@@ -1,3 +1,4 @@
+![hs2preview](https://user-images.githubusercontent.com/39247311/85811335-27289000-b75e-11ea-87e8-491486f4f31b.png)
 # HF Patch for Honey Select 2!
 A patch for [Honey Select 2](http://www.illusion.jp/preview/honey2/index.php) with all free updates, fan-made English translations and essential mods. It will allow you to load all character cards and scenes and give you countless gameplay improvements while still keeping the original, uncluttered and clean feel of the game.
 

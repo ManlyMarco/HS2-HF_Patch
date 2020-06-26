@@ -44,7 +44,7 @@ Name: "none";     Description: "{cm:noneInstall}"
 Name: "custom";   Description: "{cm:customInstall}"; Flags: iscustom
 
 [Components]
-Name: "Patch"; Description: "Free patches up to 2020-06-19 (with Studio) + game repair"; Types: full_en full extra extra_en custom bare none; Flags: fixed
+Name: "Patch"; Description: "Free patches up to 2020-06-26 (with Studio) + game repair"; Types: full_en full extra extra_en custom bare none; Flags: fixed
 
 Name: "BepInEx"; Description: "BepInEx v5.1 Plugin framework + MessageCenter v1.1 + ConfigurationManager v16.0"; Types: full_en full extra extra_en custom bare; Flags: fixed 
 Name: "BepInEx\Dev"; Description: "{cm:CompDev}";
@@ -167,7 +167,7 @@ Source: "Input\start.bat"; DestDir: "{tmp}\hfp"; Flags: ignoreversion recursesub
 
 Source: "Input\_Patch\empty_ud\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Patch
 Source: "Input\_Patch\empty_ud_eng\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Patch; Languages: en
-Source: "Input\_Patch\honey2_01_plus_0619w26K8_all\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs solidbreak; Components: Patch
+Source: "Input\_Patch\honey2_01_plus_0626fEw2_all\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs solidbreak; Components: Patch
 
 ;Source: "Input\_Patch\aisyoujyo_02_plus_0214cah6j_all_jp\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs; Components: Patch; Check: not IsSteam
 

@@ -51,15 +51,16 @@ namespace HelperLib
             var verPath = Path.Combine(path, @"version");
             try
             {
-                var contents = File.Exists(verPath) ? File.ReadAllText(verPath) : string.Empty;
-                var versionList = contents.Split(';').Select(x => x.Trim()).Where(x => !string.IsNullOrEmpty(x)).ToList();
-                versionList.Add("HF Patch v" + version);
+                //var contents = File.Exists(verPath) ? File.ReadAllText(verPath) : string.Empty;
+                //var versionList = contents.Split(';').Select(x => x.Trim()).Where(x => !string.IsNullOrEmpty(x)).ToList();
+                //versionList.Add("HF Patch v" + version);
+                //
+                //var existingVersions = new HashSet<string>();
+                //// Only keep latest copy of any version, remove older duplicates
+                //var filteredVersionList = versionList.AsEnumerable().Reverse().Where(x => existingVersions.Add(x)).Reverse().ToArray();
+                //var result = string.Join("; ", filteredVersionList);
 
-                var existingVersions = new HashSet<string>();
-                // Only keep latest copy of any version, remove older duplicates
-                var filteredVersionList = versionList.AsEnumerable().Reverse().Where(x => existingVersions.Add(x)).Reverse().ToArray();
-                var result = string.Join("; ", filteredVersionList);
-
+                var result = "HF Patch v" + version;
                 // Prevent crash when overwriting hidden file
                 if (File.Exists(verPath)) File.SetAttributes(verPath, FileAttributes.Normal);
                 File.WriteAllText(verPath, result);
@@ -102,7 +103,25 @@ namespace HelperLib
                 {
                     File.Delete(ud);
                     if (!(e is FileNotFoundException))
-                        AppendLog(path, @"Reset corrupted " + ud + Environment.NewLine + e + Environment.NewLine);
+                        AppendLog(path, @"Removed corrupted " + ud + "; Cause:" + e.Message);
+                }
+                catch { }
+            }
+
+            var sysDir = Path.Combine(path, @"UserData\config\system.xml");
+            try
+            {
+                using (var reader = File.OpenRead(sysDir))
+                    XDocument.Load(reader);
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    File.Delete(sysDir);
+
+                    if (!(e is FileNotFoundException))
+                        AppendLog(path, @"Reset corrupted " + sysDir + Environment.NewLine + e + Environment.NewLine);
                 }
                 catch { }
             }
@@ -231,40 +250,6 @@ icacls ""%target%"" /grant *S-1-1-0:(OI)(CI)F /T /C /L /Q
             }
         }
 
-        [DllExport("StartAutoUpdate", CallingConvention = CallingConvention.StdCall)]
-        public static void StartAutoUpdate([MarshalAs(UnmanagedType.LPWStr)] string path, [MarshalAs(UnmanagedType.LPWStr)] string installer, bool sm, bool smcp, bool smf, bool smme, bool smus, bool smmap, bool smstu)
-        {
-            var args = new StringBuilder();
-
-            var fullPath = Path.GetFullPath(path).TrimEnd('\\', '/');
-            args.Append($"\"{fullPath}\"");
-
-            // Use bin files if available. If none are present updater will fall back to its default sources
-            foreach (var file in Directory.GetFiles(installer, "Koikatsu HF Patch v*.bin"))
-                args.Append($" \"{Path.GetFullPath(file)}\"");
-
-            args.Append(" -guid:\"patch_common\"");
-            args.Append(" -guid:\"patch_common_extras\"");
-            args.Append(" -guid:\"patch_kk\"");
-            args.Append(" -guid:\"patch_kkp\"");
-            args.Append(" -guid:\"patch_kkp_special\"");
-            args.Append(" -guid:\"patch_as\"");
-            args.Append(" -guid:\"patch_dkn\"");
-
-            if (sm) args.Append(" -guid:\"Sideloader Modpack\"");
-            if (smcp) args.Append(" -guid:\"Sideloader Modpack - Compatibility Pack\"");
-            if (smf) args.Append(" -guid:\"Sideloader Modpack - Fixes\"");
-            if (smme) args.Append(" -guid:\"Sideloader Modpack - KK_MaterialEditor\"");
-            if (smus) args.Append(" -guid:\"Sideloader Modpack - KK_UncensorSelector\"");
-            if (smmap) args.Append(" -guid:\"Sideloader Modpack - Maps\"");
-            if (smstu) args.Append(" -guid:\"Sideloader Modpack - Studio\"");
-
-            var psi = new ProcessStartInfo(Path.Combine(fullPath, @"[UTILITY] KKManager\StandaloneUpdater.exe"), args.ToString());
-            psi.UseShellExecute = false;
-
-            var p = Process.Start(psi);
-            p.WaitForExit();
-        }
 
         [DllExport("RemoveJapaneseCards", CallingConvention = CallingConvention.StdCall)]
         public static void RemoveJapaneseCards([MarshalAs(UnmanagedType.LPWStr)] string path)
@@ -298,26 +283,6 @@ icacls ""%target%"" /grant *S-1-1-0:(OI)(CI)F /T /C /L /Q
         [DllExport("PostInstallCleanUp", CallingConvention = CallingConvention.StdCall)]
         public static void PostInstallCleanUp([MarshalAs(UnmanagedType.LPWStr)] string path)
         {
-            /*try
-            {
-                // Clean up kkp default card duplicates
-                var dd = Path.Combine(path, "DefaultData");
-                if (Directory.Exists(dd))
-                {
-                    var allFiles = Directory.GetFiles(dd, "*.png", SearchOption.AllDirectories);
-                    var duplicates = allFiles.Where(x =>
-                    {
-                        var replacementName = x.Replace(".png", "(SU).png");
-                        return allFiles.Any(y => string.Equals(replacementName, y, StringComparison.OrdinalIgnoreCase));
-                    });
-                    foreach (var file in duplicates)
-                        SafeFileDelete(file);
-                }
-            }
-            catch (Exception e)
-            {
-                AppendLog(path, e);
-            }*/
         }
 
         [DllExport("RemoveSideloaderDuplicates", CallingConvention = CallingConvention.StdCall)]
@@ -393,15 +358,14 @@ icacls ""%target%"" /grant *S-1-1-0:(OI)(CI)F /T /C /L /Q
                 foreach (var modGroup in mods.GroupBy(x => x.Guid))
                 {
                     var orderedMods = modGroup.All(x => !string.IsNullOrWhiteSpace(x.Version))
-                        ? modGroup.OrderByDescending(x => x.Path.ToLower().Contains("mods\\sideloader modpack")).ThenByDescending(x => x.Version, new VersionComparer())
-                        : modGroup.OrderByDescending(x => x.Path.ToLower().Contains("mods\\sideloader modpack")).ThenByDescending(x => File.GetLastWriteTime(x.Path));
+                        ? modGroup.OrderByDescending(x => x.Path.ToLower().Contains("sideloader modpack")).ThenByDescending(x => x.Version, new VersionComparer())
+                        : modGroup.OrderByDescending(x => x.Path.ToLower().Contains("sideloader modpack")).ThenByDescending(x => File.GetLastWriteTime(x.Path));
 
                     // Prefer .zipmod extension and then longer paths (so the mod has either longer name or is arranged in a subdirectory)
                     orderedMods = orderedMods.ThenByDescending(x => FileHasZipmodExtension(x.Path))
                         .ThenByDescending(x => x.Path.Length);
 
-                    foreach (var oldMod in orderedMods.Skip(1))
-                        SafeFileDelete(oldMod.Path);
+                    foreach (var oldMod in orderedMods.Skip(1).Where(x => !x.Path.ToLower().Contains("sideloader modpack"))) SafeFileDelete(oldMod.Path);
                 }
             }
             catch (Exception ex)

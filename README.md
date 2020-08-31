@@ -1,4 +1,4 @@
-![hs2preview](https://user-images.githubusercontent.com/39247311/85811335-27289000-b75e-11ea-87e8-491486f4f31b.png)
+![preview](https://user-images.githubusercontent.com/39247311/91757560-cf2f5f00-ebce-11ea-8c9b-8f8d6496770b.png)
 # HF Patch for Honey Select 2!
 A patch for [Honey Select 2](http://www.illusion.jp/preview/honey2/index.php) with all free updates, fan-made English translations and essential mods. It will allow you to load all character cards and scenes and give you countless gameplay improvements while still keeping the original, uncluttered and clean feel of the game.
 
@@ -18,7 +18,7 @@ Check the [Releases](https://github.com/ManlyMarco/HS2-HF_Patch/releases) page f
 4. Wait until it's done and enjoy the game!
 
 ## What mods are included?
-You can see a list of all included mods in the source code [here under the "Components" section](https://github.com/ManlyMarco/HS2-HF_Patch/blob/master/patch.iss).
+You can see a list of all included plugins and links to their websites and authors [here](https://github.com/ManlyMarco/HS2-HF_Patch/blob/master/Plugin%20Readme.md). You can see what content mods are included after installing the patch by running KKManager (installed to the game directory) and navigating to the zipmods tab.
 
 ## Discussion and help
 If you need any help, visit the Koikatsu Discord server and check out the #faqs channel. If you didn't find what you need, feel free to ask in the #help channel or in comments under this post, we'll be happy to help!

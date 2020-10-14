@@ -15,7 +15,7 @@ Name: "TL\HS2_Subtitles";                      Description: "Subtitles v2.0 (War
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Name: "UNC";                                   Description: "{cm:CompUNC}"                                                                         ; Types: full_en full extra extra_en
 Name: "UNC\Selector";                          Description: "Uncensor Selector v3.10 (Support for user-selectable uncensors)"                      ; Types: full_en full extra extra_en
-Name: "UNC\Selector\HS2_BetterPenetration";    Description: "HS2BetterPenetration v2.1.0.0 (Improves animations in H scenes)"                      ; Types: full_en full extra extra_en
+Name: "UNC\Selector\HS2_BetterPenetration";    Description: "HS2_BetterPenetration v2.1.0.0 (Improves how penetration looks in H scenes)"          ; Types: full_en full extra extra_en
 Name: "UNC\Selector\BeaverHS2";                Description: "Beaver v1.2.1 (Allows changing some uncensor-specific settings in maker)"             ; Types: full_en full extra extra_en
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Name: "Content";                               Description: "Additional content (Needed to properly load most character cards and scenes)"         ; Types: full_en full extra extra_en
@@ -63,14 +63,13 @@ Name: "Feature\HS2_QuickAccessBox";            Description: "HS2_QuickAccessBox 
 Name: "Feature\HS2_PoseFolders";               Description: "Pose Folders v1.0 (Folder support in studio pose list)"                               ; Types: full_en full extra extra_en
 Name: "Feature\HS2_PoseQuickLoad";             Description: "Pose Quick Load v1.0 (Immediately apply pose when selected in studio, turn on in F1 menu)"; Types: full_en full extra extra_en
 Name: "Feature\HS2_StudioObjectMoveHotkeys";   Description: "Studio Object Move Hotkeys v1.0 (Adds T/Y/U/I hotkeys for manipulating items in studio)"; Types: full_en full extra extra_en
-Name: "Feature\MoveControllerHS2";             Description: "Move Controller AI v1.5.1 (Improved object move window in studio)"                    ; Types: full_en full extra extra_en
+Name: "Feature\MoveControllerHS2";             Description: "Move Controller HS2 v1.5.1 (Improved object move window in studio)"                   ; Types: full_en full extra extra_en
 Name: "Feature\HS2_FKIK";                      Description: "FK and IK v1.1 (Adds FK/IK mode in studio)"                                           ; Types: full_en full extra extra_en
 Name: "Feature\HS2_CharacterExport";           Description: "Character Export v1.0 (Export characters from studio scenes)"                         ; Types: full_en full extra extra_en
 Name: "Feature\HS2_AnimationOverdrive";        Description: "Animation Overdrive v1.1 (Unlock animation speed in studio, type in the text box)"    ; Types: full_en full extra extra_en
 Name: "Feature\StudioCharaSort";               Description: "Studio Character Sort v1.0.1 (Change default sort order of cards in studio)"          ; Types: full_en full extra extra_en
 Name: "Feature\HS2_StudioSceneLoadedSound";    Description: "Studio Scene Loaded Sound v1.1 (Make a sound when a studio scene finishes loading)"   ; Types: full_en full extra extra_en
 Name: "Feature\HS2_OrthographicCamera";        Description: "OrthographicCamera v1.1.1 (Can switch to an orthographic camera in studio and game)"  ; Types: full_en full extra extra_en
-Name: "Feature\HS2_ANIMATIONOVERDRIVE";        Description: "HS2_AnimationOverdrive v1.1 (Unlock animation speed in studio, type in the text box)" ; Types: full_en full extra extra_en
 Name: "Feature\Bra";                           Description: "PushUp plugin v2.0.0 (Bras affect breast shape)"                                      ; Types: extra extra_en
 Name: "Feature\Heelz";                         Description: "HS2Heelz v1.2.0 (Support for high heel shoes)"                                        ; Types: full_en full extra extra_en
 Name: "Feature\HideAllUI";                     Description: "HideAllUI v2.2.0 (Press space to hide interface)"                                     ; Types: full_en full extra extra_en
@@ -89,82 +88,81 @@ Name: "MISC\ScriptLoader";                     Description: "C# Script Loader v1
 Name: "MISC\FullSave";                         Description: "Full save (WARNING - OVERWRITES CURRENT SAVE)"                                        
 
 [Files]
-Source: "Input\_Plugins\HS2_BepisPlugins\*";         DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\BepisPlugins; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2API\*";                   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\HS2API; Excludes: "manifest.xml"
-Source: "Input\_Plugins\XUnity.ResourceRedirector\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\XUnityResourceRedirector; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2HeadBundleRedirect\*";    DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\HS2HeadBundleRedirect; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_DependencyLoader\*";     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\DependencyLoader; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_Hooah\*";                DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\HS2_Hooah; Excludes: "manifest.xml"
-Source: "Input\_Plugins\BonesFramework\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\BonesFramework; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_BepisPlugins\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\BepisPlugins; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2API\*";                     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\HS2API; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\XUnity.ResourceRedirector\*";  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\XUnityResourceRedirector; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2HeadBundleRedirect\*";      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\HS2HeadBundleRedirect; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_DependencyLoader\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\DependencyLoader; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_Hooah\*";                  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\HS2_Hooah; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\BonesFramework\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\BonesFramework; Excludes: "manifest.xml"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Source: "Input\_TL\HS2_TextResourceRedirector\*";    DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\AutoTranslator\EnglishTranslation
-Source: "Input\_Plugins\XUnity.AutoTranslator-BepIn-5x\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\AutoTranslator; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_Subtitles\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\HS2_Subtitles; Excludes: "manifest.xml"
+Source: "Input\_TL\HS2_TextResourceRedirector\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\AutoTranslator\EnglishTranslation
+Source: "Input\_Plugins\_out\XUnity.AutoTranslator-BepIn-5x\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\AutoTranslator; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_Subtitles\*";              DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\HS2_Subtitles; Excludes: "manifest.xml"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Source: "Input\_Plugins\HS2_UncensorSelector\*";     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: UNC\Selector; Excludes: "manifest.xml"
-Source: "Input\_Plugins\BeaverHS2\*";                DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: UNC\Selector\BeaverHS2; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_BetterPenetration\*";    DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: UNC\Selector\HS2_BetterPenetration; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_UncensorSelector\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: UNC\Selector; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\BeaverHS2\*";                  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: UNC\Selector\BeaverHS2; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_BetterPenetration\*";      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: UNC\Selector\HS2_BetterPenetration; Excludes: "manifest.xml"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Source: "Input\_Plugins\HS2_MaterialEditor\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_MaterialEditor; Excludes: "manifest.xml"
-Source: "Input\_Plugins\MoreAccessories\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\MoreAccessories; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2ABMX\*";                  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2ABMX; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2PE\*";                    DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2PE; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_ClothColliders\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_ClothColliders; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_Colliders\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_Colliders; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_InvisibleBody\*";        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_InvisibleBody; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_OverlayMods\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\KSOX; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_StudioCustomMasking\*";  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_StudioCustomMasking; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_StudioImageEmbed\*";     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_StudioImageEmbed; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_StudioSceneSettings\*";  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_StudioSceneSettings; Excludes: "manifest.xml"
-Source: "Input\_Plugins\NodesConstraints\*";         DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\NodesConstraints; Excludes: "manifest.xml"
-Source: "Input\_Plugins\RendererEditor\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\RendererEditor; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_MaterialEditor\*";         DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_MaterialEditor; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\MoreAccessories\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\MoreAccessories; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2ABMX\*";                    DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2ABMX; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2PE\*";                      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2PE; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_ClothColliders\*";         DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_ClothColliders; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_Colliders\*";              DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_Colliders; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_InvisibleBody\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_InvisibleBody; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_OverlayMods\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\KSOX; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_StudioCustomMasking\*";    DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_StudioCustomMasking; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_StudioImageEmbed\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_StudioImageEmbed; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_StudioSceneSettings\*";    DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_StudioSceneSettings; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\NodesConstraints\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\NodesConstraints; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\RendererEditor\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\RendererEditor; Excludes: "manifest.xml"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Source: "Input\_Plugins\IllusionFixes_HoneySelect2\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\IllusionFixes; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_BetterHScenes\*";        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_BetterHScenes; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_HLightControl\*";        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_HLightControl; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_InputHotkeyBlock\*";     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_InputHotkeyBlock; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_MaleJuice\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_MaleJuice; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_UnlockPlayerHClothes\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_UnlockPlayerHClothes; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_UnlockPlayerHeight\*";   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_UnlockPlayerHeight; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_AnimationPairing\*";     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\AnimationPairing; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_LightprobesReset\*";     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\LightprobesReset; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\IllusionFixes_HoneySelect2\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\IllusionFixes; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_BetterHScenes\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_BetterHScenes; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_HLightControl\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_HLightControl; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_InputHotkeyBlock\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_InputHotkeyBlock; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_MaleJuice\*";              DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_MaleJuice; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_UnlockPlayerHClothes\*";   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_UnlockPlayerHClothes; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_UnlockPlayerHeight\*";     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_UnlockPlayerHeight; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_AnimationPairing\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\AnimationPairing; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_LightprobesReset\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\LightprobesReset; Excludes: "manifest.xml"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Source: "Input\_Plugins\DragAndDrop.HoneySelect2\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\DragAndDrop; Excludes: "manifest.xml"
-Source: "Input\_Plugins\DHH\*";                      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Graphics\DHH; Excludes: "manifest.xml"
-Source: "Input\_Plugins\GraphicsSettings\*";         DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Graphics\GraphicsSettings; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2Graphics\*";              DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Graphics\HS2Graphics; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_BetterAA\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Graphics\HS2_BetterAA; Excludes: "manifest.xml"
-Source: "Input\_Plugins\GravureHS2\*";               DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\GravureHS2; Excludes: "manifest.xml"
-Source: "Input\_Plugins\Heelz\*";                    DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Heelz; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HideAllUI.HoneySelect2\*";   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HideAllUI; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2US\*";                    DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2US; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_AnimationOverdrive\*";   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_AnimationOverdrive; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_BrowserFolders\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_BrowserFolders; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_CharacterExport\*";      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_CharacterExport; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_ColorPanelX\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_ColorPanelX; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_FKIK\*";                 DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_FKIK; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_HeightBar\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_HeightBar; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_MakerDefaults\*";        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_MakerDefaults; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_PoseFolders\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_PoseFolders; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_PoseQuickLoad\*";        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_PoseQuickLoad; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_PovX\*";                 DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_PovX; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_QuickAccessBox\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_QuickAccessBox; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_RemoveToRecycleBin\*";   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_RemoveToRecycleBin; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_StudioObjectMoveHotkeys\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_StudioObjectMoveHotkeys; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_StudioPOV\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_StudioPOV; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_StudioSceneLoadedSound\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_StudioSceneLoadedSound; Excludes: "manifest.xml"
-Source: "Input\_Plugins\MoveControllerHS2\*";        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\MoveControllerHS2; Excludes: "manifest.xml"
-Source: "Input\_Plugins\PushUpHS2\*";                DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Bra; Excludes: "manifest.xml"
-Source: "Input\_Plugins\StudioCharaSort\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\StudioCharaSort; Excludes: "manifest.xml"
-Source: "Input\_Plugins\VideoExport\*";              DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\VideoExport; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_ExtraGroups\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_ExtraGroups; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_HCharaSwitcher\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HCharaSwitcher; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_MakerAdditions\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\MakerAdditions; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_MakerSearch\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\MakerSearch; Excludes: "manifest.xml"
-Source: "Input\_Plugins\HS2_OrthographicCamera\*";   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_OrthographicCamera; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\DragAndDrop.HoneySelect2\*";   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\DragAndDrop; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\DHH\*";                        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Graphics\DHH; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\GraphicsSettings\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Graphics\GraphicsSettings; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2Graphics\*";                DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Graphics\HS2Graphics; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_BetterAA\*";               DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Graphics\HS2_BetterAA; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\GravureHS2\*";                 DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\GravureHS2; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\Heelz\*";                      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Heelz; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HideAllUI.HoneySelect2\*";     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HideAllUI; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2US\*";                      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2US; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_AnimationOverdrive\*";     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_AnimationOverdrive; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_BrowserFolders\*";         DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_BrowserFolders; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_CharacterExport\*";        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_CharacterExport; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_ColorPanelX\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_ColorPanelX; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_FKIK\*";                   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_FKIK; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_HeightBar\*";              DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_HeightBar; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_MakerDefaults\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_MakerDefaults; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_PoseFolders\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_PoseFolders; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_PoseQuickLoad\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_PoseQuickLoad; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_PovX\*";                   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_PovX; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_QuickAccessBox\*";         DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_QuickAccessBox; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_RemoveToRecycleBin\*";     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_RemoveToRecycleBin; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_StudioObjectMoveHotkeys\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_StudioObjectMoveHotkeys; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_StudioPOV\*";              DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_StudioPOV; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_StudioSceneLoadedSound\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_StudioSceneLoadedSound; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\MoveControllerHS2\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\MoveControllerHS2; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\PushUpHS2\*";                  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Bra; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\StudioCharaSort\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\StudioCharaSort; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\VideoExport\*";                DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\VideoExport; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_ExtraGroups\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_ExtraGroups; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_HCharaSwitcher\*";         DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HCharaSwitcher; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_MakerAdditions\*";         DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\MakerAdditions; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_MakerSearch\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\MakerSearch; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_OrthographicCamera\*";     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2_OrthographicCamera; Excludes: "manifest.xml"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Source: "Input\_Plugins\FPSCounter\*";               DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\FPS; Excludes: "manifest.xml"
-
-Source: "Input\_Plugins\HS2_CheatTools\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\Trainer\Cheats; Excludes: "manifest.xml"
-Source: "Input\_Plugins\RuntimeUnityEditor.Bepin5\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\Trainer; Excludes: "manifest.xml"
-Source: "Input\_Plugins\ScriptLoader\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\ScriptLoader; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\FPSCounter\*";                 DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\FPS; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_CheatTools\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\Trainer\Cheats; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\RuntimeUnityEditor.Bepin5\*";  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\Trainer; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\ScriptLoader\*";               DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\ScriptLoader; Excludes: "manifest.xml"

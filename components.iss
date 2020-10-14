@@ -1,10 +1,9 @@
-
-; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Components]
 Name: "API";                                   Description: "APIs (Plugins required by other plugins and mods to function)"                        ; Types: full_en full extra extra_en custom bare
 Name: "API\BepisPlugins";                      Description: "BepisPlugins v15.4 (Essential plugins required by many other plugins to function)"    ; Types: full_en full extra extra_en custom bare; Flags: fixed
 Name: "API\HS2API";                            Description: "Modding API v1.13.1 (Modding API needed by many plugins)"                             ; Types: full_en full extra extra_en custom bare; Flags: fixed
 Name: "API\XUnityResourceRedirector";          Description: "XUnity Resource Redirector v1.1.2 (Modding API for overriding resources)"             ; Types: full_en full extra extra_en custom bare; Flags: fixed
-Name: "API\BonesFramework";                    Description: "BonesFramework v1.4.0 (Lets mods add new bones)"                                      ; Types: full_en full extra extra_en custom bare
+Name: "API\BonesFramework";                    Description: "BonesFramework v1.4.0 (Lets mods add new bones)"                                      ; Types: full_en full extra extra_en custom bare; Flags: fixed
 Name: "API\DependencyLoader";                  Description: "HS2_DependencyLoader v1.1.2 (Needed by some map mods to load dependant asset bundles)"; Types: full_en full extra extra_en custom bare
 Name: "API\HS2HeadBundleRedirect";             Description: "HeadBundleRedirect v1.0 (Support for custom head tints)"                              ; Types: full_en full extra extra_en custom bare
 Name: "API\HS2_Hooah";                         Description: "HS2_Hooah v1.0.0 (Collection of randum stuff needed by some of hooah's mods)"         ; Types: full_en full extra extra_en custom bare

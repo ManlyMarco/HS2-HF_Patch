@@ -23,7 +23,7 @@ LZMAUseSeparateProcess=yes
 ;LZMADictionarySize=208576
 LZMADictionarySize=208576
 LZMANumFastBytes=273
-LZMANumBlockThreads=7
+LZMANumBlockThreads=5
 DiskSpanning=yes
 DefaultDirName=C:\Illusion\HoneySelect2
 
@@ -53,6 +53,7 @@ Name: "Patch"                   ; Description: "All free updates + game repair" 
 Name: "BepInEx"                 ; Description: "BepInEx v5.3 Plugin framework + MessageCenter v1.1 + ConfigurationManager v16.0"; Types: full_en full extra extra_en custom bare ; Flags: fixed
 ;Name: "BepInEx\Compat"          ; Description: "Backwards compatibility with old plugins (BepIn4Patcher v1.0 + IPALoaderX v1.2.1)"; Types: extra_en extra 
 Name: "BepInEx\Dev"             ; Description: "{cm:CompDev}" 
+
 Name: "KKManager"               ; Description: "KKManager v0.13.1 (Manage and update mods)"                                     ; Types: full_en full extra extra_en custom bare ; Flags: fixed
 
 Name: "Modpack"                 ; Description: "Sideloader Modpacks {#CurrentDate} (Add additional content to the game, needs at least BepisPlugins to work)"
@@ -79,7 +80,7 @@ Source: "Input\_Patch\empty_ud_eng\*";    DestDir: "{app}"                     ;
 
 Source: "Input\KKManager\*";              DestDir: "{app}\[UTILITY] KKManager\"; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: KKManager
 
-Source: "Input\_Patch\2020-07-03-all\*";  DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch
+Source: "Input\_Patch\2020-08-14-all\*";  DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch
 Source: "Input\BepInEx_x64\*";            DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: BepInEx
 Source: "Input\BepInEx_Essentials\*";     DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: BepInEx
 Source: "Input\BepInEx_Dev\*";            DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: BepInEx\Dev
@@ -303,15 +304,6 @@ begin
 
     if Result = True then
     begin
-      if (FileExists(ExpandConstant('{app}\Initial Settings.exe'))) then
-      begin
-        MsgBox('This patch was made before the Steam release of the game and is not compatible with it. Please look for a new version of the patch that supports the Steam release.', mbError, MB_OK);
-        Result := False;
-      end
-    end;
-
-    if Result = True then
-    begin
       if (FileExists(ExpandConstant('{app}\EmotionCreators.exe'))
       or FileExists(ExpandConstant('{app}\Koikatu.exe'))
       or FileExists(ExpandConstant('{app}\Koikatsu Party.exe'))
@@ -320,6 +312,15 @@ begin
       or FileExists(ExpandConstant('{app}\AI-Shoujo.exe'))) then
       begin
         MsgBox('It looks like a different game is installed to the selected directory. This is very likely to break one or both of the games, and to break the patch.%n%nMake sure you selected the correct directory. If you installed 2 games to the same directory you will have to reinstall them both to separate directories to fix this.', mbError, MB_OK);
+        Result := False;
+      end
+    end;
+
+    if Result = True then
+    begin
+      if (FileExists(ExpandConstant('{app}\Initial Settings.exe'))) then
+      begin
+        MsgBox('This patch was made before the Steam release of the game and is not compatible with it. Please look for a new version of the patch that supports the Steam release.', mbError, MB_OK);
         Result := False;
       end
     end;

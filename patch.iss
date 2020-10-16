@@ -6,7 +6,7 @@
 ;--------------------------------------------Full game name for naming patch itself and desktop icons
 #define NAME "HoneySelect2"
 ;----------------------------------------------------------------------------Current HF Patch version
-#define VERSION "1.1"
+#define VERSION "1.2"
 ;----------------------------------------------------------------------------------------------------
 #include "_Common\Header.iss"
 
@@ -50,15 +50,15 @@ Name: "custom";   Description: "{cm:customInstall}"; Flags: iscustom
 Name: "Patch"                   ; Description: "All free updates + game repair"                                                 ; Types: full_en full extra_en extra custom bare none ; Flags: fixed
 ;Name: "Patch\UserData"          ; Description: "{cm:CompDefCards}"
 
-Name: "BepInEx"                 ; Description: "BepInEx v5.3 Plugin framework + MessageCenter v1.1 + ConfigurationManager v16.0"; Types: full_en full extra extra_en custom bare ; Flags: fixed
+Name: "BepInEx"                 ; Description: "BepInEx v5.3 Plugin framework + MessageCenter v1.1.1 + ConfigurationManager v16.1"; Types: full_en full extra extra_en custom bare ; Flags: fixed
 ;Name: "BepInEx\Compat"          ; Description: "Backwards compatibility with old plugins (BepIn4Patcher v1.0 + IPALoaderX v1.2.1)"; Types: extra_en extra 
 Name: "BepInEx\Dev"             ; Description: "{cm:CompDev}" 
 
-Name: "KKManager"               ; Description: "KKManager v0.13.1 (Manage and update mods)"                                     ; Types: full_en full extra extra_en custom bare ; Flags: fixed
+Name: "KKManager"               ; Description: "KKManager v0.14.3 (Manage and update mods)"                                     ; Types: full_en full extra extra_en custom bare ; Flags: fixed
 
 Name: "Modpack"                 ; Description: "Sideloader Modpacks {#CurrentDate} (Add additional content to the game, needs at least BepisPlugins to work)"
 Name: "Modpack\General"         ; Description: "General (Content for making characters, always recommended)"                    ; Types: full_en full extra_en extra
-Name: "Modpack\Fixes"           ; Description: "Fixes (Fixes to some of the official content, always recommended)"              ; Types: full_en full extra_en extra
+;Name: "Modpack\Fixes"           ; Description: "Fixes (Fixes to some of the official content, always recommended)"              ; Types: full_en full extra_en extra
 ;Name: "Modpack\Studio"          ; Description: "Studio (Additional content for making Studio scenes)"                           ; Types: full_en full extra_en extra
 ;Name: "Modpack\Animations"      ; Description: "Animations (Additional adnimations for use in Studio and Free H)"               ; Types: full_en full extra_en extra
 ;Name: "Modpack\Maps"            ; Description: "Maps (Additional maps for use in Studio and H scenes)"                          ; Types: full_en full extra_en extra
@@ -110,7 +110,7 @@ Source: "Input\_Plugins\HS2_UncensorSelector Base.zipmod"; DestDir: "{app}\mods"
 ;-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ; Always install critical fixes
-Source: "Input\_Plugins\IllusionFixes_HoneySelect2\BepInEx\patchers\*"; DestDir: "{app}\BepInEx\patchers"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Patch
+Source: "Input\_Plugins\_out\IllusionFixes_HoneySelect2\BepInEx\patchers\*"; DestDir: "{app}\BepInEx\patchers"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Patch
 
 Source: "Input\_Misc\save.dat";                      DestDir: "{app}\UserData\save"; Flags: ignoreversion recursesubdirs; Components: MISC\FullSave
 

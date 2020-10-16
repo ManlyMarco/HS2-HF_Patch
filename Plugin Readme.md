@@ -1,14 +1,24 @@
+# AdvIKPlugin v1.1.1
+- Short description: More realistic shoulder deforming
+- Author(s):         OrangeSpork
+- More information:  https://github.com/OrangeSpork/AdvIKPlugin
+
+# Animation Controller v2.2
+- Short description: Animation Controller for Honey Select 2
+- Author(s):         DeathWeasel1337
+- More information:  https://github.com/DeathWeasel1337/KK_Plugins
+
 # Animation Overdrive v1.1
 - Short description: Unlock animation speed in studio, type in the text box
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Beaver v1.2.1
+# Beaver v1.2.2
 - Short description: Allows changing some uncensor-specific settings in maker
 - Author(s):         https://mikkemods.blogspot.com
 - More information:  https://mikkemods.blogspot.com/
 
-# BepisPlugins v15.4
+# BepisPlugins v16.0
 - Short description: Essential plugins required by many other plugins to function
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/BepisPlugins
@@ -18,7 +28,7 @@
 - Author(s):         A basement dweller
 - More information:  https://www.patreon.com/posts/29809884
 
-# BonesFramework v1.4.0
+# BonesFramework v1.4.1
 - Short description: Lets mods add new bones
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
@@ -33,19 +43,19 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Character Replacer v1.6.2
-- Short description: Replace default characters in chara maker
-- Author(s):         https://github.com/IllusionMods
-- More information:  https://github.com/IllusionMods/CharacterReplacer
-
-# Cheat Tools v2.7.2
+# Cheat Tools v2.8
 - Short description: Trainer, press F12 to open
 - Author(s):         https://github.com/ManlyMarco/IllusionCheatTools
 - More information:  https://github.com/ManlyMarco/IllusionCheatTools
 
-# Colliders v1.1
+# Colliders v1.1.1
 - Short description: Cloth physics support for mods
 - Author(s):         https://github.com/DeathWeasel1337
+- More information:  https://github.com/DeathWeasel1337/KK_Plugins
+
+# Demosaic v1.1
+- Short description: Demosaic for Honey Select 2
+- Author(s):         DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
 # DHH Graphics Enhancer v1.10
@@ -53,12 +63,17 @@
 - Author(s):         connector_jp
 - More information:  ?
 
-# Drag and Drop v1.2.1
+# Drag and Drop v1.2.2
 - Short description: Load cards and scenes by dragging them into game window
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/DragAndDrop
 
-# FK and IK v1.1
+# Enable Resize v1.5
+- Short description: Allows resizing of game window
+- Author(s):         BepInEx
+- More information:  https://github.com/BepInEx/BepInEx.Utility
+
+# FK and IK v1.1.1
 - Short description: Adds FK/IK mode in studio
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -78,7 +93,7 @@
 - Author(s):         https://mikkemods.blogspot.com
 - More information:  https://mikkemods.blogspot.com/
 
-# HCharaSwitcher v1.1.0
+# HCharaSwitcher v1.2.0
 - Short description: Change characters during H scene
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://github.com/Mantas-2155X/HCharaSwitcher
@@ -98,12 +113,7 @@
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/HideAllUI
 
-# HS2 Better Penetration v2.1.0.0
-- Short description: Improves how penetration looks in H scenes
-- Author(s):         https://www.patreon.com/Animal42069
-- More information:  https://www.patreon.com/Animal42069/posts?filters%5Btag%5D=BetterPenetration
-
-# HS2 Graphics v0.3.3
+# HS2 Graphics v0.3.3.200
 - Short description: More powerful than DHH but harder to use
 - Author(s):         https://github.com/ore-
 - More information:  https://github.com/ore-/Graphics
@@ -113,22 +123,32 @@
 - Author(s):         https://github.com/FairBear
 - More information:  https://github.com/FairBear/HS2_PovX
 
+# HS2 VR Custom Maps Fix v1.0.1
+- Short description: Allow using custom maps in HS2 VR
+- Author(s):         kkykkykky
+- More information:  https://github.com/kkykkykky/HS2VR_CustomMapsFix
+
 # HS2_AnimationPairing v1.0.0
 - Short description: Synchronizes animations between characters in studio
 - Author(s):         hooh-hooah
 - More information:  https://github.com/hooh-hooah/AnimationPairing
 
-# HS2_BetterHScenes v2.5.1
+# HS2_BetterHScenes v2.5.2
 - Short description: Fixes H performance bugs and adds extra features
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://www.patreon.com/2155X
+
+# HS2_BetterPenetration v2.2.0.1
+- Short description: Improves how penetration looks in H scenes
+- Author(s):         https://www.patreon.com/Animal42069
+- More information:  https://www.patreon.com/Animal42069/posts?filters%5Btag%5D=BetterPenetration
 
 # HS2_ClothColliders v1.0.1
 - Short description: Cloth physics support for mods
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/AI_ClothColliders
 
-# HS2_ColorPanelX v1.2.0
+# HS2_ColorPanelX v1.4.0
 - Short description: Improves color picker in maker
 - Author(s):         https://github.com/kkykkykky/
 - More information:  none
@@ -143,7 +163,7 @@
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://github.com/Mantas-2155X/HS2_ExtraGroups
 
-# HS2_HLightControl v1.2.2
+# HS2_HLightControl v1.2.3
 - Short description: Allows you to change some light settings
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://www.patreon.com/2155X
@@ -163,12 +183,12 @@
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://github.com/Mantas-2155X/MakerAdditions
 
-# HS2_MakerSearch v1.2.1
+# HS2_MakerSearch v1.4.1
 - Short description: Adds search boxes in character maker item lists
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://github.com/Mantas-2155X/MakerSearch
 
-# HS2_QuickAccessBox v2.2.1
+# HS2_QuickAccessBox v2.3
 - Short description: Quick search studio items
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/QuickAccessBox
@@ -178,7 +198,7 @@
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://www.patreon.com/2155X
 
-# HS2_UnlockPlayerHClothes v1.4.2
+# HS2_UnlockPlayerHClothes v1.4.3
 - Short description: Fixes inability to change clothes in h scenes
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://www.patreon.com/2155X
@@ -188,12 +208,12 @@
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://www.patreon.com/2155X
 
-# HS2ABMX (BonemodX) v4.3
+# HS2ABMX (BonemodX) v4.3.3
 - Short description: More sliders in character maker
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/ABMX
 
-# HS2Heelz v1.2.0
+# HS2Heelz v1.12.0
 - Short description: Support for high heel shoes
 - Author(s):         hooh-hooah
 - More information:  https://github.com/hooh-hooah/IL_Heelz
@@ -208,15 +228,15 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# IllusionFixes v13.2
+# IllusionFixes v15.0
 - Short description: A collection of essential fixes and improvements
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionFixes
 
-# Input Hotkey Block v1.2
+# Input Hotkey Block v1.3
 - Short description: Blocks plugin keybinds while typing
 - Author(s):         https://github.com/DeathWeasel1337
-- More information:  https://github.com/DeathWeasel1337/KK_Plugins
+- More information:  https://github.com/BepInEx/BepInEx.Utility
 
 # Invisible Body v1.3.2
 - Short description: Hide character body in studio for trickery with clothes
@@ -238,12 +258,12 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Material Editor v2.1.4
+# Material Editor v2.1.5
 - Short description: Material editing in maker and studio
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Modding API v1.13.1
+# Modding API v1.13.3
 - Short description: Modding API needed by many plugins
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/IllusionMods/IllusionModdingAPI
@@ -258,6 +278,11 @@
 - Author(s):         https://mikkemods.blogspot.com
 - More information:  https://mikkemods.blogspot.com/
 
+# Mute In Background v1.1
+- Short description: Mute the game when not focused
+- Author(s):         BepInEx
+- More information:  https://github.com/BepInEx/BepInEx.Utility
+
 # NodesConstraints v1.2.1
 - Short description: Connect studio items to create custom animations
 - Author(s):         https://www.patreon.com/joan6694
@@ -268,7 +293,7 @@
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/KoikatuGameplayMods
 
-# Overlay Mods v5.2
+# Overlay Mods v5.2.1
 - Short description: Set custom body, clothes and eye textures
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/Illusion-Overlay-Mods
@@ -298,10 +323,15 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# Runtime Unity Editor v2.1.1
+# Runtime Unity Editor v2.2.1.0
 - Short description: Tool for making arbitrary modifications to the game
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/RuntimeUnityEditor
+
+# StopBotheringMe v1.0.1
+- Short description: Small collection fixes to mind-boggling stuff or bugs
+- Author(s):         hooh-hooah
+- More information:  https://github.com/hooh-hooah/IL_StopBotheringMe
 
 # Studio Character Sort v1.0.1
 - Short description: Change default sort order of cards in studio
@@ -333,7 +363,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Subtitles v2.0
+# Subtitles v2.0.1
 - Short description: Warning: Machine translated, bad quality
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins

@@ -22,7 +22,7 @@ You can see a list of all included plugins and links to their websites and autho
 
 ## Discussion and help
 If you need any help, visit the Koikatsu Discord server and check out the #faqs channel. If you didn't find what you need, feel free to ask in the #help channel or in comments under this post, we'll be happy to help!
-- [AI-Girl Wiki (Gameplay and technical help)](https://wiki.anime-sharing.com/hgames/index.php?title=AI_Syoujyo)
+- [AI-Girl Wiki (Gameplay and technical help)](https://wiki.anime-sharing.com/hgames/index.php?title=Honey_Select_2)
 - [Illusion Soft discord server](https://discord.gg/illusionsoft)
 
 ## Important notes, please read

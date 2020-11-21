@@ -46,12 +46,12 @@ Name: "custom";   Description: "{cm:customInstall}"; Flags: iscustom
 #define CurrentDate GetDateTimeString('yyyy-mm-dd', '-', ':');
 
 [Components]
-Name: "Patch";                                 Description: "All free updates up to 2020-10-30 + game repair"                                      ; Types: full_en full extra_en extra custom bare none; Flags: fixed
+Name: "Patch";                    Description: "All free updates up to 2020-10-30 + game repair"                                  ; Types: full_en full extra_en extra custom bare none; Flags: fixed
 Name: "BepInEx"                 ; Description: "BepInEx v5.3 Plugin framework + MessageCenter v1.1.1 + ConfigurationManager v16.1"; Types: full_en full extra extra_en custom bare ; Flags: fixed
 Name: "BepInEx\Dev"             ; Description: "{cm:CompDev}" 
-Name: "KKManager"               ; Description: "KKManager v0.14.3 (Manage and update mods)"                                     ; Types: full_en full extra extra_en custom bare ; Flags: fixed
+Name: "KKManager"               ; Description: "KKManager v0.14.3 (Manage and update mods)"                                       ; Types: full_en full extra extra_en custom bare ; Flags: fixed
 Name: "Modpack"                 ; Description: "Sideloader Modpacks {#CurrentDate} (Add additional content to the game, needs at least BepisPlugins to work)"
-Name: "Modpack\General"         ; Description: "General (Content for making characters, always recommended)"                    ; Types: full_en full extra_en extra
+Name: "Modpack\General"         ; Description: "General (Content for making characters, always recommended)"                      ; Types: full_en full extra_en extra
 ;Name: "Modpack\Fixes"           ; Description: "Fixes (Fixes to some of the official content, always recommended)"              ; Types: full_en full extra_en extra
 ;Name: "Modpack\Studio"          ; Description: "Studio (Additional content for making Studio scenes)"                           ; Types: full_en full extra_en extra
 ;Name: "Modpack\Animations"      ; Description: "Animations (Additional adnimations for use in Studio and Free H)"               ; Types: full_en full extra_en extra
@@ -240,7 +240,7 @@ end;
 
 function DxInstalled(): Boolean;
 begin
-  Result := FileExists(ExpandConstant('{app}\abdata\add54'));
+  Result := FileExists(ExpandConstant('{app}\abdata\add50'));
 end;
 
 function DirectXRedistNeedsInstall(): Boolean;
@@ -303,7 +303,7 @@ begin
       or FileExists(ExpandConstant('{app}\AI-Syoujyo.exe'))
       or FileExists(ExpandConstant('{app}\AI-Shoujo.exe'))) then
       begin
-        MsgBox('It looks like a different game is installed to the selected directory. This is very likely to break one or both of the games, and to break the patch.%n%nMake sure you selected the correct directory. If you installed 2 games to the same directory you will have to reinstall them both to separate directories to fix this.', mbError, MB_OK);
+        MsgBox('It looks like a different game is installed to the selected directory. This is very likely to break one or both of the games, and to break the patch.' + #13#10 + #13#10 + 'Make sure you selected the correct directory. If you installed 2 games to the same directory you will have to reinstall them both to separate directories to fix this.', mbError, MB_OK);
         Result := False;
       end
     end;
@@ -338,7 +338,7 @@ begin
       end;
       
       if not DxInstalled then begin
-        SuppressibleMsgBox('NOTICE - You are missing the optional "DX" expansion (2020-10-30 Paid DLC). It adds new new items, maps and animations.%n%nThis expansion is optional, the patch will work fine without it. If you want to use it, install it BEFORE running HF Patch.', mbWarning, MB_OK, 0);
+        SuppressibleMsgBox('NOTICE - You are missing the optional "DX" expansion (2020-10-30 Paid DLC). It adds new new items, maps and animations.' + #13#10 + #13#10 + 'This expansion is optional, the patch will work fine without it. If you want to use it, install it BEFORE running HF Patch.', mbWarning, MB_OK, 0);
       end;
     end;
   end;

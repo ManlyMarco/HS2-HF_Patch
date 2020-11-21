@@ -303,7 +303,7 @@ begin
       or FileExists(ExpandConstant('{app}\AI-Syoujyo.exe'))
       or FileExists(ExpandConstant('{app}\AI-Shoujo.exe'))) then
       begin
-        MsgBox('It looks like a different game is installed to the selected directory. This is very likely to break one or both of the games, and to break the patch.%n%nMake sure you selected the correct directory. If you installed 2 games to the same directory you will have to reinstall them both to separate directories to fix this.', mbError, MB_OK);
+        MsgBox('It looks like a different game is installed to the selected directory. This is very likely to break one or both of the games, and to break the patch.' + #13#10 + #13#10 + 'Make sure you selected the correct directory. If you installed 2 games to the same directory you will have to reinstall them both to separate directories to fix this.', mbError, MB_OK);
         Result := False;
       end
     end;

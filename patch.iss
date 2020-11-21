@@ -6,7 +6,7 @@
 ;--------------------------------------------Full game name for naming patch itself and desktop icons
 #define NAME "HoneySelect2"
 ;----------------------------------------------------------------------------Current HF Patch version
-#define VERSION "1.2"
+#define VERSION "1.3"
 ;----------------------------------------------------------------------------------------------------
 #include "_Common\Header.iss"
 
@@ -23,7 +23,7 @@ LZMAUseSeparateProcess=yes
 ;LZMADictionarySize=208576
 LZMADictionarySize=208576
 LZMANumFastBytes=273
-LZMANumBlockThreads=5
+LZMANumBlockThreads=3
 DiskSpanning=yes
 DefaultDirName=C:\Illusion\HoneySelect2
 
@@ -46,19 +46,19 @@ Name: "custom";   Description: "{cm:customInstall}"; Flags: iscustom
 #define CurrentDate GetDateTimeString('yyyy-mm-dd', '-', ':');
 
 [Components]
-Name: "Patch";                                 Description: "All free updates up to 2020-10-30 + game repair"                                      ; Types: full_en full extra_en extra custom bare none; Flags: fixed
-Name: "BepInEx"                 ; Description: "BepInEx v5.3 Plugin framework + MessageCenter v1.1.1 + ConfigurationManager v16.1"; Types: full_en full extra extra_en custom bare ; Flags: fixed
+Name: "Patch";                    Description: "All free updates up to 2020-10-30 + game repair"                                  ; Types: full_en full extra_en extra custom bare none; Flags: fixed
+Name: "BepInEx"                 ; Description: "BepInEx v5.4 Plugin framework + MessageCenter v1.1.1 + ConfigurationManager v16.1"; Types: full_en full extra extra_en custom bare ; Flags: fixed
 Name: "BepInEx\Dev"             ; Description: "{cm:CompDev}" 
-Name: "KKManager"               ; Description: "KKManager v0.14.3 (Manage and update mods)"                                     ; Types: full_en full extra extra_en custom bare ; Flags: fixed
+Name: "KKManager"               ; Description: "KKManager v0.14.4 (Manage and update mods)"                                       ; Types: full_en full extra extra_en custom bare ; Flags: fixed
 Name: "Modpack"                 ; Description: "Sideloader Modpacks {#CurrentDate} (Add additional content to the game, needs at least BepisPlugins to work)"
-Name: "Modpack\General"         ; Description: "General (Content for making characters, always recommended)"                    ; Types: full_en full extra_en extra
+Name: "Modpack\General"         ; Description: "General (Content for making characters, always recommended)"                      ; Types: full_en full extra_en extra
 ;Name: "Modpack\Fixes"           ; Description: "Fixes (Fixes to some of the official content, always recommended)"              ; Types: full_en full extra_en extra
 ;Name: "Modpack\Studio"          ; Description: "Studio (Additional content for making Studio scenes)"                           ; Types: full_en full extra_en extra
 ;Name: "Modpack\Animations"      ; Description: "Animations (Additional adnimations for use in Studio and Free H)"               ; Types: full_en full extra_en extra
 ;Name: "Modpack\Maps"            ; Description: "Maps (Additional maps for use in Studio and H scenes)"                          ; Types: full_en full extra_en extra
 Name: "Modpack\MaterialEditor"  ; Description: "KK_MaterialEditor (Materials for use with MaterialEditor)"                      ; Types: full_en full extra_en extra
 Name: "Modpack\UncensorSelector"; Description: "KK_UncensorSelector (Uncensors for use with UncensorSelector)"                  ; Types: full_en full extra_en extra
-Name: "Launcher"                ; Description: "IllusionLaunchers v2.1.1 (Multilangual launcher)"                               ; Types: full_en full extra extra_en custom
+Name: "Launcher"                ; Description: "IllusionLaunchers v2.2.0 (Multilangual launcher)"                               ; Types: full_en full extra extra_en custom
 
 [Files]
 Source: "HelperLib.dll";                  DestDir: "{app}"                       ; Flags: dontcopy
@@ -71,14 +71,14 @@ Source: "Input\_Patch\empty_ud_eng\*";    DestDir: "{app}"                     ;
 Source: "Input\_Patch\2020-08-14-all\*";  DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch
 Source: "Input\_Patch\2020-10-30-subdx\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Patch; Check: DxInstalled
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Source: "E:\Games\HoneySelect2\mods\Sideloader Modpack\*"                         ; DestDir: "{app}\mods\Sideloader Modpack"                         ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\General
-Source: "E:\Games\HoneySelect2\mods\Sideloader Modpack - Exclusive HS2\*"         ; DestDir: "{app}\mods\Sideloader Modpack - Exclusive HS2"         ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\General
+Source: "G:\HFpatchmaking\HS\HS\mods\Sideloader Modpack\*"                         ; DestDir: "{app}\mods\Sideloader Modpack"                         ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\General
+Source: "G:\HFpatchmaking\HS\HS\mods\Sideloader Modpack - Exclusive HS2\*"         ; DestDir: "{app}\mods\Sideloader Modpack - Exclusive HS2"         ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\General
 ;Source: "E:\Games\HoneySelect2\mods\Sideloader Modpack - Bleeding Edge\*"         ; DestDir: "{app}\mods\Sideloader Modpack - Bleeding Edge"         ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\Bleeding
 ;Source: "E:\Games\HoneySelect2\mods\Sideloader Modpack - Studio\*"                ; DestDir: "{app}\mods\Sideloader Modpack - Studio"                ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\Studio
 ;Source: "E:\Games\HoneySelect2\mods\Sideloader Modpack - Maps\*"                  ; DestDir: "{app}\mods\Sideloader Modpack - Maps"                  ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\Maps
 ;Source: "E:\Games\HoneySelect2\mods\Sideloader Modpack - Maps (HS2 Game)\*"       ; DestDir: "{app}\mods\Sideloader Modpack - Maps (HS2 Game)"       ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\Maps
-Source: "E:\Games\HoneySelect2\mods\Sideloader Modpack - MaterialEditor Shaders\*"; DestDir: "{app}\mods\Sideloader Modpack - MaterialEditor Shaders"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\MaterialEditor
-Source: "E:\Games\HoneySelect2\mods\Sideloader Modpack - Uncensor Selector\*"     ; DestDir: "{app}\mods\Sideloader Modpack - Uncensor Selector"     ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\UncensorSelector
+Source: "G:\HFpatchmaking\HS\HS\mods\Sideloader Modpack - MaterialEditor Shaders\*"; DestDir: "{app}\mods\Sideloader Modpack - MaterialEditor Shaders"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\MaterialEditor
+Source: "G:\HFpatchmaking\HS\HS\mods\Sideloader Modpack - Uncensor Selector\*"     ; DestDir: "{app}\mods\Sideloader Modpack - Uncensor Selector"     ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\UncensorSelector
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "Input\BepInEx_x64\*";            DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: BepInEx
 Source: "Input\BepInEx_Essentials\*";     DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: BepInEx
@@ -240,7 +240,7 @@ end;
 
 function DxInstalled(): Boolean;
 begin
-  Result := FileExists(ExpandConstant('{app}\abdata\add54'));
+  Result := FileExists(ExpandConstant('{app}\abdata\add50'));
 end;
 
 function DirectXRedistNeedsInstall(): Boolean;
@@ -338,7 +338,7 @@ begin
       end;
       
       if not DxInstalled then begin
-        SuppressibleMsgBox('NOTICE - You are missing the optional "DX" expansion (2020-10-30 Paid DLC). It adds new new items, maps and animations.%n%nThis expansion is optional, the patch will work fine without it. If you want to use it, install it BEFORE running HF Patch.', mbWarning, MB_OK, 0);
+        SuppressibleMsgBox('NOTICE - You are missing the optional "DX" expansion (2020-10-30 Paid DLC). It adds new new items, maps and animations.%n%nThis expansion is optional, the patch will work fine without it. If you want to use it, install it BEFORE running HF Patch.', mbInformation, MB_OK, 0);
       end;
     end;
   end;

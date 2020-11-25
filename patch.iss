@@ -23,7 +23,7 @@ LZMAUseSeparateProcess=yes
 ;LZMADictionarySize=208576
 LZMADictionarySize=208576
 LZMANumFastBytes=273
-LZMANumBlockThreads=3
+LZMANumBlockThreads=5
 DiskSpanning=yes
 DefaultDirName=C:\Illusion\HoneySelect2
 
@@ -47,7 +47,7 @@ Name: "custom";   Description: "{cm:customInstall}"; Flags: iscustom
 
 [Components]
 Name: "Patch";                    Description: "All free updates up to 2020-10-30 + game repair"                                  ; Types: full_en full extra_en extra custom bare none; Flags: fixed
-Name: "BepInEx"                 ; Description: "BepInEx v5.4 Plugin framework + MessageCenter v1.1.1 + ConfigurationManager v16.1"; Types: full_en full extra extra_en custom bare ; Flags: fixed
+Name: "BepInEx"                 ; Description: "BepInEx v5.4.2 Plugin framework + MessageCenter v1.1.1 + ConfigurationManager v16.1"; Types: full_en full extra extra_en custom bare ; Flags: fixed
 Name: "BepInEx\Dev"             ; Description: "{cm:CompDev}" 
 Name: "KKManager"               ; Description: "KKManager v0.14.4 (Manage and update mods)"                                       ; Types: full_en full extra extra_en custom bare ; Flags: fixed
 Name: "Modpack"                 ; Description: "Sideloader Modpacks {#CurrentDate} (Add additional content to the game, needs at least BepisPlugins to work)"
@@ -338,7 +338,7 @@ begin
       end;
       
       if not DxInstalled then begin
-        SuppressibleMsgBox('NOTICE - You are missing the optional "DX" expansion (2020-10-30 Paid DLC). It adds new new items, maps and animations.%n%nThis expansion is optional, the patch will work fine without it. If you want to use it, install it BEFORE running HF Patch.', mbInformation, MB_OK, 0);
+        SuppressibleMsgBox('NOTICE - You are missing the optional "DX" expansion (2020-10-30 Paid DLC). It adds new new items, maps and animations.' + #13#10 + #13#10 + 'This expansion is optional, the patch will work fine without it. If you want to use it, install it BEFORE running HF Patch.', mbInformation, MB_OK, 0);
       end;
     end;
   end;

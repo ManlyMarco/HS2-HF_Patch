@@ -76,23 +76,24 @@ Name: "Feature\StudioCharaSort";               Description: "Studio Character So
 Name: "Feature\HS2_StudioSceneLoadedSound";    Description: "Studio Scene Loaded Sound v1.1 (Make a sound when a studio scene finishes loading)"   ; Types: full_en full extra extra_en
 Name: "Feature\HS2_OrthographicCamera";        Description: "OrthographicCamera v1.1.1 (Can switch to an orthographic camera in studio and game)"  ; Types: full_en full extra extra_en
 Name: "Feature\Bra";                           Description: "PushUp plugin v2.0.0 (Bras affect breast shape)"                                      ; Types: extra extra_en
-Name: "Feature\Heelz";                         Description: "HS2Heelz v1.14.2 (Support for high heel shoes)"                                       ; Types: full_en full extra extra_en
+Name: "Feature\Heelz";                         Description: "HS2Heelz v1.14.3 (Support for high heel shoes)"                                       ; Types: full_en full extra extra_en
 Name: "Feature\HideAllUI";                     Description: "HideAllUI v2.2.0 (Press space to hide interface)"                                     ; Types: full_en full extra extra_en
 Name: "Feature\HS2_PovX";                      Description: "HS2 PoV X v1.1.1 (First-person mode in main game)"                                    ; Types: extra extra_en
 Name: "Feature\HS2_StudioPOV";                 Description: "HS2_StudioPOV v1.1.1 (First-person mode in studio)"                                   ; Types: extra extra_en
 Name: "Feature\VideoExport";                   Description: "VideoExport v1.2.1 (Video and image sequence recorder)"                               ; Types: extra extra_en
 Name: "Feature\HS2_RemoveToRecycleBin";        Description: "Remove Cards To Recycle Bin v1.1.1 (Move removed/overwritten cards to recycle bin)"   ; Types: full_en full extra extra_en
 Name: "Feature\HS2_ExtraGroups";               Description: "HS2_ExtraGroups v1.0.1 (Unlock max number of groups and girls per group)"             ; Types: full_en full extra extra_en
-Name: "Feature\HCharaSwitcher";                Description: "HCharaSwitcher v1.2.0 (Change characters during H scene)"                             ; Types: extra extra_en
+Name: "Feature\HCharaSwitcher";                Description: "HCharaSwitcher v1.2.1 (Change characters during H scene)"                             ; Types: extra extra_en
 Name: "Feature\MuteInBackground";              Description: "Mute In Background v1.1 (Mute the game when not focused)"                             ; Types: full_en full extra extra_en
 Name: "Feature\EnableResize";                  Description: "Enable Resize v1.5 (Allows resizing of game window)"                                  ; Types: extra extra_en
 Name: "Feature\StudioAccessoryNames";          Description: "HS2_StudioAccessoryNames v1.0.0 (Shows the acc names in studio)"                      ; Types: full_en full extra extra_en
 Name: "Feature\HS2TakeChargePlugin";           Description: "HS2TakeChargePlugin v1.3.0 (Adds female take charge mode)"                            ; Types: extra extra_en
+Name: "Feature\BepInEx_EnableFullScreenToggle"; Description: "Enable Full Screen Toggle v1.0 (Allows alt+enter toggle)"                             ; Types: full_en full extra extra_en
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Name: "MISC";                                  Description: "{cm:CompMISC}"                                                                        
 Name: "MISC\FPS";                              Description: "FPS Counter v3.1 (Useful for performance testing)"                                    ; Types: full_en full extra extra_en
 Name: "MISC\Trainer";                          Description: "Runtime Unity Editor v2.2.1.0 (Tool for making arbitrary modifications to the game)"  ; Types: full_en full extra extra_en
-Name: "MISC\Trainer\Cheats";                   Description: "Cheat Tools v2.8 (Trainer, press F12 to open)"                                        ; Types: full_en full extra extra_en
+Name: "MISC\Trainer\Cheats";                   Description: "Cheat Tools v2.8.1 (Trainer, press F12 to open)"                                      ; Types: full_en full extra extra_en
 Name: "MISC\ScriptLoader";                     Description: "C# Script Loader v1.2.1 (Runs custom user scripts)"                                   ; Types: full_en full extra extra_en
 Name: "MISC\FullSave";                         Description: "Full save (WARNING - OVERWRITES CURRENT SAVE)"                                        
 
@@ -179,6 +180,7 @@ Source: "Input\_Plugins\_out\BepInEx.EnableResize\*";       DestDir: "{app}"; Fl
 Source: "Input\_Plugins\_out\BepInEx.MuteInBackground\*";   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\MuteInBackground; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2TakeChargePlugin\*";        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2TakeChargePlugin; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2_StudioAccessoryNames\*";   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\StudioAccessoryNames; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\BepInEx.EnableFullScreenToggle\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\BepInEx_EnableFullScreenToggle; Excludes: "manifest.xml"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "Input\_Plugins\_out\FPSCounter\*";                 DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\FPS; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2_CheatTools\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\Trainer\Cheats; Excludes: "manifest.xml"

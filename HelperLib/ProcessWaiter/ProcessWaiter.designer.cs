@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -63,10 +64,5 @@ namespace KKManager.Util.ProcessWaiter
         #endregion
 
         private ProcessWaiterControl processWaiterControl1;
-
-        public static Task<bool?> CheckForProcessesBlockingDir(string fullDirectory)
-        {
-            return ProcessWaiter.CheckForRunningProcesses(new[] { fullDirectory }, new string[0]);
-        }
     }
 }

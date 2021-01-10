@@ -139,7 +139,7 @@ namespace HelperLib
         {
             try
             {
-                ProcessWaiter.CheckForProcessesBlockingDir(Path.GetFullPath(path)).ConfigureAwait(false).GetAwaiter().GetResult();
+                ProcessWaiter.CheckForRunningProcesses(new[] { Path.GetFullPath(path) }, new string[0]);
 
                 var batContents = $@"
 title Fixing permissions... 
@@ -163,7 +163,7 @@ icacls ""%target%"" /grant *S-1-1-0:(OI)(CI)F /T /C /L /Q
             }
             catch (Exception e)
             {
-                AppendLog(path, "Failed to fix permissions - " + e);
+                AppendLog(path, "Failed to fix permissions for path " + path + " - " + e);
             }
         }
 

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcessWaiterControl));
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonIgnore = new System.Windows.Forms.Button();
             this.buttonKillAll = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -39,7 +38,6 @@
             this.buttonKill = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2c = new System.Windows.Forms.Panel();
-            this.panel4c = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,14 +53,6 @@
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            // 
-            // buttonCancel
-            // 
-            resources.ApplyResources(this.buttonCancel, "buttonCancel");
-            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonIgnore
             // 
@@ -91,8 +81,6 @@
             this.panel1.Controls.Add(this.buttonKillAll);
             this.panel1.Controls.Add(this.panel2c);
             this.panel1.Controls.Add(this.buttonIgnore);
-            this.panel1.Controls.Add(this.panel4c);
-            this.panel1.Controls.Add(this.buttonCancel);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
@@ -112,11 +100,6 @@
             // 
             resources.ApplyResources(this.panel2c, "panel2c");
             this.panel2c.Name = "panel2c";
-            // 
-            // panel4c
-            // 
-            resources.ApplyResources(this.panel4c, "panel4c");
-            this.panel4c.Name = "panel4c";
             // 
             // ProcessWaiterControl
             // 
@@ -139,7 +122,6 @@
 
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonIgnore;
         private System.Windows.Forms.Button buttonKillAll;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -147,6 +129,5 @@
         private System.Windows.Forms.Button buttonKill;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2c;
-        private System.Windows.Forms.Panel panel4c;
     }
 }

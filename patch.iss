@@ -47,6 +47,7 @@ Name: "custom";   Description: "{cm:customInstall}"; Flags: iscustom
 
 [Components]
 Name: "Patch";                    Description: "All free updates up to 2020-10-30 + game repair"                                  ; Types: full_en full extra_en extra custom bare none; Flags: fixed
+Name: "Patch\VR";                 Description: "Install/Update VR Module"                                                         ; Types: extra_en extra
 Name: "BepInEx"                 ; Description: "BepInEx v5.4.5 Plugin framework + MessageCenter v1.1.1 + ConfigurationManager v16.1"; Types: full_en full extra extra_en custom bare ; Flags: fixed
 Name: "BepInEx\Dev"             ; Description: "{cm:CompDev}" 
 Name: "KKManager"               ; Description: "KKManager v0.16.0 (Manage and update mods)"                                       ; Types: full_en full extra extra_en custom bare ; Flags: fixed
@@ -66,10 +67,13 @@ Source: "Input\start.bat";                DestDir: "{tmp}\hfp"                  
 Source: "Input\DirectX\Jun2010\*";        DestDir: "{tmp}\hfp\DirectXRedist2010" ; Flags: ignoreversion recursesubdirs createallsubdirs deleteafterinstall; Check: DirectXRedistNeedsInstall
 Source: "Plugin Readme.md";               DestDir: "{app}"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Source: "Input\_Patch\empty_ud\*";        DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs solidbreak; Components: Patch
-Source: "Input\_Patch\empty_ud_eng\*";    DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch; Languages: en
-Source: "Input\_Patch\2020-08-14-all\*";  DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch
-Source: "Input\_Patch\2020-10-30-subdx\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Patch; Check: DxInstalled
+Source: "Input\_Patch\empty_ud\*";        DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs solidbreak; Components: Patch
+Source: "Input\_Patch\empty_ud_eng\*";    DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch; Languages: en
+Source: "Input\_Patch\2020-08-14-all\*";  DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch
+Source: "Input\_Patch\2020-10-30-subdx\*"; DestDir: "{app}";                     Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch; Check: DxInstalled
+; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Source: "Input\_Patch\vr_normal\*";       DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch\VR; Check: not DxInstalled
+Source: "Input\_Patch\vr_dx\*";           DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch\VR; Check: DxInstalled
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "E:\HFpatchmaking\HS\HSDX\mods\Sideloader Modpack\*"                         ; DestDir: "{app}\mods\Sideloader Modpack"                         ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\General
 Source: "E:\HFpatchmaking\HS\HSDX\mods\Sideloader Modpack - Exclusive HS2\*"         ; DestDir: "{app}\mods\Sideloader Modpack - Exclusive HS2"         ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\General

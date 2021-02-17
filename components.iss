@@ -1,16 +1,16 @@
 [Components]
 Name: "API";                                   Description: "APIs (Plugins required by other plugins and mods to function)"                        ; Types: full_en full extra extra_en custom bare
-Name: "API\BepisPlugins";                      Description: "BepisPlugins v16.2.0.2 (Essential plugins required by many other plugins to function)"; Types: full_en full extra extra_en custom bare; Flags: fixed
-Name: "API\HS2API";                            Description: "Modding API v1.15 (Modding API needed by many plugins)"                               ; Types: full_en full extra extra_en custom bare; Flags: fixed
-Name: "API\XUnityResourceRedirector";          Description: "XUnity Resource Redirector v1.1.3 (Modding API for overriding resources)"             ; Types: full_en full extra extra_en custom bare; Flags: fixed
+Name: "API\BepisPlugins";                      Description: "BepisPlugins v16.2.1 (Essential plugins required by many other plugins to function)"  ; Types: full_en full extra extra_en custom bare; Flags: fixed
+Name: "API\HS2API";                            Description: "Modding API v1.16 (Modding API needed by many plugins)"                               ; Types: full_en full extra extra_en custom bare; Flags: fixed
 Name: "API\BonesFramework";                    Description: "BonesFramework v1.4.1 (Lets mods add new bones)"                                      ; Types: full_en full extra extra_en custom bare; Flags: fixed
 Name: "API\DependencyLoader";                  Description: "HS2_DependencyLoader v1.1.2 (Needed by some map mods to load dependant asset bundles)"; Types: full_en full extra extra_en custom bare
 Name: "API\HS2HeadBundleRedirect";             Description: "HeadBundleRedirect v1.0 (Support for custom head tints)"                              ; Types: full_en full extra extra_en custom bare
 Name: "API\HS2_Hooah";                         Description: "HS2_Hooah v1.4.2 (Collection of randum stuff needed by some of hooah's mods)"         ; Types: full_en full extra extra_en custom bare
 Name: "API\GeBoCommon";                        Description: "GeBo Modding API v1.0.2 (Modding API necessary for plugins by GeBo)"                  ; Types: full_en full extra_en extra custom bare
+Name: "API\XUnityResourceRedirector";          Description: "XUnity Resource Redirector v1.1.3 (Modding API for overriding resources)"             ; Types: full_en full extra extra_en custom bare
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Name: "TL";                                    Description: "{cm:CompTL}"                                                                          ; Types: full_en extra_en
-Name: "TL\AutoTranslator";                     Description: "XUnity Auto Translator v4.13.0 (Translation loader)"                                  ; Types: full extra full_en extra_en custom
+Name: "TL\AutoTranslator";                     Description: "XUnity Auto Translator v4.14.0 (Translation loader)"                                  ; Types: full extra full_en extra_en custom
 Name: "TL\AutoTranslator\EnglishTranslation";  Description: "Fan Translations up to {#CurrentDate} + HS2_TextResourceRedirector v1.4.2.1"          ; Types: full_en extra_en
 Name: "TL\HS2_Subtitles";                      Description: "Subtitles v2.2 (Warning: Machine translated, bad quality)"                            ; Types: full_en extra_en
 Name: "TL\TranslationHelper";                  Description: "Translation Helper v1.0 (Extension for AT, needed for some translations)"             ; Types: full_en full extra extra_en
@@ -18,7 +18,7 @@ Name: "TL\TranslationHelper";                  Description: "Translation Helper 
 Name: "UNC";                                   Description: "{cm:CompUNC}"                                                                         ; Types: full_en full extra extra_en
 Name: "UNC\Selector";                          Description: "Uncensor Selector v3.11.1 (Support for user-selectable uncensors)"                    ; Types: full_en full extra extra_en
 Name: "UNC\Selector\HS2_BetterPenetration";    Description: "HS2_BetterPenetration v2.5.1.0 (Improves how penetration looks in H scenes)"          ; Types: full_en full extra extra_en
-Name: "UNC\Selector\BeaverHS2";                Description: "Beaver v1.2.2 (Allows changing some uncensor-specific settings in maker)"             ; Types: full_en full extra extra_en
+Name: "UNC\Selector\BeaverHS2";                Description: "Beaver v1.2.3 (Allows changing some uncensor-specific settings in maker)"             ; Types: full_en full extra extra_en
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Name: "Content";                               Description: "Additional content (Needed to properly load most character cards and scenes)"         ; Types: full_en full extra extra_en
 Name: "Content\HS2_MaterialEditor";            Description: "Material Editor v2.6 (Material editing in maker and studio)"                          ; Types: full_en full extra extra_en
@@ -34,9 +34,10 @@ Name: "Content\HS2_InvisibleBody";             Description: "Invisible Body v1.4
 Name: "Content\HS2_StudioSceneSettings";       Description: "StudioSceneSettings v1.3 (Add clip plane settings to studio scene effects)"           ; Types: full_en full extra extra_en
 Name: "Content\HS2_StudioImageEmbed";          Description: "StudioImageEmbed v1.0 (Save custom images into scenes so other people can load them)" ; Types: full_en full extra extra_en
 Name: "Content\HS2_StudioCustomMasking";       Description: "Studio Custom Masking v1.0 (Can make studio items disappear when blocking the camera view)"; Types: full_en full extra extra_en
+Name: "Content\MDGQ_BodyChange_v1_0_EDIT";     Description: "MdgqBodyChange v1.0 (Needed for some mods to work correctly)"                         ; Types: full_en full extra extra_en
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Name: "FIX";                                   Description: "{cm:CompFIX}"                                                                         ; Types: extra extra_en
-Name: "FIX\IllusionFixes";                     Description: "IllusionFixes v15.1 (A collection of essential fixes and improvements)"               ; Types: full_en full extra extra_en
+Name: "FIX\IllusionFixes";                     Description: "IllusionFixes v15.1.1 (A collection of essential fixes and improvements)"             ; Types: full_en full extra extra_en
 Name: "FIX\HS2_InputHotkeyBlock";              Description: "Input Hotkey Block v1.3 (Blocks plugin keybinds while typing)"                        ; Types: full_en full extra extra_en
 Name: "FIX\HS2_UnlockPlayerHeight";            Description: "HS2_UnlockPlayerHeight v1.4.3 (Allows non-default heights of male characters)"        ; Types: full_en full extra extra_en
 Name: "FIX\HS2_UnlockPlayerHClothes";          Description: "HS2_UnlockPlayerHClothes v1.4.3 (Fixes inability to change clothes in h scenes)"      ; Types: full_en full extra extra_en
@@ -56,7 +57,7 @@ Name: "Feature\Graphics\HS2Graphics";          Description: "HS2 Graphics v0.3.3
 Name: "Feature\Graphics\GraphicsSettings";     Description: "Graphics Settings v1.2.1 (More settings to make graphics more or less demanding)"     ; Types: full_en full extra extra_en
 Name: "Feature\Graphics\HS2_BetterAA";         Description: "Better Anti-Aliasing v1.6 (Improves anti-aliasing without any performance hit)"       ; Types: full_en full extra extra_en
 Name: "Feature\DragAndDrop";                   Description: "Drag and Drop v1.2.3 (Load cards and scenes by dragging them into game window)"       ; Types: full_en full extra extra_en
-Name: "Feature\HS2_BrowserFolders";            Description: "Maker/Studio Browser Folders v2.3 (Adds folder support to studio character and scene lists)"; Types: full_en full extra extra_en
+Name: "Feature\HS2_BrowserFolders";            Description: "Maker/Studio Browser Folders v2.4.1 (Adds folder support to studio character and scene lists)"; Types: full_en full extra extra_en
 Name: "Feature\HS2US";                         Description: "HS2US v1.9.0 (Tweaks and improvements to studio and maker interfaces)"                ; Types: full_en full extra extra_en
 Name: "Feature\HS2_HeightBar";                 Description: "HeightBarX v3.3 (Adds height measure bar to maker)"                                   ; Types: full_en full extra extra_en
 Name: "Feature\HS2_ColorPanelX";               Description: "HS2_ColorPanelX v1.4.1 (Improves color picker in maker)"                              ; Types: full_en full extra extra_en
@@ -68,7 +69,7 @@ Name: "Feature\HS2_QuickAccessBox";            Description: "HS2_QuickAccessBox 
 Name: "Feature\HS2_PoseFolders";               Description: "Pose Folders v1.0 (Folder support in studio pose list)"                               ; Types: full_en full extra extra_en
 Name: "Feature\HS2_PoseQuickLoad";             Description: "Pose Quick Load v1.0 (Immediately apply pose when selected in studio, turn on in F1 menu)"; Types: full_en full extra extra_en
 Name: "Feature\HS2_StudioObjectMoveHotkeys";   Description: "Studio Object Move Hotkeys v1.0 (Adds T/Y/U/I hotkeys for manipulating items in studio)"; Types: full_en full extra extra_en
-Name: "Feature\MoveControllerHS2";             Description: "Move Controller HS2 v1.5.1 (Improved object move window in studio)"                   ; Types: full_en full extra extra_en
+Name: "Feature\MoveControllerHS2";             Description: "Move Controller HS2 v1.5.2 (Improved object move window in studio)"                   ; Types: full_en full extra extra_en
 Name: "Feature\HS2_FKIK";                      Description: "FK and IK v1.1.1 (Adds FK/IK mode in studio)"                                         ; Types: full_en full extra extra_en
 Name: "Feature\HS2_CharacterExport";           Description: "Character Export v1.0 (Export characters from studio scenes)"                         ; Types: full_en full extra extra_en
 Name: "Feature\HS2_AnimationOverdrive";        Description: "Animation Overdrive v1.1 (Unlock animation speed in studio, type in the text box)"    ; Types: full_en full extra extra_en
@@ -78,7 +79,7 @@ Name: "Feature\HS2_OrthographicCamera";        Description: "OrthographicCamera 
 Name: "Feature\Bra";                           Description: "PushUp plugin v2.0.0 (Bras affect breast shape)"                                      ; Types: extra extra_en
 Name: "Feature\Heelz";                         Description: "HS2Heelz v1.14.3 (Support for high heel shoes)"                                       ; Types: full_en full extra extra_en
 Name: "Feature\HideAllUI";                     Description: "HideAllUI v2.2.0 (Press space to hide interface)"                                     ; Types: full_en full extra extra_en
-Name: "Feature\HS2_PovX";                      Description: "HS2 PoV X v1.1.1 (First-person mode in main game)"                                    ; Types: extra extra_en
+Name: "Feature\HS2_PovX";                      Description: "HS2 PoV X v1.1.1 (First-person mode in main game)"                                    ; Types: full_en full extra extra_en
 Name: "Feature\HS2_StudioPOV";                 Description: "HS2_StudioPOV v1.1.1 (First-person mode in studio)"                                   ; Types: extra extra_en
 Name: "Feature\VideoExport";                   Description: "VideoExport v1.2.1 (Video and image sequence recorder)"                               ; Types: extra extra_en
 Name: "Feature\HS2_RemoveToRecycleBin";        Description: "Remove Cards To Recycle Bin v1.1.1 (Move removed/overwritten cards to recycle bin)"   ; Types: full_en full extra extra_en
@@ -94,8 +95,9 @@ Name: "Feature\StudioCameraObjectTweaks";      Description: "Studio Camera Tweak
 Name: "Feature\RandomHPicker";                 Description: "HS2_RandomHPicker v1.0.0 (Adds random button for map and chara select)"               ; Types: full_en full extra extra_en
 Name: "Feature\EyeControl";                    Description: "Eye Control v1.0.1 (Allows you to set a max eye openness)"                            ; Types: full_en full extra extra_en
 Name: "Feature\Autosave";                      Description: "Autosave v1.0.1 (Autosave for maker and studio)"                                      ; Types: full_en full extra extra_en
-Name: "Feature\HS2WearCustom";                 Description: "Studio Wear Custom v0.1.5 (Plug-in for changing clothes and hair in studio, possible issues)"          
+Name: "Feature\HS2WearCustom";                 Description: "Studio Wear Custom v0.1.5 (Plug-in for changing clothes and hair in studio)"          
 Name: "Feature\Autostart";                     Description: "Autostart v1.0.0 (Skip game startup screens or directly start character maker)"       ; Types: full_en full extra extra_en
+Name: "Feature\PregnancyPlus";                 Description: "KK_PregnancyPlus v1.22 (Adds additional belly sliders in Studio and Maker)"           ; Types: full_en full extra extra_en
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Name: "MISC";                                  Description: "{cm:CompMISC}"                                                                        
 Name: "MISC\FPS";                              Description: "FPS Counter v3.1 (Useful for performance testing)"                                    ; Types: full_en full extra extra_en
@@ -107,12 +109,12 @@ Name: "MISC\FullSave";                         Description: "Full save (WARNING 
 [Files]
 Source: "Input\_Plugins\_out\HS2_BepisPlugins\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\BepisPlugins; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2API\*";                     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\HS2API; Excludes: "manifest.xml"
-Source: "Input\_Plugins\_out\XUnity.ResourceRedirector\*";  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\XUnityResourceRedirector; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2HeadBundleRedirect\*";      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\HS2HeadBundleRedirect; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2_DependencyLoader\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\DependencyLoader; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2_Hooah\*";                  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\HS2_Hooah; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\BonesFramework\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\BonesFramework; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2_GeBoCommon\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\GeBoCommon; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\XUnity.ResourceRedirector\*";  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\XUnityResourceRedirector; Excludes: "manifest.xml"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "Input\_TL\HS2_TextResourceRedirector\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\AutoTranslator\EnglishTranslation
 Source: "Input\_Plugins\_out\XUnity.AutoTranslator-BepIn-5x\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\AutoTranslator; Excludes: "manifest.xml"
@@ -136,6 +138,7 @@ Source: "Input\_Plugins\_out\HS2_StudioImageEmbed\*";       DestDir: "{app}"; Fl
 Source: "Input\_Plugins\_out\HS2_StudioSceneSettings\*";    DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\HS2_StudioSceneSettings; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\NodesConstraints\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\NodesConstraints; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\RendererEditor\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\RendererEditor; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\MDGQ_BodyChange_v1.0_EDIT\*";  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\MDGQ_BodyChange_v1_0_EDIT; Excludes: "manifest.xml"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "Input\_Plugins\_out\IllusionFixes_HoneySelect2\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\IllusionFixes; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2_BetterHScenes\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: FIX\HS2_BetterHScenes; Excludes: "manifest.xml"
@@ -195,6 +198,7 @@ Source: "Input\_Plugins\_out\HS2_StudioCameraObjectTweaks\*"; DestDir: "{app}"; 
 Source: "Input\_Plugins\_out\HS2_StudioExtraMoveAxis\*";    DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\StudioExtraMoveAxis; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\AI_Autostart\*";               DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\Autostart; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2WearCustom\*";              DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\HS2WearCustom; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\HS2_PregnancyPlus\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Feature\PregnancyPlus; Excludes: "manifest.xml"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "Input\_Plugins\_out\FPSCounter\*";                 DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\FPS; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2_CheatTools\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\Trainer\Cheats; Excludes: "manifest.xml"

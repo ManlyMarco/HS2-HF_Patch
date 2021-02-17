@@ -6,7 +6,7 @@
 ;--------------------------------------------Full game name for naming patch itself and desktop icons
 #define NAME "HoneySelect2"
 ;----------------------------------------------------------------------------Current HF Patch version
-#define VERSION "1.4"
+#define VERSION "1.5"
 ;----------------------------------------------------------------------------------------------------
 #include "_Common\Header.iss"
 
@@ -46,7 +46,7 @@ Name: "custom";   Description: "{cm:customInstall}"; Flags: iscustom
 #define CurrentDate GetDateTimeString('yyyy-mm-dd', '-', ':');
 
 [Components]
-Name: "Patch";                    Description: "All free updates up to 2020-10-30 + game repair"                                  ; Types: full_en full extra_en extra custom bare none; Flags: fixed
+Name: "Patch";                    Description: "All free updates up to 2021-02-14 + game repair"                                  ; Types: full_en full extra_en extra custom bare none; Flags: fixed
 Name: "Patch\VR";                 Description: "Install/Update VR Module"                                                         ; Types: extra_en extra
 Name: "BepInEx"                 ; Description: "BepInEx v5.4.5 Plugin framework + MessageCenter v1.1.1 + ConfigurationManager v16.1"; Types: full_en full extra extra_en custom bare ; Flags: fixed
 Name: "BepInEx\Dev"             ; Description: "{cm:CompDev}" 
@@ -59,7 +59,7 @@ Name: "Modpack\General"         ; Description: "General (Content for making char
 ;Name: "Modpack\Maps"            ; Description: "Maps (Additional maps for use in Studio and H scenes)"                          ; Types: full_en full extra_en extra
 Name: "Modpack\MaterialEditor"  ; Description: "KK_MaterialEditor (Materials for use with MaterialEditor)"                      ; Types: full_en full extra_en extra
 Name: "Modpack\UncensorSelector"; Description: "KK_UncensorSelector (Uncensors for use with UncensorSelector)"                  ; Types: full_en full extra_en extra
-Name: "Launcher"                ; Description: "IllusionLaunchers v3.0.0 (Multilangual launcher)"                               ; Types: full_en full extra extra_en custom
+Name: "Launcher"                ; Description: "IllusionLaunchers v3.0.1 (Multilangual launcher)"                               ; Types: full_en full extra extra_en custom
 
 [Files]
 Source: "HelperLib.dll";                  DestDir: "{app}"                       ; Flags: dontcopy
@@ -70,7 +70,7 @@ Source: "Plugin Readme.md";               DestDir: "{app}"
 Source: "Input\_Patch\empty_ud\*";        DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs solidbreak; Components: Patch
 Source: "Input\_Patch\empty_ud_eng\*";    DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch; Languages: en
 Source: "Input\_Patch\2020-08-14-all\*";  DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch
-Source: "Input\_Patch\2020-10-30-subdx\*"; DestDir: "{app}";                     Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch; Check: DxInstalled
+Source: "Input\_Patch\2021-02-14-subdx\*"; DestDir: "{app}";                     Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch; Check: DxInstalled
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "Input\_Patch\vr_normal\*";       DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch\VR; Check: not DxInstalled
 Source: "Input\_Patch\vr_dx\*";           DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch\VR; Check: DxInstalled

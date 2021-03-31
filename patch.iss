@@ -6,7 +6,7 @@
 ;--------------------------------------------Full game name for naming patch itself and desktop icons
 #define NAME "HoneySelect2"
 ;----------------------------------------------------------------------------Current HF Patch version
-#define VERSION "1.5"
+#define VERSION "1.6"
 ;----------------------------------------------------------------------------------------------------
 #include "_Common\Header.iss"
 
@@ -48,7 +48,7 @@ Name: "custom";   Description: "{cm:customInstall}"; Flags: iscustom
 [Components]
 Name: "Patch";                    Description: "All free updates up to 2021-02-14 + game repair"                                  ; Types: full_en full extra_en extra custom bare none; Flags: fixed
 Name: "Patch\VR";                 Description: "Install/Update VR Module"                                                         ; Types: extra_en extra
-Name: "BepInEx"                 ; Description: "BepInEx v5.4.5 Plugin framework + MessageCenter v1.1.1 + ConfigurationManager v16.1"; Types: full_en full extra extra_en custom bare ; Flags: fixed
+Name: "BepInEx"                 ; Description: "BepInEx v5.4.9 Plugin framework + MessageCenter v1.1.1 + ConfigurationManager v16.1"; Types: full_en full extra extra_en custom bare ; Flags: fixed
 Name: "BepInEx\Dev"             ; Description: "{cm:CompDev}" 
 Name: "KKManager"               ; Description: "KKManager v0.16.0 (Manage and update mods)"                                       ; Types: full_en full extra extra_en custom bare ; Flags: fixed
 Name: "Modpack"                 ; Description: "Sideloader Modpacks {#CurrentDate} (Add additional content to the game, needs at least BepisPlugins to work)"

@@ -1,4 +1,9 @@
-# AdvIKPlugin v1.3.0
+# Additional Accessory Controls v1.0.5
+- Short description: QoL improvements to accessory handling and outfits
+- Author(s):         OrangeSpork
+- More information:  https://github.com/OrangeSpork/AdditionalAccessoryControls
+
+# AdvIKPlugin v1.5.2
 - Short description: More realistic shoulder deforming
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/AdvIKPlugin
@@ -13,7 +18,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Autosave v1.0.1
+# Autosave v1.1
 - Short description: Autosave for maker and studio
 - Author(s):         DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -38,7 +43,7 @@
 - Author(s):         A basement dweller
 - More information:  https://www.patreon.com/posts/29809884
 
-# BonesFramework v1.4.1
+# BonesFramework v1.4.2
 - Short description: Lets mods add new bones
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
@@ -63,6 +68,11 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
+# Deformers v0.31
+- Short description: Allows deforming of accessories
+- Author(s):         Dainty
+- More information:  https://github.com/DaintyIL/Illusion_Deformers
+
 # Demosaic v1.1
 - Short description: Demosaic for Honey Select 2
 - Author(s):         DeathWeasel1337
@@ -77,6 +87,11 @@
 - Short description: Load cards and scenes by dragging them into game window
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/DragAndDrop
+
+# Dynamic Bone Editor v1.0.3
+- Short description: Edit properties of Dynamic Bones for accessories
+- Author(s):         DeathWeasel1337
+- More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
 # Enable Full Screen Toggle v1.0
 - Short description: Allows alt+enter toggle
@@ -108,7 +123,7 @@
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/FPSCounter
 
-# GeBo Modding API v1.0.2
+# GeBo Modding API v1.1.0
 - Short description: Modding API necessary for plugins by GeBo
 - Author(s):         GeBo
 - More information:  https://github.com/GeBo1/GeBoPlugins
@@ -148,10 +163,15 @@
 - Author(s):         https://github.com/ore-
 - More information:  https://github.com/ore-/Graphics
 
-# HS2 PoV X v1.1.1
+# HS2 PoV X v1.2.1
 - Short description: First-person mode in main game
 - Author(s):         https://github.com/FairBear
 - More information:  https://github.com/FairBear/HS2_PovX
+
+# HS2 Studio Better Penetration v1.0.1.0
+- Short description: BetterPenetration for studio
+- Author(s):         Animal42069
+- More information:  https://www.patreon.com/Animal42069
 
 # HS2 VR Custom Maps Fix v1.1.0
 - Short description: Allow using custom maps in HS2 VR
@@ -163,12 +183,12 @@
 - Author(s):         hooh-hooah
 - More information:  https://github.com/hooh-hooah/AnimationPairing
 
-# HS2_BetterHScenes v2.5.8
+# HS2_BetterHScenes v2.6.2
 - Short description: Fixes H performance bugs and adds extra features
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://www.patreon.com/2155X
 
-# HS2_BetterPenetration v2.5.1.0
+# HS2_BetterPenetration v3.0.2.0
 - Short description: Improves how penetration looks in H scenes
 - Author(s):         https://www.patreon.com/Animal42069
 - More information:  https://www.patreon.com/Animal42069/posts?filters%5Btag%5D=BetterPenetration
@@ -273,7 +293,7 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# IllusionFixes v15.1.1
+# IllusionFixes v15.2
 - Short description: A collection of essential fixes and improvements
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionFixes
@@ -288,7 +308,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# KK_PregnancyPlus v1.22
+# KK_PregnancyPlus v2.0
 - Short description: Adds additional belly sliders in Studio and Maker
 - Author(s):         thojmr
 - More information:  https://github.com/thojmr/KK_PregnancyPlus/releases
@@ -308,7 +328,12 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Material Editor v2.6
+# Map Controller plugin v0.4
+- Short description: A plugin to selectively move/rotate/scale and hide specific elements
+- Author(s):         Mikke
+- More information:  ???
+
+# Material Editor v3.0.4
 - Short description: Material editing in maker and studio
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -318,7 +343,7 @@
 - Author(s):         ???
 - More information:  ???
 
-# Modding API v1.16
+# Modding API v1.17
 - Short description: Modding API needed by many plugins
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/IllusionMods/IllusionModdingAPI
@@ -348,7 +373,7 @@
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/KoikatuGameplayMods
 
-# Overlay Mods v5.2.1
+# Overlay Mods v6.0.1
 - Short description: Set custom body, clothes and eye textures
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/Illusion-Overlay-Mods
@@ -403,6 +428,11 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
+# Studio MultiSelect Chara v1.0.0
+- Short description: Shift+tab to select all instances of same chara
+- Author(s):         GeBo
+- More information:  https://gebo1.github.io/GeBoPlugins/src/StudioMultiselectChara/
+
 # Studio Object Move Hotkeys v1.0
 - Short description: Adds T/Y/U/I hotkeys for manipulating items in studio
 - Author(s):         https://github.com/DeathWeasel1337
@@ -412,6 +442,11 @@
 - Short description: Make a sound when a studio scene finishes loading
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
+
+# Studio Scene Navigation v1.0.0
+- Short description: Hotkeys to load the next/previous scene from scenes folder
+- Author(s):         GeBo
+- More information:  https://gebo1.github.io/GeBoPlugins/src/StudioSceneNavigation/
 
 # Studio Wear Custom v0.1.5
 - Short description: Plug-in for changing clothes and hair in studio
@@ -423,7 +458,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# StudioSceneSettings v1.3
+# StudioSceneSettings v1.3.1
 - Short description: Add clip plane settings to studio scene effects
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -433,7 +468,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Translation Helper v1.0
+# Translation Helper v1.1.0
 - Short description: Extension for AT, needed for some translations
 - Author(s):         GeBo
 - More information:  https://github.com/GeBo1/GeBoPlugins
@@ -447,6 +482,11 @@
 - Short description: Video and image sequence recorder
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
+
+# Who Is There? v1.0.1
+- Short description: Let’s you see who's in “surprise” events
+- Author(s):         GeBo
+- More information:  https://gebo1.github.io/GeBoPlugins/src/GameWh
 
 # XUnity Auto Translator v4.14.0
 - Short description: Translation loader

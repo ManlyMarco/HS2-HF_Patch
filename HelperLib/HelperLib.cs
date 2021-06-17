@@ -19,6 +19,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using KKManager.Util.ProcessWaiter;
+using Microsoft.Win32;
 using RGiesecke.DllExport;
 
 namespace HelperLib
@@ -37,6 +38,88 @@ namespace HelperLib
             {
                 Console.WriteLine(e);
             }
+        }
+
+        private static readonly string GoodSettings =
+            @"<?xml version=""1.0"" encoding=""utf-16""?>
+<Setting>
+  <Size>1280 x 720 (16 : 9)</Size>
+  <Width>1280</Width>
+  <Height>720</Height>
+  <Quality>2</Quality>
+  <FullScreen>false</FullScreen>
+  <Display>0</Display>
+  <Language>0</Language>
+</Setting>";
+
+        [DllExport("FindInstallLocation", CallingConvention = CallingConvention.StdCall)]
+        [return: MarshalAs(UnmanagedType.LPWStr)]
+        public static void FindInstallLocation([MarshalAs(UnmanagedType.LPWStr)] string path, [MarshalAs(UnmanagedType.LPWStr)] string gameName, [MarshalAs(UnmanagedType.LPWStr)] string gameNameSteam, [MarshalAs(UnmanagedType.BStr)] out string strout)
+        {
+            try
+            {
+                var subKey = Registry.CurrentUser.OpenSubKey($@"Software\illusion\{gameName}\{gameName}");
+                if (subKey != null)
+                {
+                    var regDir = subKey.GetValue("INSTALLDIR_HFP")?.ToString();
+                    if (Directory.Exists(regDir))
+                    {
+                        strout = regDir;
+                        return;
+                    }
+                    regDir = subKey.GetValue("INSTALLDIR")?.ToString();
+                    if (Directory.Exists(regDir))
+                    {
+                        strout = regDir;
+                        return;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                AppendLog(path, e);
+            }
+
+            try
+            {
+                var steamAppsLocations = new Steam().SteamAppsLocations;
+                var selectMany = steamAppsLocations.Select(x => Path.Combine(x, "common")).SelectMany(Directory.GetDirectories);
+                var steamLoc = selectMany.FirstOrDefault(x => Path.GetFileName(x).Equals(gameNameSteam, StringComparison.InvariantCultureIgnoreCase));
+                if (Directory.Exists(steamLoc))
+                {
+                    strout = steamLoc;
+                    return;
+                }
+            }
+            catch (Exception e)
+            {
+                AppendLog(path, e);
+            }
+
+            try
+            {
+                var bruteForcePath = new[]
+                    {
+                        new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)),
+                        new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86)),
+                    }
+                    .Concat(DriveInfo.GetDrives().AttemptMany(x => x.RootDirectory.GetDirectories()))
+                    .AttemptMany(x => x.GetDirectories())
+                    .Where(y => y.Name.Contains(gameNameSteam) || y.Name.Contains(gameName))
+                    .AttemptMany(x => x.GetFiles())
+                    .FirstOrDefault(y => y.Name.Contains(gameNameSteam) || y.Name.Contains(gameName));
+                if (Directory.Exists(bruteForcePath?.FullName))
+                {
+                    strout = bruteForcePath.DirectoryName;
+                    return;
+                }
+            }
+            catch (Exception e)
+            {
+                AppendLog(path, e);
+            }
+
+            strout = "C:\\Path to the installed game";
         }
 
         [DllExport("SetConfigDefaults", CallingConvention = CallingConvention.StdCall)]
@@ -61,6 +144,7 @@ namespace HelperLib
                 //var result = string.Join("; ", filteredVersionList);
 
                 var result = "HF Patch v" + version;
+
                 // Prevent crash when overwriting hidden file
                 if (File.Exists(verPath)) File.SetAttributes(verPath, FileAttributes.Normal);
                 File.WriteAllText(verPath, result);
@@ -102,26 +186,11 @@ namespace HelperLib
                 try
                 {
                     File.Delete(ud);
-                    if (!(e is FileNotFoundException))
-                        AppendLog(path, @"Removed corrupted " + ud + "; Cause:" + e.Message);
-                }
-                catch { }
-            }
-
-            var sysDir = Path.Combine(path, @"UserData\config\system.xml");
-            try
-            {
-                using (var reader = File.OpenRead(sysDir))
-                    XDocument.Load(reader);
-            }
-            catch (Exception e)
-            {
-                try
-                {
-                    File.Delete(sysDir);
+                    File.WriteAllText(ud, GoodSettings, Encoding.Unicode);
 
                     if (!(e is FileNotFoundException))
-                        AppendLog(path, @"Reset corrupted " + sysDir + Environment.NewLine + e + Environment.NewLine);
+                        AppendLog(path, @"Fixed corrupted " + ud + "; Cause:" + e.Message);
+
                 }
                 catch { }
             }
@@ -137,11 +206,9 @@ namespace HelperLib
         [DllExport("FixPermissions", CallingConvention = CallingConvention.StdCall)]
         public static void FixPermissions([MarshalAs(UnmanagedType.LPWStr)] string path)
         {
-            try
-            {
-                ProcessWaiter.CheckForRunningProcesses(new[] { Path.GetFullPath(path) }, new string[0]);
+            ProcessWaiter.CheckForProcessesBlockingDir(Path.GetFullPath(path)).ConfigureAwait(false).GetAwaiter().GetResult();
 
-                var batContents = $@"
+            var batContents = $@"
 title Fixing permissions... 
 rem Get the localized version of Y/N to pass to takeown to make this work in different locales
 for /f ""tokens=1,2 delims=[,]"" %%a in ('""choice <nul 2>nul""') do set ""yes=%%a"" & set ""no=%%b""
@@ -156,15 +223,10 @@ echo.
 echo Fixing access rights ...
 icacls ""%target%"" /grant *S-1-1-0:(OI)(CI)F /T /C /L /Q
 ";
-                var batPath = Path.Combine(Path.GetTempPath(), "hfpatch_fixperms.bat");
-                File.WriteAllText(batPath, batContents);
+            var batPath = Path.Combine(Path.GetTempPath(), "hfpatch_fixperms.bat");
+            File.WriteAllText(batPath, batContents);
 
-                Process.Start(new ProcessStartInfo("cmd", $"/C \"{batPath}\"") { WindowStyle = ProcessWindowStyle.Hidden, CreateNoWindow = true });
-            }
-            catch (Exception e)
-            {
-                AppendLog(path, "Failed to fix permissions for path " + path + " - " + e);
-            }
+            Process.Start(new ProcessStartInfo("cmd", $"/C \"{batPath}\"") { WindowStyle = ProcessWindowStyle.Hidden, CreateNoWindow = true });
         }
 
         [DllExport("CreateBackup", CallingConvention = CallingConvention.StdCall)]
@@ -226,7 +288,7 @@ icacls ""%target%"" /grant *S-1-1-0:(OI)(CI)F /T /C /L /Q
 
                 var acceptableDirs = new[]{
                     "Sideloader Modpack",
-                    "Sideloader Modpack - Bleeding Edge",
+                    //"Sideloader Modpack - Bleeding Edge",
                     "Sideloader Modpack - Exclusive AIS",
                     "Sideloader Modpack - Exclusive HS2",
                     "Sideloader Modpack - Maps",
@@ -258,6 +320,40 @@ icacls ""%target%"" /grant *S-1-1-0:(OI)(CI)F /T /C /L /Q
             }
         }
 
+        [DllExport("StartAutoUpdate", CallingConvention = CallingConvention.StdCall)]
+        public static void StartAutoUpdate([MarshalAs(UnmanagedType.LPWStr)] string path, [MarshalAs(UnmanagedType.LPWStr)] string installer, bool sm, bool smcp, bool smf, bool smme, bool smus, bool smmap, bool smstu)
+        {
+            var args = new StringBuilder();
+
+            var fullPath = Path.GetFullPath(path).TrimEnd('\\', '/');
+            args.Append($"\"{fullPath}\"");
+
+            // Use bin files if available. If none are present updater will fall back to its default sources
+            foreach (var file in Directory.GetFiles(installer, "Koikatsu HF Patch v*.bin"))
+                args.Append($" \"{Path.GetFullPath(file)}\"");
+
+            args.Append(" -guid:\"patch_common\"");
+            args.Append(" -guid:\"patch_common_extras\"");
+            args.Append(" -guid:\"patch_kk\"");
+            args.Append(" -guid:\"patch_kkp\"");
+            args.Append(" -guid:\"patch_kkp_special\"");
+            args.Append(" -guid:\"patch_as\"");
+            args.Append(" -guid:\"patch_dkn\"");
+
+            if (sm) args.Append(" -guid:\"Sideloader Modpack\"");
+            if (smcp) args.Append(" -guid:\"Sideloader Modpack - Compatibility Pack\"");
+            if (smf) args.Append(" -guid:\"Sideloader Modpack - Fixes\"");
+            if (smme) args.Append(" -guid:\"Sideloader Modpack - KK_MaterialEditor\"");
+            if (smus) args.Append(" -guid:\"Sideloader Modpack - KK_UncensorSelector\"");
+            if (smmap) args.Append(" -guid:\"Sideloader Modpack - Maps\"");
+            if (smstu) args.Append(" -guid:\"Sideloader Modpack - Studio\"");
+
+            var psi = new ProcessStartInfo(Path.Combine(fullPath, @"[UTILITY] KKManager\StandaloneUpdater.exe"), args.ToString());
+            psi.UseShellExecute = false;
+
+            var p = Process.Start(psi);
+            p.WaitForExit();
+        }
 
         [DllExport("RemoveJapaneseCards", CallingConvention = CallingConvention.StdCall)]
         public static void RemoveJapaneseCards([MarshalAs(UnmanagedType.LPWStr)] string path)
@@ -366,14 +462,15 @@ icacls ""%target%"" /grant *S-1-1-0:(OI)(CI)F /T /C /L /Q
                 foreach (var modGroup in mods.GroupBy(x => x.Guid))
                 {
                     var orderedMods = modGroup.All(x => !string.IsNullOrWhiteSpace(x.Version))
-                        ? modGroup.OrderByDescending(x => x.Path.ToLower().Contains("sideloader modpack")).ThenByDescending(x => x.Version, new VersionComparer())
-                        : modGroup.OrderByDescending(x => x.Path.ToLower().Contains("sideloader modpack")).ThenByDescending(x => File.GetLastWriteTime(x.Path));
+                        ? modGroup.OrderByDescending(x => x.Path.ToLower().Contains("mods\\sideloader modpack")).ThenByDescending(x => x.Version, new VersionComparer())
+                        : modGroup.OrderByDescending(x => x.Path.ToLower().Contains("mods\\sideloader modpack")).ThenByDescending(x => File.GetLastWriteTime(x.Path));
 
                     // Prefer .zipmod extension and then longer paths (so the mod has either longer name or is arranged in a subdirectory)
                     orderedMods = orderedMods.ThenByDescending(x => FileHasZipmodExtension(x.Path))
                         .ThenByDescending(x => x.Path.Length);
 
-                    foreach (var oldMod in orderedMods.Skip(1).Where(x => !x.Path.ToLower().Contains("sideloader modpack"))) SafeFileDelete(oldMod.Path);
+                    foreach (var oldMod in orderedMods.Skip(1))
+                        SafeFileDelete(oldMod.Path);
                 }
             }
             catch (Exception ex)

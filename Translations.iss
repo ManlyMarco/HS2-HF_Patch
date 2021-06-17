@@ -13,16 +13,13 @@ MsgMissingGameFiles=ERROR - Critical game files are missing, make sure this is t
 MsgExtractedZipmod=WARNING - Most likely a sideloader mod was extracted inside the game directory. Some game files might now be corrupted.%n%nRepair will be attempted, but if you still have problems you will have to reinstall the game.
 MsgEmotionCreatorsDetected=ERROR - EmotionCreators files have been detected! If you installed EmotionCreators to the same folder as Koikatsu, you have broken Koikatsu game files. To fix this you will need to reinstall both games to separate directories!
 
-
-MsgDeepPath=Your game is in a very deeply nested folder, which can cause serious issues or even prevent the game from starting.%n%nPlease move your game folder to a simpler path like for example "C:\Games\Koikatsu" and try to run this patch again.
-
 RunGame=&Run HoneySelect2
-RunWiki=Open AI-Shoujo/HoneySelect2 wiki (FAQ, English manual)
+RunWiki=Open HoneySelect2 wiki (FAQ, English manual)
 RunDiscord=Join Illusion Soft Discord server (Help, updates, sharing)
 RunHF=Open HongFire release thread
 StartUpdate=Start mod updater (Download latest new mods and mod updates)
 
-IconGame=HoneySelect2 launcher
+IconGame=HoneySelect2
 
 TaskIcon=Create a game &desktop icon
 TaskDelete=Clean up old mods (Helps fix and avoid issues. Your old plugins will be backed up to a .zip inside game root.)
@@ -56,10 +53,8 @@ jp.MsgMissingGameFiles=エラー - 重要なゲームファイルがありませ
 jp.MsgExtractedZipmod=警告 - Sideloader modがゲームディレクトリ内に抽出されたようです。 一部のゲームファイルが破損している可能性があります。%n%n修復を試みますが、それでも問題が解決しない場合は、ゲームを再インストールする必要があります。
 jp.MsgEmotionCreatorsDetected=エラー - 「エモーション・クリエイター」を「コイカツ」と同じフォルダにインストールした場合は、「コイカツ」ゲームファイルが壊れています。修正するには、両方のゲームを別々のディレクトリに再インストールする必要があります。
 
-jp.MsgDeepPath=あなたのゲームは非常に深いディレクトリにあります。これは深刻な問題を引き起こし、ゲームの開始を妨げることさえあります。%n%nゲームフォルダを、たとえば「C:\Games\Koikatu」のような単純なパスに移動して、このパッチをもう一度実行してみてください。
-
 jp.RunGame=ゲームを始める
-jp.RunWiki=オープン英語AI-Shoujo/HoneySelect2のwiki（FAQ、マニュアル）
+jp.RunWiki=オープン英語HoneySelect2のwiki（FAQ、マニュアル）
 jp.RunDiscord=英語のDiscordチャンネルに参加する（ヘルプ、アップデート、カード、モッズの共有）
 jp.RunHF=HongFireディスカッションスレッドを開く（英語）
 jp.StartUpdate=MODアップデーターを開始します（最新の新しいMODとMODアップデートをダウンロードします）
@@ -82,3 +77,16 @@ jp.CompDefCards=デフォルトのカード、シーン、背景
 jp.CompUNC=無修正化
 jp.CompFIX=重要な修正
 jp.CompMISC=他の
+
+
+MsgPathTooLong=Your game is in a very deeply nested folder, which can cause serious issues or even prevent the game from starting.%n%nPlease move your game folder to a simpler path like for example "C:\Games\HS2" and try to run this patch again.
+jp.MsgPathTooLong=ゲームは非常に深くネストされたフォルダーにあります。これにより、深刻な問題が発生したり、ゲームが開始できなくなったりする可能性があります。%n%nゲームフォルダを、たとえば「C：\Games\HS2」のような単純なパスに移動して、このパッチをもう一度実行してみてください。
+
+MsgSteamUpdatesMissing=Your game is missing official updates from Steam. Please go to your Steam Library and update HoneySelect2 before installing this patch.
+sc.MsgSteamUpdatesMissing=您的游戏缺少Steam的官方更新。 在安装此补丁之前，请转到您的Steam库并更新HoneySelect2。
+
+MsgPatchInsideGameDirErr=This patch is inside of the game directory you are attempting to install to. You have to move the patch files outside of the game directory and try again. You can keep the patch files in your downloads folder.
+jp.MsgPatchInsideGameDirErr=このパッチは、インストール先のゲームディレクトリ内にあります。パッチファイルをゲームディレクトリの外に移動して、再試行する必要があります。パッチファイルはダウンロードフォルダー内に残すことができます。
+
+MsgDifferentGameDetected=It looks like a different game is installed to the selected directory. This is very likely to break one or both of the games, and to break the patch.%n%nMake sure you selected the correct directory. If you installed 2 games to the same directory you will have to reinstall them both to separate directories to fix this.
+jp.MsgDifferentGameDetected=選択したディレクトリに別のゲームがインストールされているようです。これにより、一方または両方のゲームが破損し、パッチが破損する可能性があります。%n%n正しいディレクトリを選択していることを確認してください。同じディレクトリに2つのゲームをインストールした場合は、両方を別のディレクトリに再インストールして、これを修正する必要があります。

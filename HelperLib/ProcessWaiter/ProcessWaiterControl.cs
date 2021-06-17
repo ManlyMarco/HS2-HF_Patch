@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timer = System.Timers.Timer;
 
@@ -18,11 +19,11 @@ namespace KKManager.Util.ProcessWaiter
         private readonly Timer _timer = new Timer(600);
         private static readonly string DefaultImageKey = "Default";
 
-        public void Initialize(int[] processIDs, bool processChildren)
+        public async Task Initialize(int[] processIDs, bool processChildren)
         {
             treeView1.ShowRootLines = processChildren;
 
-            SetNodes(processIDs, processChildren);
+            await SetNodes(processIDs, processChildren);
         }
 
         public bool ProcessesStillRunning => treeView1.Nodes.Count > 0;
@@ -79,14 +80,14 @@ namespace KKManager.Util.ProcessWaiter
             return results;
         }
 
-        private void SetNodes(int[] processIDs, bool processChildren)
+        private async Task SetNodes(int[] processIDs, bool processChildren)
         {
             var il = new ImageList();
             il.Images.Add(DefaultImageKey, SystemIcons.Application);
             treeView1.ImageKey = DefaultImageKey;
 
             //(ParentForm ?? Parent).Enabled = false;
-            var results = AddProcesses(processIDs, processChildren, il);
+            var results = await AddProcesses(processIDs, processChildren, il);
             
             treeView1.Nodes.Clear();
             var prev = treeView1.ImageList;
@@ -98,9 +99,10 @@ namespace KKManager.Util.ProcessWaiter
             //(ParentForm ?? Parent).Enabled = true;
         }
 
-        private List<TreeNode> AddProcesses(int[] processIDs, bool processChildren, ImageList il)
+        private async Task<List<TreeNode>> AddProcesses(int[] processIDs, bool processChildren, ImageList il)
         {
-            var processes = FindProcesses(processIDs);
+            List<Tuple<Process, Icon>> processes = null;
+            await Task.Run(() => processes = FindProcesses(processIDs));
 
             var results = new List<TreeNode>();
             if (processes == null) return results;
@@ -125,7 +127,7 @@ namespace KKManager.Util.ProcessWaiter
                     {
                         var children = ProcessTools.GetChildProcesses(process.Item1.Id);
 
-                        var childProcesses = AddProcesses(children.ToArray(), processChildren, il);
+                        var childProcesses = await AddProcesses(children.ToArray(), processChildren, il);
                         node.Nodes.AddRange(childProcesses.ToArray());
                     }
                     catch (Exception ex)
@@ -142,13 +144,16 @@ namespace KKManager.Util.ProcessWaiter
         {
             get
             {
-                return buttonIgnore.Enabled;
+                return buttonCancel.Enabled;
             }
             set
             {
                 buttonIgnore.Enabled = value;
                 buttonIgnore.Visible = value;
+                buttonCancel.Enabled = value;
+                buttonCancel.Visible = value;
                 panel2c.Visible = value;
+                panel4c.Visible = value;
             }
         }
 

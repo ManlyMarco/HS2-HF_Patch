@@ -44,12 +44,12 @@ namespace KKManager.Util.ProcessWaiter
         /// <param name="processIDs">IDs of processes to check</param>
         /// <param name="processChildren">Check child processes as well</param>
         /// <returns></returns>
-        public static bool ShowDialog(Form owner, int[] processIDs, bool processChildren)
+        public static async Task<bool> ShowDialog(Form owner, int[] processIDs, bool processChildren)
         {
             using (var pw = new ProcessWaiter())
             {
                 pw.Icon = owner.Icon;
-                pw.processWaiterControl1.Initialize(processIDs, processChildren);
+                await pw.processWaiterControl1.Initialize(processIDs, processChildren);
                 return pw.ShowDialog(owner) == DialogResult.OK;
             }
         }
@@ -57,7 +57,7 @@ namespace KKManager.Util.ProcessWaiter
         /// <summary>
         /// true if user accepted, false if user cancelled, null if no applications were found so dialog was not shown.
         /// </summary>
-        public static bool? CheckForRunningProcesses(string[] filters, string[] processNameExcludeRegexes, Form parentForm = null)
+        public static async Task<bool?> CheckForRunningProcesses(string[] filters, string[] processNameExcludeRegexes, Form parentForm = null)
         {
             if (!IsAdministrator)
             {
@@ -65,11 +65,12 @@ namespace KKManager.Util.ProcessWaiter
                 return null;
             }
 
-            var idsToCheck = GetRelatedProcessIds(filters, processNameExcludeRegexes);
+            int[] idsToCheck = { };
+            await Task.Run(() => idsToCheck = GetRelatedProcessIds(filters, processNameExcludeRegexes));
 
             if (idsToCheck.Length == 0) return null;
 
-            return ShowDialog(parentForm ?? ActiveForm, idsToCheck.ToArray(), false);
+            return await ShowDialog(parentForm ?? ActiveForm, idsToCheck.ToArray(), false);
         }
 
         private static bool IsAdministrator

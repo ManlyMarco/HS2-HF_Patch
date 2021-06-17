@@ -1,4 +1,13 @@
 [Components]
+Name: "BepInEx";                               Description: "BepInEx v5.4.11.0 (Plugin framework)"                                                 ; Types: full_en full extra_en extra custom bare; Flags: fixed
+Name: "BepInEx\ConfigurationManager";          Description: "Configuration Manager v16.1 (Can change plugin settings. Press F1 to open, not visible inside HMD)"; Types: full_en full extra extra_en custom bare; Flags: fixed
+Name: "BepInEx\MessageCenter";                 Description: "Message Center v1.1.1 (Allows plugins to show messages in top left corner of the game)"; Types: full_en full extra extra_en custom bare; Flags: fixed
+Name: "BepInEx\BepInEx_CatchUnityEventExceptions"; Description: "Catch Unity Event Exceptions v1.0 (Prevents some bugs in plugins from affecting other plugins)"; Types: full_en full extra extra_en
+Name: "BepInEx\Dev";                           Description: "{cm:CompDev}"                                                                         
+; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Name: "IllusionLaunchers";                     Description: "IllusionLaunchers v3.1.1.0 (Custom game launcher)"                                    ; Types: full_en full extra extra_en custom
+Name: "KKManager";                             Description: "KKManager v0.17.0.0 (Manage and update mods, browse cards)"                           ; Types: full_en full extra extra_en custom bare; Flags: fixed
+; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Name: "API";                                   Description: "APIs (Plugins required by other plugins and mods to function)"                        ; Types: full_en full extra extra_en custom bare
 Name: "API\BepisPlugins";                      Description: "BepisPlugins v16.2.1 (Essential plugins required by many other plugins to function)"  ; Types: full_en full extra extra_en custom bare; Flags: fixed
 Name: "API\HS2API";                            Description: "Modding API v1.17 (Modding API needed by many plugins)"                               ; Types: full_en full extra extra_en custom bare; Flags: fixed
@@ -9,15 +18,17 @@ Name: "API\HS2_Hooah";                         Description: "HS2_Hooah v1.4.2 (C
 Name: "API\GeBoCommon";                        Description: "GeBo Modding API v1.1.0 (Modding API necessary for plugins by GeBo)"                  ; Types: full_en full extra_en extra custom bare
 Name: "API\XUnityResourceRedirector";          Description: "XUnity Resource Redirector v1.1.3 (Modding API for overriding resources)"             ; Types: full_en full extra extra_en custom bare
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Name: "TL";                                    Description: "{cm:CompTL}"                                                                          ; Types: full_en extra_en
-Name: "TL\AutoTranslator";                     Description: "XUnity Auto Translator v4.14.0 (Translation loader)"                                  ; Types: full extra full_en extra_en custom
-Name: "TL\AutoTranslator\EnglishTranslation";  Description: "Fan Translations up to {#CurrentDate} + HS2_TextResourceRedirector v1.4.2.1"          ; Types: full_en extra_en
-Name: "TL\HS2_Subtitles";                      Description: "Subtitles v2.2 (Warning: Machine translated, bad quality)"                            ; Types: full_en extra_en
-Name: "TL\TranslationHelper";                  Description: "Translation Helper v1.1.0 (Extension for AT, needed for some translations)"           ; Types: full_en full extra extra_en
+Name: "AT";                                    Description: "XUnity Auto Translator v1.0.2.1 (Translation loader)"                                 ; Types: full extra full_en extra_en custom
+Name: "AT\TextResourceRedirector";             Description: "Text Resource Redirector v1.4.4 (Needed for many translations to load)"               ; Types: full_en full extra extra_en
+Name: "AT\TranslationHelper";                  Description: "Translation Helper v1.1.0.1 (Extension for AT, needed for some translations)"         ; Types: full_en full extra extra_en
+Name: "AT\TranslationCacheCleaner";            Description: "Translation Cache Cleaner v0.6.0 (Hotkey to clean stale translations from cache)"     ; Types: full_en full extra extra_en
+Name: "AT\TL";                                    Description: "{cm:CompTL}"                                                                          ; Types: full_en extra_en
+Name: "AT\TL\EnglishTranslation";  Description: "Collection of English translations up to {#CurrentDate}"                                                ; Types: full_en extra_en
+Name: "AT\TL\Subtitles";                          Description: "Subtitles v2.2 (Warning: Machine translated, bad quality)"                            ; Types: full_en extra_en
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Name: "UNC";                                   Description: "{cm:CompUNC}"                                                                         ; Types: full_en full extra extra_en
+Name: "UNC";                                   Description: "{cm:CompUNC}"                                                                         ; Types: full_en full extra_en extra
 Name: "UNC\Selector";                          Description: "Uncensor Selector v3.11.1 (Support for user-selectable uncensors)"                    ; Types: full_en full extra extra_en
-Name: "UNC\Selector\HS2_BetterPenetration";    Description: "HS2_BetterPenetration v3.0.2.0 (Improves how penetration looks in H scenes)"          ; Types: full_en full extra extra_en
+Name: "UNC\Selector\BetterPenetration";        Description: "BetterPenetration v3.0.2.0 (Improves how penetration looks in H scenes)"              ; Types: full_en full extra extra_en
 Name: "UNC\Selector\HS2_BetterPenetration\Studio_BetterPenetration"; Description: "HS2 Studio Better Penetration v1.0.1.0 (BetterPenetration for studio)"                ; Types: full_en full extra extra_en
 Name: "UNC\Selector\BeaverHS2";                Description: "Beaver v1.2.3 (Allows changing some uncensor-specific settings in maker)"             ; Types: full_en full extra extra_en
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -115,6 +126,15 @@ Name: "MISC\ScriptLoader";                     Description: "C# Script Loader v1
 Name: "MISC\FullSave";                         Description: "Full save (WARNING - OVERWRITES CURRENT SAVE)"                                        
 
 [Files]
+#ifndef DEBUG
+Source: "Input\_Plugins\_out\BepInEx_x64\*";                DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: BepInEx; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\BepInEx.ConfigurationManager\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: BepInEx\ConfigurationManager; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\BepInEx.MessageCenter\*";      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: BepInEx\MessageCenter; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\IllusionLaunchers_HoneySelect 2\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: IllusionLaunchers; Excludes: "manifest.xml"; 
+;Check: not IsSteam and not IsConvertedSteam
+;Source: "Input\_Plugins\_out\IllusionLaunchers_HoneySelect 2 Steam\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: IllusionLaunchers; Excludes: "manifest.xml"; Check: IsSteam or IsConvertedSteam
+Source: "Input\_Plugins\_out\KKManager\*";                  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: KKManager; Excludes: "manifest.xml"
+; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "Input\_Plugins\_out\HS2_BepisPlugins\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\BepisPlugins; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2API\*";                     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\HS2API; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2HeadBundleRedirect\*";      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\HS2HeadBundleRedirect; Excludes: "manifest.xml"
@@ -122,12 +142,9 @@ Source: "Input\_Plugins\_out\HS2_DependencyLoader\*";       DestDir: "{app}"; Fl
 Source: "Input\_Plugins\_out\HS2_Hooah\*";                  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\HS2_Hooah; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\BonesFramework\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\BonesFramework; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\HS2_GeBoCommon\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\GeBoCommon; Excludes: "manifest.xml"
-Source: "Input\_Plugins\_out\XUnity.ResourceRedirector\*";  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\XUnityResourceRedirector; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\XUnity.ResourceRedirector-BepIn-5x\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: API\XUnityResourceRedirector; Excludes: "manifest.xml"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Source: "Input\_TL\HS2_TextResourceRedirector\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\AutoTranslator\EnglishTranslation
-Source: "Input\_Plugins\_out\XUnity.AutoTranslator-BepIn-5x\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\AutoTranslator; Excludes: "manifest.xml"
-Source: "Input\_Plugins\_out\HS2_Subtitles\*";              DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\HS2_Subtitles; Excludes: "manifest.xml"
-Source: "Input\_Plugins\_out\HS2_TranslationHelper\*";      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\TranslationHelper; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\XUnity.AutoTranslator-BepIn-5x\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: AT; Excludes: "manifest.xml"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "Input\_Plugins\_out\HS2_UncensorSelector\*";       DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: UNC\Selector; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\BeaverHS2\*";                  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: UNC\Selector\BeaverHS2; Excludes: "manifest.xml"
@@ -220,3 +237,7 @@ Source: "Input\_Plugins\_out\FPSCounter\*";                 DestDir: "{app}"; Fl
 Source: "Input\_Plugins\_out\HS2_CheatTools\*";             DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\Trainer\Cheats; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\RuntimeUnityEditor_BepInEx5\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\Trainer; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\ScriptLoader\*";               DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\ScriptLoader; Excludes: "manifest.xml"
+
+[Code]
+// Need to put this behind an empty Code category so that the automatic tool doesn't add new file items below this #endif
+#endif

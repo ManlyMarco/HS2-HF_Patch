@@ -7,12 +7,12 @@
 ;-------------Full game name for naming patch itself and desktop icons
 #define NAME "HoneySelect2"
 ;---------------------------------------------Current HF Patch version
-#define VERSION "1.6"
+#define VERSION "1.7"
 ;-----------------------------------------Sideloader modpack directory
 #define ModsDir "E:\HFpatchmaking\HS\HSDX\mods"
 ;#define ModsDir "F:\Games\KoikatsuP\mods"
 ;--Don't include any files in the build to make it go fast for testing
-#define DEBUG
+;#define DEBUG
 ;---------------------------------------------------------------------
 
 #include "_Common\Header.iss"
@@ -107,7 +107,7 @@ Source: "Input\_Plugins\_out\IllusionFixes_HoneySelect2\BepInEx\patchers\*"; Des
 #ifndef DEBUG
 Source: "Input\BepInEx_Dev\*";            DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: BepInEx\Dev
 ;-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Source: "Input\_TL\HS2-Translation-master\*";        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: TL\AutoTranslator\EnglishTranslation
+Source: "Input\_TL\HS2-Translation-master\*";        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: AT\TL\EnglishTranslation
 Source: "Input\_TL\_lang jp\*";                      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Languages: jp
 Source: "Input\_TL\_lang ch\*";                      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Languages: sc
 Source: "Input\_TL\_lang eng\*";                     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Languages: en

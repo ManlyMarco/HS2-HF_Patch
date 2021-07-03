@@ -532,8 +532,6 @@ begin
       DeleteFile(ExpandConstant('{app}\BepInEx\config.ini'));
     end;
 
-    SetConfigDefaults(ExpandConstant('{app}'));
-
     PrepareToInstallWithProgressPage.SetProgress(9, 10);
     PrepareToInstallWithProgressPage.SetText('Cleaning up old mods and scripts', '');
     
@@ -557,6 +555,8 @@ begin
         RenameFile(ExpandConstant('{app}\AYAYA.cs'), ExpandConstant('{app}\scripts\AYAYA.cs'));
       end;
     end;
+
+    SetConfigDefaults(ExpandConstant('{app}'));
   end;
   
   PrepareToInstallWithProgressPage.SetProgress(10, 10);

@@ -13,12 +13,19 @@
 ;#define ModsDir "F:\Games\KoikatsuP\mods"
 ;--Don't include any files in the build to make it go fast for testing
 ;#define DEBUG
+;------------Don't include general, studio and map sideloader modpacks
+;#define LITE
 ;---------------------------------------------------------------------
 
 #include "_Common\Header.iss"
 [Setup]
+#ifndef LITE
 AppName=HF Patch for HoneySelect2
 OutputBaseFilename=HoneySelect2 HF Patch v{#VERSION}
+#else
+AppName=HF Patch for HoneySelect2 (Light Version)
+OutputBaseFilename=HoneySelect2 HF Patch v{#VERSION} Light Version
+#endif
 ArchitecturesInstallIn64BitMode=x64
 CloseApplications=yes
 RestartApplications=no
@@ -30,7 +37,9 @@ LZMAUseSeparateProcess=yes
 LZMADictionarySize=208576
 LZMANumFastBytes=273
 LZMANumBlockThreads=4
+#ifndef LITE
 DiskSpanning=yes
+#endif
 DefaultDirName={code:GetDefaultDirName}
 
 WindowResizable=yes
@@ -60,11 +69,14 @@ Name: "Patch";                    Description: "All free updates + game repair" 
 Name: "Patch\VR";                 Description: "Install/Update VR Module"                                                         ; Types: extra_en extra
 ;-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Name: "Modpack"                 ; Description: "Sideloader Modpacks {#CurrentDate} (Add additional content to the game, needs at least BepisPlugins to work)"
+#ifndef LITE
 Name: "Modpack\General"         ; Description: "General (Content for making characters, always recommended)"                      ; Types: full_en full extra_en extra
 ;Name: "Modpack\Fixes"           ; Description: "Fixes (Fixes to some of the official content, always recommended)"              ; Types: full_en full extra_en extra
 ;Name: "Modpack\Studio"          ; Description: "Studio (Additional content for making Studio scenes)"                           ; Types: full_en full extra_en extra
-;Name: "Modpack\Animations"      ; Description: "Animations (Additional adnimations for use in Studio and Free H)"               ; Types: full_en full extra_en extra
-;Name: "Modpack\Maps"            ; Description: "Maps (Additional maps for use in Studio and H scenes)"                          ; Types: full_en full extra_en extra
+;Name: "Modpack\MapsStudio"      ; Description: "Maps for use in Studio (Add > Map)"
+Name: "Modpack\MapsGame"        ; Description: "Maps for use in main game (H scenes)"
+;Name: "Modpack\Animations"      ; Description: "Animations (Additional adnimations for use in Studio and H scenes)"               ; Types: full_en full extra_en extra                          ; Types: full_en full extra_en extra
+#endif
 Name: "Modpack\MaterialEditor"  ; Description: "MaterialEditor (Materials for use with MaterialEditor)"                      ; Types: full_en full extra_en extra
 Name: "Modpack\UncensorSelector"; Description: "UncensorSelector (Uncensors for use with UncensorSelector)"                  ; Types: full_en full extra_en extra
 
@@ -84,13 +96,15 @@ Source: "Input\_Patch\vr_normal\*";       DestDir: "{app}";                     
 Source: "Input\_Patch\vr_dx\*";           DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch\VR; Check: DxInstalled
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ; Solidbreak at the start to split off the modpacks from other files in case they don't have to be installed. solidbreak splits before the files entry with it is processed
-Source: "{#ModsDir}\Sideloader Modpack\*";                      DestDir: "{app}\mods\Sideloader Modpack";                      Flags: ignoreversion recursesubdirs solidbreak; Components: Modpack\General;        
-Source: "{#ModsDir}\Sideloader Modpack - Exclusive HS2\*"         ; DestDir: "{app}\mods\Sideloader Modpack - Exclusive HS2"         ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\General
+#ifndef LITE
+Source: "{#ModsDir}\Sideloader Modpack\*"                          ; DestDir: "{app}\mods\Sideloader Modpack"                         ; Flags: ignoreversion recursesubdirs solidbreak; Components: Modpack\General;        
+Source: "{#ModsDir}\Sideloader Modpack - Exclusive HS2\*"          ; DestDir: "{app}\mods\Sideloader Modpack - Exclusive HS2"         ; Flags: ignoreversion recursesubdirs; Components: Modpack\General
 ;Source: "{#ModsDir}\Sideloader Modpack - Bleeding Edge\*"         ; DestDir: "{app}\mods\Sideloader Modpack - Bleeding Edge"         ; Flags: ignoreversion recursesubdirs; Components: Modpack\Bleeding
 ;Source: "{#ModsDir}\Sideloader Modpack - Studio\*"                ; DestDir: "{app}\mods\Sideloader Modpack - Studio"                ; Flags: ignoreversion recursesubdirs; Components: Modpack\Studio
-;Source: "{#ModsDir}\Sideloader Modpack - Maps\*"                  ; DestDir: "{app}\mods\Sideloader Modpack - Maps"                  ; Flags: ignoreversion recursesubdirs ; Components: Modpack\Maps
-;Source: "E:\Games\HoneySelect2\mods\Sideloader Modpack - Maps (HS2 Game)\*"       ; DestDir: "{app}\mods\Sideloader Modpack - Maps (HS2 Game)"       ; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Modpack\Maps
-Source: "{#ModsDir}\Sideloader Modpack - MaterialEditor Shaders\*"; DestDir: "{app}\mods\Sideloader Modpack - MaterialEditor Shaders"; Flags: ignoreversion recursesubdirs; Components: Modpack\MaterialEditor
+;Source: "{#ModsDir}\Sideloader Modpack - Maps\*"                  ; DestDir: "{app}\mods\Sideloader Modpack - Maps"                  ; Flags: ignoreversion recursesubdirs; Components: Modpack\MapsStudio
+Source: "{#ModsDir}\Sideloader Modpack - Maps (HS2 Game)\*"       ; DestDir: "{app}\mods\Sideloader Modpack - Maps (HS2 Game)"       ; Flags: ignoreversion recursesubdirs; Components: Modpack\MapsGame
+#endif
+Source: "{#ModsDir}\Sideloader Modpack - MaterialEditor Shaders\*"; DestDir: "{app}\mods\Sideloader Modpack - MaterialEditor Shaders"; Flags: ignoreversion recursesubdirs solidbreak; Components: Modpack\MaterialEditor
 Source: "{#ModsDir}\Sideloader Modpack - Uncensor Selector\*"     ; DestDir: "{app}\mods\Sideloader Modpack - Uncensor Selector"     ; Flags: ignoreversion recursesubdirs; Components: Modpack\UncensorSelector
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ; Make sure this is never missing in case the plugin archive doesn't have it included. Also solidbreak to split off the modpacks
@@ -130,12 +144,15 @@ Type: filesandordirs; Name: "{app}\zh-CN"; Components: IllusionLaunchers
 Type: filesandordirs; Name: "{app}\zh-TW"; Components: IllusionLaunchers
 
 ; Clean up old modpacks. Large modpacks might not be fully included so don't remove here, instead they get cleaned up from old versions later
-;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack"                       ; Components: Content\Modpack
-;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack - Bleeding Edge"       ; Components: Content\Modpack
-;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack - Maps"                ; Components: Content\ModpackMaps
-;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack - MaterialEditor Shaders" ; Components: Content\HS2_MaterialEditor
-;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack - Studio"              ; Components: Content\ModpackStudio
-;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack - Uncensor Selector"   ; Components: UNC\Selector\Pack
+#ifndef LITE
+;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack"                       ; Components: Modpack
+;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack - Bleeding Edge"       ; Components: Modpack
+;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack - Maps"                ; Components: Modpack\MapsStudio
+;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack - Maps (HS2 Game)"     ; Components: Modpack\MapsGame
+;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack - MaterialEditor Shaders" ; Components: Modpack\MaterialEditor
+;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack - Studio"              ; Components: Modpack\Studio
+;Type: filesandordirs; Name: "{app}\mods\Sideloader Modpack - Uncensor Selector"   ; Components: Modpack\UncensorSelector
+#endif
 
 ; Clean up old patches and packs
 Type: files; Name: "{app}\start.bat"

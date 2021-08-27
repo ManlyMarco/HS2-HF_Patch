@@ -1,9 +1,9 @@
-# Additional Accessory Controls v1.0.5
+# Additional Accessory Controls v1.1.7
 - Short description: QoL improvements to accessory handling and outfits
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/AdditionalAccessoryControls
 
-# AdvIKPlugin v1.5.2
+# AdvIKPlugin v1.6.3
 - Short description: More realistic shoulder deforming
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/AdvIKPlugin
@@ -33,7 +33,12 @@
 - Author(s):         https://mikkemods.blogspot.com
 - More information:  https://mikkemods.blogspot.com/
 
-# BepisPlugins v16.2.1
+# BepInEx v5.4.15.0
+- Short description: Plugin framework
+- Author(s):         https://github.com/BepInEx
+- More information:  https://github.com/BepInEx/BepInEx
+
+# BepisPlugins v16.4
 - Short description: Essential plugins required by many other plugins to function
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/BepisPlugins
@@ -43,22 +48,37 @@
 - Author(s):         A basement dweller
 - More information:  https://www.patreon.com/posts/29809884
 
+# BetterPenetration v4.3.0.0
+- Short description: Improves how penetration looks in H scenes
+- Author(s):         https://www.patreon.com/Animal42069
+- More information:  https://www.patreon.com/Animal42069/posts?filters%5Btag%5D=BetterPenetration
+
 # BonesFramework v1.4.2
 - Short description: Lets mods add new bones
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
+
+# ButtPlugin v2.0.0.0
+- Short description: Adds support for buttplug.io compatible strokers and vibrators
+- Author(s):         Sauceke
+- More information:  https://github.com/Sauceke/BepInEx.ButtPlugin
 
 # C# Script Loader v1.2.4
 - Short description: Runs custom user scripts
 - Author(s):         https://github.com/denikson
 - More information:  https://github.com/denikson/BepInEx.ScriptLoader
 
+# Catch Unity Event Exceptions v1.0
+- Short description: Prevents some bugs in plugins from affecting other plugins
+- Author(s):         BepInEx
+- More information:  https://github.com/BepInEx/BepInEx.Utility
+
 # Character Export v1.0
 - Short description: Export characters from studio scenes
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Cheat Tools v2.9
+# Cheat Tools v2.10.1
 - Short description: Trainer, press F12 to open
 - Author(s):         https://github.com/ManlyMarco/IllusionCheatTools
 - More information:  https://github.com/ManlyMarco/IllusionCheatTools
@@ -68,7 +88,12 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Deformers v0.31
+# Configuration Manager v16.3
+- Short description: Can change plugin settings. Press F1 to open, not visible inside HMD
+- Author(s):         BepInEx
+- More information:  https://github.com/BepInEx/BepInEx.ConfigurationManager
+
+# Deformers v0.5
 - Short description: Allows deforming of accessories
 - Author(s):         Dainty
 - More information:  https://github.com/DaintyIL/Illusion_Deformers
@@ -94,12 +119,12 @@
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
 # Enable Full Screen Toggle v1.0
-- Short description: Allows alt+enter toggle
+- Short description: Toggle full screen with alt+enter
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.Utility
 
 # Enable Resize v1.5
-- Short description: Allows resizing of game window
+- Short description: Allows resizing the game window, can mess with the UI, turn on in plugin settings
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.Utility
 
@@ -120,10 +145,10 @@
 
 # FPS Counter v3.1
 - Short description: Useful for performance testing
-- Author(s):         https://github.com/ManlyMarco
+- Author(s):         ManlyMarco
 - More information:  https://github.com/ManlyMarco/FPSCounter
 
-# GeBo Modding API v1.1.0
+# GeBo Modding API v1.1.2.1
 - Short description: Modding API necessary for plugins by GeBo
 - Author(s):         GeBo
 - More information:  https://github.com/GeBo1/GeBoPlugins
@@ -163,12 +188,17 @@
 - Author(s):         https://github.com/ore-
 - More information:  https://github.com/ore-/Graphics
 
+# HS2 Particle Editor v1.0.0
+- Short description: Allows editing of particle items in studio
+- Author(s):         https://github.com/kkykkykky
+- More information:  https://github.com/kkykkykky
+
 # HS2 PoV X v1.2.1
 - Short description: First-person mode in main game
 - Author(s):         https://github.com/FairBear
 - More information:  https://github.com/FairBear/HS2_PovX
 
-# HS2 Studio Better Penetration v1.0.1.0
+# HS2 Studio Better Penetration v2.2.1.0
 - Short description: BetterPenetration for studio
 - Author(s):         Animal42069
 - More information:  https://www.patreon.com/Animal42069
@@ -183,15 +213,10 @@
 - Author(s):         hooh-hooah
 - More information:  https://github.com/hooh-hooah/AnimationPairing
 
-# HS2_BetterHScenes v2.6.2
+# HS2_BetterHScenes v2.6.5
 - Short description: Fixes H performance bugs and adds extra features
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://www.patreon.com/2155X
-
-# HS2_BetterPenetration v3.0.2.0
-- Short description: Improves how penetration looks in H scenes
-- Author(s):         https://www.patreon.com/Animal42069
-- More information:  https://www.patreon.com/Animal42069/posts?filters%5Btag%5D=BetterPenetration
 
 # HS2_ClothColliders v1.0.1
 - Short description: Cloth physics support for mods
@@ -238,7 +263,7 @@
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://github.com/Mantas-2155X/MakerSearch
 
-# HS2_QuickAccessBox v2.3
+# HS2_QuickAccessBox v2.4.1
 - Short description: Quick search studio items
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/QuickAccessBox
@@ -250,6 +275,11 @@
 
 # HS2_StudioAccessoryNames v1.0.0
 - Short description: Shows the acc names in studio
+- Author(s):         Mantas-2155X aka 2155X
+- More information:  https://www.patreon.com/2155X
+
+# HS2_StudioMiscSearch v1.0.0
+- Short description: This plugin adds search bars to various Studio lists
 - Author(s):         Mantas-2155X aka 2155X
 - More information:  https://www.patreon.com/2155X
 
@@ -268,7 +298,7 @@
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://www.patreon.com/2155X
 
-# HS2ABMX (BonemodX) v4.4.1
+# HS2ABMX (BonemodX) v4.4.2
 - Short description: More sliders in character maker
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/ABMX
@@ -293,14 +323,19 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# IllusionFixes v15.2
+# IllusionFixes v16.0
 - Short description: A collection of essential fixes and improvements
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionFixes
 
-# Input Hotkey Block v1.3
+# IllusionLaunchers v3.1.1.0
+- Short description: Custom game launcher
+- Author(s):         https://github.com/IllusionMods
+- More information:  https://github.com/IllusionMods/IllusionLaunchers
+
+# Input Hotkey Block v1.4
 - Short description: Blocks plugin keybinds while typing
-- Author(s):         https://github.com/DeathWeasel1337
+- Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.Utility
 
 # Invisible Body v1.4
@@ -308,22 +343,32 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# KK_PregnancyPlus v2.0
+# KK_PregnancyPlus v4.8
 - Short description: Adds additional belly sliders in Studio and Maker
 - Author(s):         thojmr
 - More information:  https://github.com/thojmr/KK_PregnancyPlus/releases
+
+# KKManager v0.17.0.0
+- Short description: Manage and update mods, browse cards
+- Author(s):         https://github.com/IllusionMods
+- More information:  https://github.com/IllusionMods/KKManager
 
 # Maker Defaults v1.0.1
 - Short description: Customize default character maker settings
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Maker/Studio Browser Folders v2.4.1
+# Maker Jump to Selection v1.0.0
+- Short description: Adds a button to jump to the selected item in scroll lists
+- Author(s):         OrangeSpork
+- More information:  https://github.com/OrangeSpork/MakerJumpToSelectionPlugin
+
+# Maker/Studio Browser Folders v2.5.2
 - Short description: Adds folder support to studio character and scene lists
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/Illusion_BrowserFolders
 
-# Male Juice v1.2.2
+# Male Juice v1.3
 - Short description: Fixes male juice textures not being shown on males
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -333,7 +378,7 @@
 - Author(s):         Mikke
 - More information:  ???
 
-# Material Editor v3.0.4
+# Material Editor v3.1.2
 - Short description: Material editing in maker and studio
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -343,7 +388,12 @@
 - Author(s):         ???
 - More information:  ???
 
-# Modding API v1.17
+# Message Center v1.1.1
+- Short description: Allows plugins to show messages in top left corner of the game
+- Author(s):         BepInEx
+- More information:  https://github.com/BepInEx/BepInEx.Utility
+
+# Modding API v1.23
 - Short description: Modding API needed by many plugins
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/IllusionMods/IllusionModdingAPI
@@ -353,13 +403,13 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# Move Controller HS2 v1.5.2
+# Move Controller HS2 v1.7.0
 - Short description: Improved object move window in studio
 - Author(s):         https://mikkemods.blogspot.com
 - More information:  https://mikkemods.blogspot.com/
 
 # Mute In Background v1.1
-- Short description: Mute the game when not focused
+- Short description: Mute the game when it's not in focus, turn on in plugin settings
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.Utility
 
@@ -368,12 +418,22 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
+# OptimizeIMGUI v1.0
+- Short description: Slight perf improvement of plugin UIs
+- Author(s):         BepInEx
+- More information:  https://github.com/BepInEx/BepInEx.Utility
+
 # OrthographicCamera v1.1.1
 - Short description: Can switch to an orthographic camera in studio and game
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/KoikatuGameplayMods
 
-# Overlay Mods v6.0.1
+# Outfit Painter v1.0.0
+- Short description: Allows you to assign 'Channels' to colors on clothing and accessories
+- Author(s):         OrangeSpork
+- More information:  https://github.com/OrangeSpork/OutfitPainter
+
+# Overlay Mods v6.0.2
 - Short description: Set custom body, clothes and eye textures
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/Illusion-Overlay-Mods
@@ -381,6 +441,11 @@
 # Pose Folders v1.0
 - Short description: Folder support in studio pose list
 - Author(s):         https://github.com/DeathWeasel1337
+- More information:  https://github.com/DeathWeasel1337/KK_Plugins
+
+# Pose Gender Restriction Unlocker v1.0
+- Short description: Removes the gender restriction on saved Studio poses
+- Author(s):         DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
 # Pose Quick Load v1.0
@@ -403,9 +468,9 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# Runtime Unity Editor v2.3.0.0
-- Short description: Tool for making arbitrary modifications to the game
-- Author(s):         https://github.com/ManlyMarco
+# RuntimeUnityEditor v2.4.0.0
+- Short description: Debugging and development tool
+- Author(s):         ManlyMarco
 - More information:  https://github.com/ManlyMarco/RuntimeUnityEditor
 
 # StopBotheringMe v1.0.1
@@ -428,7 +493,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Studio MultiSelect Chara v1.0.0
+# Studio MultiSelect Chara v1.0.0.2
 - Short description: Shift+tab to select all instances of same chara
 - Author(s):         GeBo
 - More information:  https://gebo1.github.io/GeBoPlugins/src/StudioMultiselectChara/
@@ -443,7 +508,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Studio Scene Navigation v1.0.0
+# Studio Scene Navigation v1.0.2.2
 - Short description: Hotkeys to load the next/previous scene from scenes folder
 - Author(s):         GeBo
 - More information:  https://gebo1.github.io/GeBoPlugins/src/StudioSceneNavigation/
@@ -458,7 +523,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# StudioSceneSettings v1.3.1
+# StudioSceneSettings v1.3.2
 - Short description: Add clip plane settings to studio scene effects
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -468,12 +533,17 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Translation Helper v1.1.0
+# Text Resource Redirector v1.4.4.3
+- Short description: Used to apply some translations
+- Author(s):         IllusionMods
+- More information:  https://github.com/IllusionMods/TranslationTools
+
+# Translation Helper v1.1.0.9
 - Short description: Extension for AT, needed for some translations
 - Author(s):         GeBo
 - More information:  https://github.com/GeBo1/GeBoPlugins
 
-# Uncensor Selector v3.11.1
+# Uncensor Selector v3.11.2
 - Short description: Support for user-selectable uncensors
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -483,18 +553,18 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# Who Is There? v1.0.1
-- Short description: Let’s you see who's in “surprise” events
+# Who Is There? v1.0.1.3
+- Short description: Lets you see who's in surprise events
 - Author(s):         GeBo
 - More information:  https://gebo1.github.io/GeBoPlugins/src/GameWh
 
-# XUnity Auto Translator v4.14.0
+# XUnity Auto Translator v1.0.2.1
 - Short description: Translation loader
-- Author(s):         https://github.com/bbepis/XUnity.AutoTranslator
+- Author(s):         bbepis and others
 - More information:  https://github.com/bbepis/XUnity.AutoTranslator
 
-# XUnity Resource Redirector v1.1.3
-- Short description: Modding API for overriding resources
-- Author(s):         https://github.com/bbepis/XUnity.AutoTranslator
+# XUnity Resource Redirector v1.2.0
+- Short description: Modding API
+- Author(s):         bbepis and others
 - More information:  https://github.com/bbepis/XUnity.AutoTranslator
 

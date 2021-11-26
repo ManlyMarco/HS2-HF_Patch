@@ -13,6 +13,8 @@
 ;#define ModsDir "F:\Games\KoikatsuP\mods"
 ;--Don't include any files in the build to make it go fast for testing
 ;#define DEBUG
+;---Skip file verification for easier testing, COMMENT OUT FOR RELEASE
+;#define NOVERIFY
 ;------------Don't include general, studio and map sideloader modpacks
 ;#define LITE
 ;---------------------------------------------------------------------
@@ -69,14 +71,15 @@ Name: "Patch\VR";                 Description: "Install/Update VR Module"       
 Name: "Modpack"                 ; Description: "Sideloader Modpacks {#CurrentDate} (Add additional content to the game, needs at least BepisPlugins to work)"
 #ifndef LITE
 Name: "Modpack\General"         ; Description: "General (Content for making characters, always recommended)"                      ; Types: full_en full extra_en extra
-;Name: "Modpack\Fixes"           ; Description: "Fixes (Fixes to some of the official content, always recommended)"              ; Types: full_en full extra_en extra
 ;Name: "Modpack\Studio"          ; Description: "Studio (Additional content for making Studio scenes)"                           ; Types: full_en full extra_en extra
 ;Name: "Modpack\MapsStudio"      ; Description: "Maps for use in Studio (Add > Map)"
 Name: "Modpack\MapsGame"        ; Description: "Maps for use in main game (H scenes)"
 ;Name: "Modpack\Animations"      ; Description: "Animations (Additional adnimations for use in Studio and H scenes)"               ; Types: full_en full extra_en extra                          ; Types: full_en full extra_en extra
 #endif
+;Name: "Modpack\Fixes"           ; Description: "Fixes (Fixes to some of the official content, always recommended)"              ; Types: full_en full extra_en extra
 Name: "Modpack\MaterialEditor"  ; Description: "MaterialEditor (Materials for use with MaterialEditor)"                      ; Types: full_en full extra_en extra
 Name: "Modpack\UncensorSelector"; Description: "UncensorSelector (Uncensors for use with UncensorSelector)"                  ; Types: full_en full extra_en extra
+;-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 [Files]
 Source: "HelperLib.dll";                  DestDir: "{app}"                       ; Flags: dontcopy
@@ -117,6 +120,7 @@ Source: "Input\_Plugins\_out\IllusionFixes_HoneySelect2\BepInEx\patchers\*"; Des
 
 [Files]
 #ifndef DEBUG
+Source: "Input\BepInEx_config\*";                           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs solidbreak; Components: BepInEx
 Source: "Input\BepInEx_Dev\*";            DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: BepInEx\Dev
 ;-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "Input\_TL\HS2-Translation-master\*";        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: AT\TL\EnglishTranslation
@@ -130,7 +134,6 @@ Source: "Input\Launcher_branding\*"; DestDir: "{app}"; Flags: ignoreversion recu
 [InstallDelete]
 ; Clean up old translations
 Type: filesandordirs; Name: "{app}\BepInEx\translation"; Components: AT\TL\EnglishTranslation
-
 Type: files; Name: "{app}\InitSetting.exe"
 Type: files; Name: "{app}\InitSetting.exe.config"
 Type: files; Name: "{app}\Initial Settings.exe"
@@ -348,6 +351,22 @@ begin
   end;
 end;
 
+function IsCharValid(Value: Char): Boolean;
+begin
+  Result := Ord(Value) <= $007F;
+end;
+
+function IsDirNameValid(const Value: string): Boolean;
+var
+  I: Integer;
+begin
+  Result := False;
+  for I := 1 to Length(Value) do
+    if not IsCharValid(Value[I]) then
+      Exit;
+  Result := True;
+end;
+
 function NextButtonClick(CurPageID: Integer): Boolean;
 var
   ResultCode: Integer;
@@ -370,6 +389,14 @@ begin
         MsgBox(ExpandConstant('{cm:MsgDeepPath}'), mbError, MB_OK);
         Result := False;
       end
+    end;
+
+    if Result = True then
+    begin
+      if not IsDirNameValid(ExpandConstant('{app}')) then
+      begin
+        MsgBox(ExpandConstant('{cm:MsgPathNonLatin}'), mbError, MB_OK);
+      end;
     end;
 
     if Result = True then
@@ -437,7 +464,6 @@ external 'VerifyFiles@files:HelperLib.dll stdcall';
 // Set up a custom prepare to install page with progress
 var
   PrepareToInstallWithProgressPage : TOutputProgressWizardPage;
-
 procedure InitializeWizard;
 var
   A: AnsiString;
@@ -462,9 +488,10 @@ begin
   PrepareToInstallWithProgressPage.SetProgress(0, 10);
   PrepareToInstallWithProgressPage.SetText('Verifying HF Patch files, this can take a few minutes', '');
   
+#ifndef NOVERIFY
   VerifyFiles(ExpandConstant('{srcexe}'), VerifyResult);
-#ifndef DEBUG
 #endif
+
   // If verification failed, set return of this method to it and innosetup will automatically fail the install. Still need to skip rest of the code though.
   if not (VerifyResult = '') then
   begin
@@ -485,6 +512,9 @@ begin
       Exec('taskkill', '/F /IM KKManager.exe', ExpandConstant('{app}'), SW_HIDE, ewWaitUntilTerminated, ResultCode);
       Exec('taskkill', '/F /IM StandaloneUpdater.exe', ExpandConstant('{app}'), SW_HIDE, ewWaitUntilTerminated, ResultCode);
 
+        // Often needed after fixing permissions to unlock the files so the permissions can be written, without this access to them is always denied
+        //Exec('taskkill', '/F /IM explorer.exe', ExpandConstant('{app}'), SW_HIDE, ewWaitUntilTerminated, ResultCode);
+    
       PrepareToInstallWithProgressPage.SetProgress(5, 10);
       PrepareToInstallWithProgressPage.SetText('Fixing file permissions of game directory', '');
       
@@ -525,7 +555,6 @@ begin
         DelTree(ExpandConstant('{app}\BepInEx\plugins'), True, True, True);
         DelTree(ExpandConstant('{app}\BepInEx\patchers'), True, True, True);
         DelTree(ExpandConstant('{app}\BepInEx\IPA'), True, True, True);
-        DelTree(ExpandConstant('{app}\scripts'), True, True, True);
         Exec(ExpandConstant('{cmd}'), '/c del *.dll', ExpandConstant('{app}\BepInEx'), SW_SHOW, ewWaitUntilTerminated, ResultCode);
         Exec(ExpandConstant('{cmd}'), '/c del *.dl_', ExpandConstant('{app}\BepInEx'), SW_SHOW, ewWaitUntilTerminated, ResultCode);
       end;

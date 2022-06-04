@@ -90,11 +90,14 @@ Source: "Plugin Readme.md";               DestDir: "{app}"
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "Input\_Patch\empty_ud\*";        DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs solidbreak; Components: Patch
 Source: "Input\_Patch\empty_ud_eng\*";    DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch; Languages: en
+Source: "Input\_Patch\steam_diff\*";      DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch; Check: IsSteam
 Source: "Input\_Patch\2020-08-14-all\*";  DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch
-Source: "Input\_Patch\2021-02-14-subdx\*"; DestDir: "{app}";                     Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch; Check: DxInstalled
+Source: "Input\_Patch\2021-02-14-subdx\*";DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch; Check: DxInstalled
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "Input\_Patch\vr_normal\*";       DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch\VR; Check: not DxInstalled
 Source: "Input\_Patch\vr_dx\*";           DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch\VR; Check: DxInstalled
+; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Source: "Input\_Patch\steam_post\*";      DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Patch; Check: IsSteam
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ; Solidbreak at the start to split off the modpacks from other files in case they don't have to be installed. solidbreak splits before the files entry with it is processed
 #ifndef LITE
@@ -136,7 +139,7 @@ Source: "Input\Launcher_branding\*"; DestDir: "{app}"; Flags: ignoreversion recu
 Type: filesandordirs; Name: "{app}\BepInEx\translation"; Components: AT\TL\EnglishTranslation
 Type: files; Name: "{app}\InitSetting.exe"
 Type: files; Name: "{app}\InitSetting.exe.config"
-Type: files; Name: "{app}\Initial Settings.exe"
+;Type: files; Name: "{app}\Initial Settings.exe" ; DO NOT remove since the steam check relies on this existing
 Type: files; Name: "{app}\Initial Settings.exe.config"
 Type: filesandordirs; Name: "{app}\UserData\LauncherEN"; Components: IllusionLaunchers
 ; Used by stock launcher in steam release, remove to declutter if using custom launcher
@@ -194,9 +197,36 @@ Type: files; Name: "{app}\version.dll"; Components: BepInEx
 Type: files; Name: "{app}\winhttp.dll"; Components: BepInEx
 Type: files; Name: "{app}\doorstop_config.ini"; Components: BepInEx
 
-; Potentially incompatible, outdated or buggy plugins
-Type: files; Name: "{app}\BepInEx\plugins\Heelz.dll"; Check: IsSteam
-Type: files; Name: "{app}\BepInEx\plugins\PushUpAI.dll"; Check: IsSteam
+; Convert steam to jp (together with contents of steam_diff)
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c-1\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c-2\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c00\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c01\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c02\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c03\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c04\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c05\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c06\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c07\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c08\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c09\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c10\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c11\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c12\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\c13\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\etc\70"        ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\op\70"         ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\adv\scenario\op_append\70"  ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\gamedata\achievement"       ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\abdata\localize"                   ; Components: Patch; Check: IsSteam
+;Type: filesandordirs; Name:  "{app}\DefaultData\coordinate"           ; Components: Patch; Check: IsSteam
+;Type: filesandordirs; Name:  "{app}\DefaultData\ScreenEffect"         ; Components: Patch; Check: IsSteam
+Type: filesandordirs; Name: "{app}\HoneySelect2_Data\StreamingAssets\aa\Windows\StandaloneWindows64" ; Components: Patch; Check: IsSteam
+Type: files; Name: "{app}\abdata\add101"                              ; Components: Patch; Check: IsSteam
+Type: files; Name: "{app}\abdata\add102"                              ; Components: Patch; Check: IsSteam
+Type: files; Name: "{app}\abdata\add103"                              ; Components: Patch; Check: IsSteam
+Type: files; Name: "{app}\abdata\add70"                               ; Components: Patch; Check: IsSteam
+Type: files; Name: "{app}\abdata\list\h\animationinfo\70.unity3d"     ; Components: Patch; Check: IsSteam
 
 ; Prevent both disabled and enabled dlls existing at the same time, they will get restored later
 Type: files; Name: "{app}\BepInEx\plugins\DHH_AI4.dll"
@@ -337,6 +367,9 @@ begin
 
     FixConfig(ExpandConstant('{app}'));
     WriteVersionFile(ExpandConstant('{app}'), '{#VERSION}');
+    
+    if(IsSteam()) then
+      DeleteFile(ExpandConstant('{app}\InitSetting.exe'));
 
     // Always turn these off just to be safe, user can turn them back on in launcher
     if(FileExists(ExpandConstant('{app}\BepInEx\plugins\DHH_AI4.dll'))) then
@@ -418,15 +451,6 @@ begin
       or FileExists(ExpandConstant('{app}\AI-Shoujo.exe'))) then
       begin
         MsgBox(ExpandConstant('{cm:MsgDifferentGameDetected}'), mbError, MB_OK);
-        Result := False;
-      end
-    end;
-
-    if Result = True then
-    begin
-      if (FileExists(ExpandConstant('{app}\Initial Settings.exe'))) then
-      begin
-        MsgBox('This patch was made before the Steam release of the game and is not compatible with it. Please look for a new version of the patch that supports the Steam release.', mbError, MB_OK);
         Result := False;
       end
     end;

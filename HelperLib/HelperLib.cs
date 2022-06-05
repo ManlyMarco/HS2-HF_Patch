@@ -184,7 +184,7 @@ namespace HelperLib
                     var _ = bool.Parse(r.Element("FullScreen").Value);
                     CheckRange(r.Element("Quality").Value, 0, 2);
                     CheckRange(r.Element("Display").Value, 0, Screen.AllScreens.Length);
-                    CheckRange(r.Element("Language").Value, 0, 4);
+                    CheckRange(r.Element("Language").Value, 0, 0); // enforce jp language
                 }
             }
             catch (Exception e)

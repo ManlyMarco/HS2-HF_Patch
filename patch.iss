@@ -7,7 +7,7 @@
 ;-------------Full game name for naming patch itself and desktop icons
 #define NAME "HoneySelect2"
 ;---------------------------------------------Current HF Patch version
-#define VERSION "1.10"
+#define VERSION "2.0"
 ;-----------------------------------------Sideloader modpack directory
 #define ModsDir "E:\HFpatchmaking\HS\HSDX\mods"
 ;#define ModsDir "F:\Games\KoikatsuP\mods"
@@ -16,7 +16,7 @@
 ;---Skip file verification for easier testing, COMMENT OUT FOR RELEASE
 ;#define NOVERIFY
 ;------------Don't include general, studio and map sideloader modpacks
-#define LITE
+;#define LITE
 ;---------------------------------------------------------------------
 
 #include "_Common\Header.iss"
@@ -38,7 +38,7 @@ LZMAUseSeparateProcess=yes
 ;LZMADictionarySize=208576
 LZMADictionarySize=208576
 LZMANumFastBytes=273
-LZMANumBlockThreads=8
+LZMANumBlockThreads=7
 DiskSpanning=yes
 DefaultDirName={code:GetDefaultDirName}
 

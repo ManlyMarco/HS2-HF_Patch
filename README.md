@@ -4,7 +4,7 @@ A patch for [Honey Select 2](http://www.illusion.jp/preview/honey2/index.php) wi
 
 All content is tested and fixed (or removed) as needed before each update. HF Patch can repair many common problems, try it if you have issues with your game or mod setup. By default, it cleans the game before applying new mods, providing a stable platform for further modding.
 
-HF Patch does not contain the full game, paid expansions or any other pirated content. You have to buy the game and expansions separately. You can buy the game [on DLsite](https://www.dlsite.com/pro/work/=/product_id/VJ013916.html).
+HF Patch does not contain the full game, paid expansions or any other pirated content. You have to buy the game and expansions separately. You can buy the game [on Steam](https://store.steampowered.com/app/1631080/HoneySelect2Libido_DX/) or [on DLsite](https://www.dlsite.com/pro/work/=/product_id/VJ013916.html) (Steam version has DX included and is cheaper).
 
 You can support development of HF Patch and many of the included plugins through my Patreon page: https://www.patreon.com/ManlyMarco
 

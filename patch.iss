@@ -7,7 +7,7 @@
 ;-------------Full game name for naming patch itself and desktop icons
 #define NAME "HoneySelect2"
 ;---------------------------------------------Current HF Patch version
-#define VERSION "2.0"
+#define VERSION "2.1"
 ;-----------------------------------------Sideloader modpack directory
 #define ModsDir "E:\HFpatchmaking\HS\HSDX\mods"
 ;#define ModsDir "F:\Games\KoikatsuP\mods"
@@ -16,7 +16,7 @@
 ;---Skip file verification for easier testing, COMMENT OUT FOR RELEASE
 ;#define NOVERIFY
 ;------------Don't include general, studio and map sideloader modpacks
-;#define LITE
+#define LITE
 ;---------------------------------------------------------------------
 
 #include "_Common\Header.iss"
@@ -38,7 +38,7 @@ LZMAUseSeparateProcess=yes
 ;LZMADictionarySize=208576
 LZMADictionarySize=208576
 LZMANumFastBytes=273
-LZMANumBlockThreads=7
+LZMANumBlockThreads=6
 DiskSpanning=yes
 DefaultDirName={code:GetDefaultDirName}
 
@@ -54,10 +54,10 @@ Name: "sc"; MessagesFile: "compiler:Languages\ChineseSimplified.isl"
 #include "Translations.iss"
 
 [Types]
-Name: "full_en";  Description: "{cm:fullInstall}"; Languages: en;
-Name: "full";     Description: "{cm:fullInstall}"; Languages: jp sc;
-Name: "extra_en"; Description: "{cm:extraInstall}"; Languages: en;
-Name: "extra";    Description: "{cm:extraInstall}"; Languages: jp sc;
+Name: "full_en";  Description: "{cm:fullInstall}"; Languages: en sc;
+Name: "full";     Description: "{cm:fullInstall}"; Languages: jp; 
+Name: "extra_en"; Description: "{cm:extraInstall}"; Languages: en sc;
+Name: "extra";    Description: "{cm:extraInstall}"; Languages: jp; 
 Name: "bare";     Description: "{cm:bareInstall}"
 Name: "none";     Description: "{cm:noneInstall}"
 Name: "custom";   Description: "{cm:customInstall}"; Flags: iscustom
@@ -71,9 +71,9 @@ Name: "Patch\VR";                 Description: "Install/Update VR Module"       
 Name: "Modpack"                 ; Description: "Sideloader Modpacks {#CurrentDate} (Add additional content to the game, needs at least BepisPlugins to work)"
 #ifndef LITE
 Name: "Modpack\General"         ; Description: "General (Content for making characters, always recommended)"                      ; Types: full_en full extra_en extra
-;Name: "Modpack\Studio"          ; Description: "Studio (Additional content for making Studio scenes)"                           ; Types: full_en full extra_en extra
+Name: "Modpack\Studio"          ; Description: "Studio (Additional content for making Studio scenes)"                           ; Types: full_en full extra_en extra
 ;Name: "Modpack\MapsStudio"      ; Description: "Maps for use in Studio (Add > Map)"
-Name: "Modpack\MapsGame"        ; Description: "Maps for use in main game (H scenes)"
+Name: "Modpack\MapsGame"        ; Description: "Maps for use in main game (H scenes)"                                             ; Types: full_en full extra_en extra
 ;Name: "Modpack\Animations"      ; Description: "Animations (Additional adnimations for use in Studio and H scenes)"               ; Types: full_en full extra_en extra                          ; Types: full_en full extra_en extra
 #endif
 ;Name: "Modpack\Fixes"           ; Description: "Fixes (Fixes to some of the official content, always recommended)"              ; Types: full_en full extra_en extra
@@ -104,7 +104,7 @@ Source: "Input\_Patch\steam_post\*";      DestDir: "{app}";                     
 Source: "{#ModsDir}\Sideloader Modpack\*"                          ; DestDir: "{app}\mods\Sideloader Modpack"                         ; Flags: ignoreversion recursesubdirs solidbreak; Components: Modpack\General;        
 Source: "{#ModsDir}\Sideloader Modpack - Exclusive HS2\*"          ; DestDir: "{app}\mods\Sideloader Modpack - Exclusive HS2"         ; Flags: ignoreversion recursesubdirs; Components: Modpack\General
 ;Source: "{#ModsDir}\Sideloader Modpack - Bleeding Edge\*"         ; DestDir: "{app}\mods\Sideloader Modpack - Bleeding Edge"         ; Flags: ignoreversion recursesubdirs; Components: Modpack\Bleeding
-;Source: "{#ModsDir}\Sideloader Modpack - Studio\*"                ; DestDir: "{app}\mods\Sideloader Modpack - Studio"                ; Flags: ignoreversion recursesubdirs; Components: Modpack\Studio
+Source: "{#ModsDir}\Sideloader Modpack - Studio\*"                ; DestDir: "{app}\mods\Sideloader Modpack - Studio"                ; Flags: ignoreversion recursesubdirs; Components: Modpack\Studio
 ;Source: "{#ModsDir}\Sideloader Modpack - Maps\*"                  ; DestDir: "{app}\mods\Sideloader Modpack - Maps"                  ; Flags: ignoreversion recursesubdirs; Components: Modpack\MapsStudio
 Source: "{#ModsDir}\Sideloader Modpack - Maps (HS2 Game)\*"       ; DestDir: "{app}\mods\Sideloader Modpack - Maps (HS2 Game)"       ; Flags: ignoreversion recursesubdirs; Components: Modpack\MapsGame
 #endif
@@ -115,6 +115,10 @@ Source: "{#ModsDir}\Sideloader Modpack - Uncensor Selector\*"     ; DestDir: "{a
 Source: "Input\_Plugins\HS2_UncensorSelector Base.zipmod"; DestDir: "{app}\mods"; Flags: ignoreversion; Components: UNC\Selector
 ; Always install critical fixes
 Source: "Input\_Plugins\_out\IllusionFixes_HoneySelect2\BepInEx\patchers\*"; DestDir: "{app}\BepInEx\patchers"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Patch
+; If BP isn't installed, exclude BP uncensors from the random selection
+Source: "Input\US_config_noBP.cfg"; DestDir: "{app}\BepInEx\config"; DestName: "com.deathweasel.bepinex.uncensorselector.cfg"; Flags: solidbreak
+; This config only allows BP uncensors to be chosen by random
+Source: "Input\US_config_BP.cfg";   DestDir: "{app}\BepInEx\config"; DestName: "com.deathweasel.bepinex.uncensorselector.cfg"; Flags: solidbreak; Components: UNC\Selector\BetterPenetration
 #endif
 
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -127,6 +131,7 @@ Source: "Input\BepInEx_config\*";                           DestDir: "{app}"; Fl
 Source: "Input\BepInEx_Dev\*";            DestDir: "{app}"                     ; Flags: ignoreversion recursesubdirs createallsubdirs;            Components: BepInEx\Dev
 ;-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "Input\_TL\HS2-Translation-master\*";        DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: AT\TL\EnglishTranslation
+Source: "Input\_TL\MysteryTranslation\*";            DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: AT\TL\EnglishTranslation
 Source: "Input\_TL\_lang jp\*";                      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Languages: jp
 Source: "Input\_TL\_lang ch\*";                      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Languages: sc
 Source: "Input\_TL\_lang eng\*";                     DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Languages: en
@@ -141,7 +146,7 @@ Type: files; Name: "{app}\InitSetting.exe"
 Type: files; Name: "{app}\InitSetting.exe.config"
 ;Type: files; Name: "{app}\Initial Settings.exe" ; DO NOT remove since the steam check relies on this existing
 Type: files; Name: "{app}\Initial Settings.exe.config"
-Type: filesandordirs; Name: "{app}\UserData\LauncherEN"; Components: IllusionLaunchers
+Type: filesandordirs; Name: "{app}\BepInEx\LauncherEN"; Components: IllusionLaunchers
 ; Used by stock launcher in steam release, remove to declutter if using custom launcher
 Type: filesandordirs; Name: "{app}\ja-JP"; Components: IllusionLaunchers   
 Type: filesandordirs; Name: "{app}\zh-CN"; Components: IllusionLaunchers
@@ -231,8 +236,8 @@ Type: files; Name: "{app}\abdata\list\h\animationinfo\70.unity3d"     ; Componen
 ; Prevent both disabled and enabled dlls existing at the same time, they will get restored later
 Type: files; Name: "{app}\BepInEx\plugins\DHH_AI4.dll"
 Type: files; Name: "{app}\BepInEx\plugins\DHH_AI4.dl_"
-Type: files; Name: "{app}\BepInEx\plugins\Graphics\Graphics.dll"
-Type: files; Name: "{app}\BepInEx\plugins\Graphics\Graphics.dl_"
+Type: files; Name: "{app}\BepInEx\plugins\Graphics\HS2Graphics.dll"
+Type: files; Name: "{app}\BepInEx\plugins\Graphics\HS2Graphics.dl_"
 
 ; Clean dlls completely to fix problems with copied/unnecessary/old dlls. All dlls are included in the patch data
 Type: filesandordirs; Name: "{app}\HoneySelect2_Data\Managed"; Components: Patch
@@ -374,8 +379,8 @@ begin
     // Always turn these off just to be safe, user can turn them back on in launcher
     if(FileExists(ExpandConstant('{app}\BepInEx\plugins\DHH_AI4.dll'))) then
       RenameFile(ExpandConstant('{app}\BepInEx\plugins\DHH_AI4.dll'), ExpandConstant('{app}\BepInEx\plugins\DHH_AI4.dl_'));
-    if(FileExists(ExpandConstant('{app}\BepInEx\plugins\Graphics\Graphics.dll'))) then
-      RenameFile(ExpandConstant('{app}\BepInEx\plugins\Graphics\Graphics.dll'), ExpandConstant('{app}\BepInEx\plugins\Graphics\Graphics.dl_'));
+    if(FileExists(ExpandConstant('{app}\BepInEx\plugins\Graphics\HS2Graphics.dll'))) then
+      RenameFile(ExpandConstant('{app}\BepInEx\plugins\Graphics\HS2Graphics.dll'), ExpandConstant('{app}\BepInEx\plugins\Graphics\HS2Graphics.dl_'));
       
     // Prevent trying to install the redist again
     Exec('reg', 'add HKEY_LOCAL_MACHINE\SOFTWARE\Valve\Steam\Apps\CommonRedist\DirectX\Jun2010 /v dxsetup /t REG_DWORD /d 1 /f /reg:32', ExpandConstant('{app}'), SW_HIDE, ewWaitUntilTerminated, ResultCode);

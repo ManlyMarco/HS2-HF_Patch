@@ -7,7 +7,7 @@
 ;-------------Full game name for naming patch itself and desktop icons
 #define NAME "HoneySelect2"
 ;---------------------------------------------Current HF Patch version
-#define VERSION "2.1"
+#define VERSION "2.2"
 ;-----------------------------------------Sideloader modpack directory
 #define ModsDir "E:\HFpatchmaking\HS\HSDX\mods"
 ;#define ModsDir "F:\Games\KoikatsuP\mods"
@@ -16,7 +16,7 @@
 ;---Skip file verification for easier testing, COMMENT OUT FOR RELEASE
 ;#define NOVERIFY
 ;------------Don't include general, studio and map sideloader modpacks
-#define LITE
+;#define LITE
 ;---------------------------------------------------------------------
 
 #include "_Common\Header.iss"
@@ -38,7 +38,7 @@ LZMAUseSeparateProcess=yes
 ;LZMADictionarySize=208576
 LZMADictionarySize=208576
 LZMANumFastBytes=273
-LZMANumBlockThreads=6
+LZMANumBlockThreads=8
 DiskSpanning=yes
 DefaultDirName={code:GetDefaultDirName}
 
@@ -67,6 +67,7 @@ Name: "custom";   Description: "{cm:customInstall}"; Flags: iscustom
 [Components]
 Name: "Patch";                    Description: "All free updates + game repair"                                  ; Types: full_en full extra_en extra custom bare none; Flags: fixed
 Name: "Patch\VR";                 Description: "Install/Update VR Module"                                                         ; Types: extra_en extra
+Name: "Server";                   Description: "Use worldwide server in the in-game card browser instead of Japanese-only"        ; Types: full_en extra_en
 ;-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Name: "Modpack"                 ; Description: "Sideloader Modpacks {#CurrentDate} (Add additional content to the game, needs at least BepisPlugins to work)"
 #ifndef LITE
@@ -111,6 +112,7 @@ Source: "{#ModsDir}\Sideloader Modpack - Maps (HS2 Game)\*"       ; DestDir: "{a
 Source: "{#ModsDir}\Sideloader Modpack - MaterialEditor Shaders\*"; DestDir: "{app}\mods\Sideloader Modpack - MaterialEditor Shaders"; Flags: ignoreversion recursesubdirs solidbreak; Components: Modpack\MaterialEditor
 Source: "{#ModsDir}\Sideloader Modpack - Uncensor Selector\*"     ; DestDir: "{app}\mods\Sideloader Modpack - Uncensor Selector"     ; Flags: ignoreversion recursesubdirs; Components: Modpack\UncensorSelector
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Source: "Input\Server\*";                 DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Server
 ; Make sure this is never missing in case the plugin archive doesn't have it included. Also solidbreak to split off the modpacks
 Source: "Input\_Plugins\HS2_UncensorSelector Base.zipmod"; DestDir: "{app}\mods"; Flags: ignoreversion; Components: UNC\Selector
 ; Always install critical fixes

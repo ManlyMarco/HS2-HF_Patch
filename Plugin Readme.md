@@ -88,12 +88,12 @@
 - Author(s):         https://github.com/ManlyMarco/IllusionCheatTools
 - More information:  https://github.com/ManlyMarco/IllusionCheatTools
 
-# Colliders v1.2
+# Colliders v1.3
 - Short description: Cloth physics support for mods
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Configuration Manager v17.1
+# Configuration Manager v18.0
 - Short description: Can change plugin settings. Press F1 to open, not visible inside HMD
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.ConfigurationManager
@@ -122,11 +122,6 @@
 - Short description: Edit properties of Dynamic Bones for accessories
 - Author(s):         DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
-
-# Ear Wiggle v1.0.1
-- Short description: Adds Dynamic Bones to the Ears allowing Ears to Wiggle
-- Author(s):         OrangeSpork
-- More information:  https://github.com/OrangeSpork/EarWiggle
 
 # Enable Full Screen Toggle v1.0
 - Short description: Toggle full screen with alt+enter
@@ -343,7 +338,7 @@
 - Author(s):         hooh-hooah
 - More information:  https://github.com/hooh-hooah/IL_Heelz
 
-# HS2PE v2.13.3.1
+# HS2PE v2.13.4
 - Short description: Advanced studio controls
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
@@ -358,17 +353,17 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# IllusionFixes v20.2
+# IllusionFixes v21.0.1
 - Short description: A collection of essential fixes and improvements
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionFixes
 
-# IllusionLaunchers v3.3.2.0
+# IllusionLaunchers v3.4.0.38361
 - Short description: Custom game launcher
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionLaunchers
 
-# IllusionLaunchers v3.3.2.0
+# IllusionLaunchers v3.4.0.38361
 - Short description: Custom game launcher
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionLaunchers
@@ -393,12 +388,12 @@
 - Author(s):         thojmr
 - More information:  https://github.com/thojmr/KK_PregnancyPlus/releases
 
-# KKManager v0.21.1.0
+# KKManager v0.22.0.0
 - Short description: Manage and update mods, browse cards
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/KKManager
 
-# LoveMachine v3.4.0
+# LoveMachine v3.7.0
 - Short description: Support for some interactive sex toys
 - Author(s):         Sauceke
 - More information:  https://github.com/Sauceke/BepInEx.LoveMachine
@@ -413,7 +408,7 @@
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/MakerJumpToSelectionPlugin
 
-# Maker/Studio Browser Folders v2.6.2
+# Maker/Studio Browser Folders v3.0
 - Short description: Adds folder support to studio character and scene lists
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/Illusion_BrowserFolders
@@ -433,7 +428,7 @@
 - Author(s):         Mikke
 - More information:  https://mikkemods.blogspot.com/
 
-# Material Editor v3.1.21
+# Material Editor v3.1.22
 - Short description: Material editing in maker and studio
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -498,7 +493,7 @@
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/OutfitPainter
 
-# Overlay Mods v6.1
+# Overlay Mods v6.1.2
 - Short description: Set custom body, clothes and eye textures
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/Illusion-Overlay-Mods
@@ -618,7 +613,7 @@
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/TranslationTools
 
-# Timeline v1.1.7
+# Timeline v1.1.8
 - Short description: Advanced animation editor for Studio (Ctrl+T, read the Help)
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/HSPlugins
@@ -643,7 +638,7 @@
 - Author(s):         Hijack Hornet
 - More information:  https://github.com/HijackHornet/IllusionMods
 
-# Uncensor Selector v3.11.6
+# Uncensor Selector v3.11.7
 - Short description: Support for user-selectable uncensors
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins

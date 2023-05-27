@@ -417,12 +417,30 @@ begin
 
   if (CurPageID = wpSelectDir) then
   begin
+    if Result = True then
+    begin
+      if (FileExists(ExpandConstant('{app}\EmotionCreators.exe'))
+      or FileExists(ExpandConstant('{app}\Koikatu.exe'))
+      or FileExists(ExpandConstant('{app}\Koikatsu Party.exe'))
+      or FileExists(ExpandConstant('{app}\KoikatsuSunshine.exe'))
+      or FileExists(ExpandConstant('{app}\KoiKoiMonogatari.exe'))
+      or FileExists(ExpandConstant('{app}\KoiKoiMonogatariVR.exe'))
+      or FileExists(ExpandConstant('{app}\PlayHome.exe'))
+      or FileExists(ExpandConstant('{app}\VR_Kanojo.exe'))
+      or FileExists(ExpandConstant('{app}\AI-Syoujyo.exe'))
+      or FileExists(ExpandConstant('{app}\AI-Shoujo.exe'))) then
+      begin
+        MsgBox(ExpandConstant('{cm:MsgDifferentGameDetected}'), mbError, MB_OK);
+        Result := False;
+      end
+    end;
+
     if (not FileExists(ExpandConstant('{app}\HoneySelect2_Data\resources.assets'))) then
     begin
       if(SuppressibleMsgBox(ExpandConstant('{cm:MsgExeNotFound}'), mbError, MB_YESNO, 0) = IDNO) then
         Result := False;
     end;
-
+    
     if Result = True then
     begin
       if (Length(ExpandConstant('{app}')) > 100) then
@@ -445,20 +463,6 @@ begin
       if (Pos(LowerCase(ExpandConstant('{app}\')), LowerCase(ExpandConstant('{src}\'))) > 0) then
       begin
         MsgBox('This patch is inside of the game directory you are attempting to install to. You have to move the patch files outside of the game directory and try again.', mbError, MB_OK);
-        Result := False;
-      end
-    end;
-
-    if Result = True then
-    begin
-      if (FileExists(ExpandConstant('{app}\EmotionCreators.exe'))
-      or FileExists(ExpandConstant('{app}\Koikatu.exe'))
-      or FileExists(ExpandConstant('{app}\Koikatsu Party.exe'))
-      or FileExists(ExpandConstant('{app}\PlayHome.exe'))
-      or FileExists(ExpandConstant('{app}\AI-Syoujyo.exe'))
-      or FileExists(ExpandConstant('{app}\AI-Shoujo.exe'))) then
-      begin
-        MsgBox(ExpandConstant('{cm:MsgDifferentGameDetected}'), mbError, MB_OK);
         Result := False;
       end
     end;

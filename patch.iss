@@ -7,7 +7,7 @@
 ;-------------Full game name for naming patch itself and desktop icons
 #define NAME "HoneySelect2"
 ;---------------------------------------------Current HF Patch version
-#define VERSION "2.6"
+#define VERSION "2.7"
 ;-----------------------------------------Sideloader modpack directory
 #define GameDir "L:\HFpatchmaking\HS\MODSOURCE"
 ;#define ModsDir "F:\Games\KoikatsuP\mods"
@@ -38,7 +38,7 @@ LZMAUseSeparateProcess=yes
 ;LZMADictionarySize=208576
 LZMADictionarySize=208576
 LZMANumFastBytes=273
-LZMANumBlockThreads=18
+LZMANumBlockThreads=17
 DiskSpanning=yes
 DefaultDirName={code:GetDefaultDirName}
 
@@ -72,7 +72,7 @@ Name: "Server";                   Description: "Use worldwide server in the in-g
 Name: "Modpack"                 ; Description: "Sideloader Modpacks {#CurrentDate} (Add additional content to the game, needs at least BepisPlugins to work)"
 #ifndef LITE
 Name: "Modpack\General"         ; Description: "General (Content for making characters, always recommended)"                      ; Types: full_en full extra_en extra
-Name: "Modpack\Studio"          ; Description: "Studio (Additional content for making Studio scenes)"                           ; Types: full_en full extra_en extra
+;Name: "Modpack\Studio"          ; Description: "Studio (Additional content for making Studio scenes)"                           ; Types: full_en full extra_en extra
 ;Name: "Modpack\MapsStudio"      ; Description: "Maps for use in Studio (Add > Map)"
 Name: "Modpack\MapsGame"        ; Description: "Maps for use in main game (H scenes)"                                             ; Types: full_en full extra_en extra
 ;Name: "Modpack\Animations"      ; Description: "Animations (Additional adnimations for use in Studio and H scenes)"               ; Types: full_en full extra_en extra                          ; Types: full_en full extra_en extra
@@ -105,7 +105,7 @@ Source: "Input\_Patch\steam_post\*";      DestDir: "{app}";                     
 Source: "{#GameDir}\mods\Sideloader Modpack\*"                          ; DestDir: "{app}\mods\Sideloader Modpack"                         ; Flags: ignoreversion recursesubdirs solidbreak; Components: Modpack\General;        
 Source: "{#GameDir}\mods\Sideloader Modpack - Exclusive HS2\*"          ; DestDir: "{app}\mods\Sideloader Modpack - Exclusive HS2"         ; Flags: ignoreversion recursesubdirs; Components: Modpack\General
 ;Source: "{#ModsDir}\Sideloader Modpack - Bleeding Edge\*"         ; DestDir: "{app}\mods\Sideloader Modpack - Bleeding Edge"         ; Flags: ignoreversion recursesubdirs; Components: Modpack\Bleeding
-Source: "{#GameDir}\mods\Sideloader Modpack - Studio\*"                ; DestDir: "{app}\mods\Sideloader Modpack - Studio"                ; Flags: ignoreversion recursesubdirs; Components: Modpack\Studio
+;Source: "{#GameDir}\mods\Sideloader Modpack - Studio\*"                ; DestDir: "{app}\mods\Sideloader Modpack - Studio"                ; Flags: ignoreversion recursesubdirs; Components: Modpack\Studio
 ;Source: "{#ModsDir}\Sideloader Modpack - Maps\*"                  ; DestDir: "{app}\mods\Sideloader Modpack - Maps"                  ; Flags: ignoreversion recursesubdirs; Components: Modpack\MapsStudio
 Source: "{#GameDir}\mods\Sideloader Modpack - Maps (HS2 Game)\*"       ; DestDir: "{app}\mods\Sideloader Modpack - Maps (HS2 Game)"       ; Flags: ignoreversion recursesubdirs; Components: Modpack\MapsGame
 #endif
@@ -113,6 +113,7 @@ Source: "{#GameDir}\mods\Sideloader Modpack - MaterialEditor Shaders\*"; DestDir
 Source: "{#GameDir}\mods\Sideloader Modpack - Uncensor Selector\*"     ; DestDir: "{app}\mods\Sideloader Modpack - Uncensor Selector"     ; Flags: ignoreversion recursesubdirs; Components: Modpack\UncensorSelector
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "{#GameDir}\BepInEx\cache\sideloader_zipmod_cache.bin*";                 DestDir: "{app}\BepinEx\cache";                      Flags: ignoreversion recursesubdirs createallsubdirs;           
+Source: "Input\AIS_HS2_QuickAccessBox_Thumbs_Stock.zipmod";                 DestDir: "{app}\mods\Sideloader Modpack - Studio\Misc";    Flags: ignoreversion recursesubdirs createallsubdirs;           
 Source: "Input\Server\*";                 DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Server
 ; Make sure this is never missing in case the plugin archive doesn't have it included. Also solidbreak to split off the modpacks
 Source: "Input\_Plugins\HS2_UncensorSelector Base.zipmod"; DestDir: "{app}\mods"; Flags: ignoreversion; Components: UNC\Selector

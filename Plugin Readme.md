@@ -23,7 +23,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Autosave v1.1.1
+# Autosave v1.2
 - Short description: Autosave for maker and studio
 - Author(s):         DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -43,7 +43,7 @@
 - Author(s):         https://github.com/BepInEx
 - More information:  https://github.com/BepInEx/BepInEx
 
-# BepInEx.SplashScreen v2.2.0.0
+# BepInEx.SplashScreen v2.2.1.0
 - Short description: A loading screen on game startup with information about patchers and plugins being currently loaded
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.SplashScreen
@@ -98,7 +98,7 @@
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/CharacterRandomizer
 
-# Cheat Tools v3.3.2
+# Cheat Tools v3.5
 - Short description: Trainer, press F12 to open
 - Author(s):         https://github.com/ManlyMarco/IllusionCheatTools
 - More information:  https://github.com/ManlyMarco/IllusionCheatTools
@@ -108,7 +108,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Configuration Manager v18.3
+# Configuration Manager v18.3.1
 - Short description: Can change plugin settings. Press F1 to open, not visible inside HMD
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.ConfigurationManager
@@ -358,7 +358,7 @@
 - Author(s):         hooh-hooah
 - More information:  https://github.com/hooh-hooah/IL_Heelz
 
-# HS2PE v2.17.3
+# HS2PE v2.18.1
 - Short description: Advanced studio controls
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
@@ -408,7 +408,7 @@
 - Author(s):         thojmr
 - More information:  https://github.com/thojmr/KK_PregnancyPlus/releases
 
-# KKManager v1.3.1.0
+# KKManager v1.4.2.0
 - Short description: Manage and update mods, browse cards
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/KKManager
@@ -448,7 +448,7 @@
 - Author(s):         Mikke
 - More information:  https://mikkemods.blogspot.com/
 
-# Material Editor v3.9.2.2
+# Material Editor v3.10
 - Short description: Material editing in maker and studio
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -473,7 +473,7 @@
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/ModBoneImplantor
 
-# Modding API v1.41
+# Modding API v1.42.1
 - Short description: Modding API needed by many plugins
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/IllusionMods/IllusionModdingAPI
@@ -498,6 +498,11 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
+# ObjectMap v1.1.3
+- Short description: Allows editing of maps
+- Author(s):         krypto4863
+- More information:  https://github.com/krypto5863/Illusion.ObjectMap
+
 # OptimizeIMGUI v1.0
 - Short description: Slight perf improvement of plugin UIs
 - Author(s):         BepInEx
@@ -513,7 +518,7 @@
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/OutfitPainter
 
-# Overlay Mods v6.1.3
+# Overlay Mods v6.1.6
 - Short description: Set custom body, clothes and eye textures
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/Illusion-Overlay-Mods
@@ -553,10 +558,15 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# RuntimeUnityEditor v5.4
+# Runtime Unity Editor v5.5.1
 - Short description: Debugging and development tool
 - Author(s):         ManlyMarco
 - More information:  https://github.com/ManlyMarco/RuntimeUnityEditor
+
+# Shallty Utils v1.3
+- Short description: A utility plugin focused on enhancing Timeline to improve animator's workflows (may cause issues)
+- Author(s):         Shallty
+- More information:  ???
 
 # Silhouette plugin v1.0
 - Short description: Characters can be turned monocolor in studio, saves performance
@@ -673,12 +683,12 @@
 - Author(s):         Hijack Hornet
 - More information:  https://github.com/HijackHornet/IllusionMods
 
-# Uncensor Selector v3.12.1
+# Uncensor Selector v3.12.2
 - Short description: Support for user-selectable uncensors
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# VideoExport v1.3.0
+# VideoExport v1.3.1
 - Short description: Video and image sequence recorder
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
@@ -688,12 +698,12 @@
 - Author(s):         GeBo
 - More information:  https://gebo1.github.io/GeBoPlugins/src/GameWh
 
-# XUnity Auto Translator v5.3.1
+# XUnity Auto Translator v5.4.3
 - Short description: Translation loader
 - Author(s):         bbepis and others
 - More information:  https://github.com/bbepis/XUnity.AutoTranslator
 
-# XUnity Resource Redirector v2.0.0
+# XUnity Resource Redirector v2.1.0
 - Short description: Modding API
 - Author(s):         bbepis and others
 - More information:  https://github.com/bbepis/XUnity.AutoTranslator

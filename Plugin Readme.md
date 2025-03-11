@@ -98,6 +98,11 @@
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/CharacterRandomizer
 
+# Character Replacer v1.7
+- Short description: Can replace default maker characters
+- Author(s):         IllusionMods
+- More information:  https://github.com/IllusionMods/CharacterReplacer
+
 # Cheat Tools v3.5
 - Short description: Trainer, press F12 to open
 - Author(s):         https://github.com/ManlyMarco/IllusionCheatTools
@@ -108,7 +113,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Configuration Manager v18.3.1
+# Configuration Manager v18.4
 - Short description: Can change plugin settings. Press F1 to open, not visible inside HMD
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.ConfigurationManager
@@ -227,6 +232,11 @@
 - Short description: Allows putting on bottom clothing with tops that would otherwise block them
 - Author(s):         kkykkykky
 - More information:  https://github.com/kkykkykky/AllowBottom
+
+# HS2 Boob Settings v1.1.0
+- Short description: Adds more options for the breast and lower body (butt) category(Possible issue)
+- Author(s):         FairBear
+- More information:  https://github.com/FairBear/HS2_BoobSettings
 
 # HS2 Graphics v0.5.2
 - Short description: More powerful than DHH but harder to use
@@ -348,7 +358,7 @@
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://www.patreon.com/2155X
 
-# HS2ABMX (BonemodX) v5.2.2
+# HS2ABMX (BonemodX) v5.2.3
 - Short description: More sliders in character maker
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/ABMX
@@ -358,7 +368,7 @@
 - Author(s):         hooh-hooah
 - More information:  https://github.com/hooh-hooah/IL_Heelz
 
-# HS2PE v2.18.1
+# HS2PE v2.20
 - Short description: Advanced studio controls
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
@@ -373,7 +383,7 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# IllusionFixes v21.6
+# IllusionFixes v22.0.2
 - Short description: A collection of essential fixes and improvements
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionFixes
@@ -388,6 +398,11 @@
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionLaunchers
 
+# IMGUIScale v0.1.9
+- Short description: Allows sizing certain plugin windows
+- Author(s):         ???
+- More information:  https://yuki-portal.com/uploader/honeyselect2/category/mod/
+
 # Input Hotkey Block v1.4
 - Short description: Blocks plugin keybinds while typing
 - Author(s):         BepInEx
@@ -398,7 +413,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Item Layer Edit v1.1.2.0
+# Item Layer Edit v1.1.2.1
 - Short description: Switch objects between chara and map layers
 - Author(s):         Keelhauled
 - More information:  https://github.com/Keelhauled/KeelPlugins
@@ -428,7 +443,7 @@
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/MakerJumpToSelectionPlugin
 
-# Maker/Studio Browser Folders v3.2.2
+# Maker/Studio Browser Folders v3.2.3
 - Short description: Adds folder support to studio character and scene lists
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/Illusion_BrowserFolders
@@ -448,7 +463,7 @@
 - Author(s):         Mikke
 - More information:  https://mikkemods.blogspot.com/
 
-# Material Editor v3.10
+# Material Editor v3.12
 - Short description: Material editing in maker and studio
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -473,7 +488,7 @@
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/ModBoneImplantor
 
-# Modding API v1.42.1
+# Modding API v1.42.2
 - Short description: Modding API needed by many plugins
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/IllusionMods/IllusionModdingAPI
@@ -493,13 +508,13 @@
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.Utility
 
-# NodesConstraints v1.3.3
+# NodesConstraints v1.4.1
 - Short description: Connect studio items to create custom animations
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
 # ObjectMap v1.1.3
-- Short description: Allows editing of maps
+- Short description: Allows editing of studio maps as normal objects
 - Author(s):         krypto4863
 - More information:  https://github.com/krypto5863/Illusion.ObjectMap
 
@@ -518,7 +533,7 @@
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/OutfitPainter
 
-# Overlay Mods v6.1.6
+# Overlay Mods v6.3
 - Short description: Set custom body, clothes and eye textures
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/Illusion-Overlay-Mods
@@ -558,7 +573,7 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# Runtime Unity Editor v5.5.1
+# Runtime Unity Editor v5.6
 - Short description: Debugging and development tool
 - Author(s):         ManlyMarco
 - More information:  https://github.com/ManlyMarco/RuntimeUnityEditor
@@ -653,7 +668,7 @@
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/TranslationTools
 
-# Timeline v1.4.2
+# Timeline v1.5.1
 - Short description: Advanced animation editor for Studio (Ctrl+T, read the Help)
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/HSPlugins
@@ -663,7 +678,7 @@
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/KK_Plugins/
 
-# Title shortcuts v1.3.1.0
+# Title shortcuts v1.3.1.1
 - Short description: Hotkeys in main menu; can automatically start maker
 - Author(s):         Keelhauled
 - More information:  https://github.com/Keelhauled/KeelPlugins
@@ -688,7 +703,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# VideoExport v1.3.1
+# VideoExport v1.5
 - Short description: Video and image sequence recorder
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
@@ -698,7 +713,7 @@
 - Author(s):         GeBo
 - More information:  https://gebo1.github.io/GeBoPlugins/src/GameWh
 
-# XUnity Auto Translator v5.4.3
+# XUnity Auto Translator v5.4.4
 - Short description: Translation loader
 - Author(s):         bbepis and others
 - More information:  https://github.com/bbepis/XUnity.AutoTranslator

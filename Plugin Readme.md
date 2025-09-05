@@ -58,7 +58,7 @@
 - Author(s):         A basement dweller
 - More information:  https://www.patreon.com/posts/29809884
 
-# BetterPenetration v5.0.1.2
+# BetterPenetration v5.0.1.4
 - Short description: Improves how penetration looks in H scenes
 - Author(s):         https://www.patreon.com/Animal42069
 - More information:  https://www.patreon.com/Animal42069/posts?filters%5Btag%5D=BetterPenetration
@@ -117,6 +117,11 @@
 - Short description: Can change plugin settings. Press F1 to open, not visible inside HMD
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.ConfigurationManager
+
+# Custom intro voices v32.0
+- Short description: Parasocial for AI vtubers
+- Author(s):         ManlyMarco
+- More information:  https://www.youtube.com/watch?v=SZBQ4lQFqvw
 
 # Deformers v0.6
 - Short description: Allows deforming of accessories
@@ -358,7 +363,7 @@
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://www.patreon.com/2155X
 
-# HS2ABMX (BonemodX) v5.2.5
+# HS2ABMX (BonemodX) v5.3
 - Short description: More sliders in character maker
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/ABMX
@@ -398,6 +403,11 @@
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionLaunchers
 
+# IMGUI_HiDPI_Patcher v0.0.4.0
+- Short description: Increases text size in plugin windows (!Known to cause issues with some plugins!)
+- Author(s):         y=soro
+- More information:  https://github.com/y0soro/Unity.IMGUI.HiDPI.Patcher
+
 # IMGUIScale v0.1.9
 - Short description: Allows sizing certain plugin windows
 - Author(s):         ???
@@ -428,7 +438,7 @@
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/KKManager
 
-# LoveMachine v3.20.0
+# LoveMachine v4.0.0
 - Short description: Support for some interactive sex toys
 - Author(s):         Sauceke
 - More information:  https://github.com/Sauceke/BepInEx.LoveMachine
@@ -463,7 +473,7 @@
 - Author(s):         Mikke
 - More information:  https://mikkemods.blogspot.com/
 
-# Material Editor v3.13.1
+# Material Editor v3.13.2
 - Short description: Material editing in maker and studio
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -533,7 +543,7 @@
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/OutfitPainter
 
-# Overlay Mods v7.0.2
+# Overlay Mods v7.0.3
 - Short description: Set custom body, clothes and eye textures
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/Illusion-Overlay-Mods
@@ -573,7 +583,7 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# Runtime Unity Editor v6.0
+# Runtime Unity Editor v6.1
 - Short description: Debugging and development tool
 - Author(s):         ManlyMarco
 - More information:  https://github.com/ManlyMarco/RuntimeUnityEditor
@@ -646,7 +656,7 @@
 # Studio_AnimationSearch v1.0.0
 - Short description: You can hide certains positions for specific characters
 - Author(s):         Hijack Hornet
-- More information:  https://github.com/HijackHornet/IllusionMods
+- More information:  https://github.com/ManlyMarco/HijackHornet_IllusionMods
 
 # StudioImageEmbed v1.0.3
 - Short description: Save custom images into scenes so other people can load them
@@ -696,7 +706,7 @@
 # UIScalerAndWidescreenSupport v1.0.2
 - Short description: Allows widescreen and UI scaling
 - Author(s):         Hijack Hornet
-- More information:  https://github.com/HijackHornet/IllusionMods
+- More information:  https://github.com/ManlyMarco/HijackHornet_IllusionMods
 
 # Uncensor Selector v3.12.3
 - Short description: Support for user-selectable uncensors

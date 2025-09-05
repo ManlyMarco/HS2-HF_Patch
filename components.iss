@@ -30,17 +30,17 @@ Name: "AT\TL\HS2_Subtitles";                   Description: "Subtitles v2.3.2 (W
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Name: "UNC";                                   Description: "{cm:CompUNC}"                                                                         ; Types: full_en full extra_en extra
 Name: "UNC\Selector";                          Description: "Uncensor Selector v3.12.3 (Support for user-selectable uncensors)"                    ; Types: full_en full extra extra_en
-Name: "UNC\Selector\BetterPenetration";        Description: "BetterPenetration v5.0.1.2 (Improves how penetration looks in H scenes)"              ; Types: full_en full extra extra_en
+Name: "UNC\Selector\BetterPenetration";        Description: "BetterPenetration v5.0.1.4 (Improves how penetration looks in H scenes)"              ; Types: full_en full extra extra_en
 Name: "UNC\Selector\BeaverHS2";                Description: "Beaver v1.2.3 (Allows changing some uncensor-specific settings in maker)"             ; Types: full_en full extra extra_en
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Name: "Content";                               Description: "Additional content (Needed to properly load most character cards and scenes)"         ; Types: full_en full extra extra_en
-Name: "Content\HS2_MaterialEditor";            Description: "Material Editor v3.13.1 (Material editing in maker and studio)"                       ; Types: full_en full extra extra_en
+Name: "Content\HS2_MaterialEditor";            Description: "Material Editor v3.13.2 (Material editing in maker and studio)"                       ; Types: full_en full extra extra_en
 Name: "Content\RendererEditor";                Description: "RendererEditor v1.6.0 (Edit materials of items in Studio)"                            ; Types: full_en full extra extra_en
 Name: "Content\HS2PE";                         Description: "HS2PE v2.21.1 (Advanced studio controls)"                                             ; Types: full_en full extra extra_en
 Name: "Content\MoreAccessories";               Description: "MoreAccessories v1.2.2 (Unlocks accessory limit above 20)"                            ; Types: full_en full extra extra_en
 Name: "Content\NodesConstraints";              Description: "NodesConstraints v1.4.1 (Connect studio items to create custom animations)"           ; Types: full_en full extra extra_en
-Name: "Content\HS2ABMX";                       Description: "HS2ABMX (BonemodX) v5.2.5 (More sliders in character maker)"                          ; Types: full_en full extra extra_en
-Name: "Content\KSOX";                          Description: "Overlay Mods v7.0.2 (Set custom body, clothes and eye textures)"                      ; Types: full_en full extra extra_en
+Name: "Content\HS2ABMX";                       Description: "HS2ABMX (BonemodX) v5.3 (More sliders in character maker)"                            ; Types: full_en full extra extra_en
+Name: "Content\KSOX";                          Description: "Overlay Mods v7.0.3 (Set custom body, clothes and eye textures)"                      ; Types: full_en full extra extra_en
 Name: "Content\HS2_Colliders";                 Description: "Colliders v1.3.1 (Cloth physics support for mods)"                                    ; Types: full_en full extra extra_en
 Name: "Content\HS2_ClothColliders";            Description: "HS2_ClothColliders v1.1 (Cloth physics support for mods)"                             ; Types: full_en full extra extra_en
 Name: "Content\HS2_InvisibleBody";             Description: "Invisible Body v1.4 (Hide character body in studio for trickery with clothes)"        ; Types: full_en full extra extra_en
@@ -160,9 +160,11 @@ Name: "MISC";                                  Description: "{cm:CompMISC}"
 Name: "MISC\FPS";                              Description: "FPS Counter v3.3 (Useful for performance testing)"                                    ; Types: full_en full extra extra_en
 Name: "MISC\Trainer\Cheats";                   Description: "Cheat Tools v3.6 (Trainer, press F12 to open)"                                        ; Types: full_en full extra extra_en
 Name: "MISC\ScriptLoader";                     Description: "C# Script Loader v1.2.4 (Runs custom user scripts)"                                   ; Types: full_en full extra extra_en
-Name: "MISC\RuntimeUnityEditor";               Description: "Runtime Unity Editor v6.0 (Debugging and development tool)"                           ; Types: full_en full extra extra_en
+Name: "MISC\RuntimeUnityEditor";               Description: "Runtime Unity Editor v6.1 (Debugging and development tool)"                           ; Types: full_en full extra extra_en
 Name: "MISC\FullSave";                         Description: "Full save (OVERWRITES CURRENT SAVE)"                                                  
-Name: "MISC\ButtPlugin";                       Description: "LoveMachine v3.20.0 (Support for some interactive sex toys)"                          
+Name: "MISC\ButtPlugin";                       Description: "LoveMachine v4.0.0 (Support for some interactive sex toys)"                           
+Name: "MISC\Memes";                            Description: "Custom intro voices v32.0 (Parasocial for AI vtubers)"                                ; Types: extra extra_en
+Name: "Misc\HiDPI_Patcher";                    Description: "IMGUI_HiDPI_Patcher v0.0.4.0 (Increases text size in plugin windows (!Known to cause issues with some plugins!))"
 
 [Files]
 #ifndef DEBUG
@@ -319,6 +321,8 @@ Source: "Input\_Plugins\_out\ScriptLoader\*";               DestDir: "{app}"; Fl
 Source: "Input\_Plugins\_out\Full_save\*";                  DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\FullSave; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\RuntimeUnityEditor\*";         DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\RuntimeUnityEditor; Excludes: "manifest.xml"
 Source: "Input\_Plugins\_out\LoveMachine_for_Honey_Select_2\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\ButtPlugin; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\Memes\*";                      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MISC\Memes; Excludes: "manifest.xml"
+Source: "Input\_Plugins\_out\IMGUI.HiDPI.Patcher.Mono\*";   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Misc\HiDPI_Patcher; Excludes: "manifest.xml"
 
 [Code]
 // Need to put this behind an empty Code category so that the automatic tool doesn't add new file items below this #endif

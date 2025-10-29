@@ -23,7 +23,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Autosave v1.2
+# Autosave v2.0
 - Short description: Autosave for maker and studio
 - Author(s):         DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -38,7 +38,7 @@
 - Author(s):         https://mikkemods.blogspot.com
 - More information:  https://mikkemods.blogspot.com/
 
-# BepInEx v5.4.23.3
+# BepInEx v5.4.23.4
 - Short description: Plugin framework
 - Author(s):         https://github.com/BepInEx
 - More information:  https://github.com/BepInEx/BepInEx
@@ -48,7 +48,7 @@
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.SplashScreen
 
-# BepisPlugins v21.0
+# BepisPlugins v21.1.2
 - Short description: Essential plugins required by many other plugins to function
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/BepisPlugins
@@ -118,8 +118,8 @@
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.ConfigurationManager
 
-# Custom intro voices v32.0
-- Short description: Parasocial for AI vtubers
+# Custom intro voices v33.0
+- Short description: Being a gooner is my job
 - Author(s):         ManlyMarco
 - More information:  https://www.youtube.com/watch?v=SZBQ4lQFqvw
 
@@ -193,7 +193,7 @@
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/FKHeightAdjustUI
 
-# FPS Counter v3.3
+# FPS Counter v3.3.1
 - Short description: Useful for performance testing
 - Author(s):         ManlyMarco
 - More information:  https://github.com/ManlyMarco/FPSCounter
@@ -203,7 +203,7 @@
 - Author(s):         GeBo
 - More information:  https://github.com/GeBo1/GeBoPlugins
 
-# Graphics Settings v1.3.1
+# Graphics Settings v1.4
 - Short description: More settings to make graphics more or less demanding
 - Author(s):         https://github.com/BepInEx/BepInEx.GraphicsSettings
 - More information:  https://github.com/BepInEx/BepInEx.GraphicsSettings
@@ -323,7 +323,7 @@
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://github.com/Mantas-2155X/MakerSearch
 
-# HS2_QuickAccessBox v3.2
+# HS2_QuickAccessBox v3.4
 - Short description: Quick search studio items
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/QuickAccessBox
@@ -363,7 +363,7 @@
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://www.patreon.com/2155X
 
-# HS2ABMX (BonemodX) v5.3
+# HS2ABMX (BonemodX) v5.4
 - Short description: More sliders in character maker
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/ABMX
@@ -373,7 +373,7 @@
 - Author(s):         hooh-hooah
 - More information:  https://github.com/hooh-hooah/IL_Heelz
 
-# HS2PE v2.21.1
+# HS2PE v2.21.4
 - Short description: Advanced studio controls
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
@@ -388,7 +388,7 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# IllusionFixes v22.0.3
+# IllusionFixes v22.0.4
 - Short description: A collection of essential fixes and improvements
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionFixes
@@ -433,12 +433,12 @@
 - Author(s):         thojmr
 - More information:  https://github.com/thojmr/KK_PregnancyPlus/releases
 
-# KKManager v1.5.0.0
+# KKManager v1.6.1.0
 - Short description: Manage and update mods, browse cards
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/KKManager
 
-# LoveMachine v4.0.0
+# LoveMachine v4.1.0
 - Short description: Support for some interactive sex toys
 - Author(s):         Sauceke
 - More information:  https://github.com/Sauceke/BepInEx.LoveMachine
@@ -473,7 +473,7 @@
 - Author(s):         Mikke
 - More information:  https://mikkemods.blogspot.com/
 
-# Material Editor v3.13.2
+# Material Editor v3.13.5
 - Short description: Material editing in maker and studio
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -498,7 +498,7 @@
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/ModBoneImplantor
 
-# Modding API v1.42.2
+# Modding API v1.44
 - Short description: Modding API needed by many plugins
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/IllusionMods/IllusionModdingAPI
@@ -518,7 +518,7 @@
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.Utility
 
-# NodesConstraints v1.4.1
+# NodesConstraints v1.6.2
 - Short description: Connect studio items to create custom animations
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
@@ -583,7 +583,7 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# Runtime Unity Editor v6.1
+# Runtime Unity Editor v6.2
 - Short description: Debugging and development tool
 - Author(s):         ManlyMarco
 - More information:  https://github.com/ManlyMarco/RuntimeUnityEditor
@@ -623,7 +623,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Studio MultiSelect Chara v1.0.0.3
+# Studio MultiSelect Chara v1.2.0.1
 - Short description: Shift+tab to select all instances of same chara
 - Author(s):         GeBo
 - More information:  https://gebo1.github.io/GeBoPlugins/src/StudioMultiselectChara/
@@ -638,7 +638,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Studio Scene Navigation v1.0.3.0
+# Studio Scene Navigation v1.2.0.1
 - Short description: Hotkeys to load the next/previous scene from scenes folder
 - Author(s):         GeBo
 - More information:  https://gebo1.github.io/GeBoPlugins/src/StudioSceneNavigation/
@@ -678,7 +678,7 @@
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/TranslationTools
 
-# Timeline v1.5.1
+# Timeline v1.5.4
 - Short description: Advanced animation editor for Studio (Ctrl+T, read the Help)
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/HSPlugins
@@ -693,7 +693,7 @@
 - Author(s):         Keelhauled
 - More information:  https://github.com/Keelhauled/KeelPlugins
 
-# Translation Helper v1.1.1.0
+# Translation Helper v1.2.0.1
 - Short description: Extension for AT, needed for some translations
 - Author(s):         GeBo
 - More information:  https://github.com/GeBo1/GeBoPlugins
@@ -713,7 +713,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# VideoExport v1.7
+# VideoExport v1.8
 - Short description: Video and image sequence recorder
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
@@ -723,7 +723,7 @@
 - Author(s):         GeBo
 - More information:  https://gebo1.github.io/GeBoPlugins/src/GameWh
 
-# XUnity Auto Translator v5.4.5
+# XUnity Auto Translator v5.5
 - Short description: Translation loader
 - Author(s):         bbepis and others
 - More information:  https://github.com/bbepis/XUnity.AutoTranslator

@@ -7,7 +7,7 @@
 ;-------------Full game name for naming patch itself and desktop icons
 #define NAME "HoneySelect2"
 ;---------------------------------------------Current HF Patch version
-#define VERSION "2.16"
+#define VERSION "2.17"
 ;-----------------------------------------Sideloader modpack directory
 #define GameDir "L:\HFpatchmaking\HS\MODSOURCE"
 ;#define ModsDir "F:\Games\KoikatsuP\mods"
@@ -40,6 +40,7 @@ LZMADictionarySize=208576
 LZMANumFastBytes=273
 LZMANumBlockThreads=8
 DiskSpanning=yes
+DiskSliceSize=4294967295
 DefaultDirName={code:GetDefaultDirName}
 
 WindowResizable=yes
@@ -113,7 +114,7 @@ Source: "{#GameDir}\mods\Sideloader Modpack - MaterialEditor Shaders\*"; DestDir
 Source: "{#GameDir}\mods\Sideloader Modpack - Uncensor Selector\*"     ; DestDir: "{app}\mods\Sideloader Modpack - Uncensor Selector"     ; Flags: ignoreversion recursesubdirs; Components: Modpack\UncensorSelector
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "{#GameDir}\BepInEx\cache\sideloader_zipmod_cache.bin*";                 DestDir: "{app}\BepinEx\cache";                      Flags: ignoreversion recursesubdirs createallsubdirs;           
-Source: "Input\AIS_HS2_QuickAccessBox_Thumbs_Stock.zipmod";                 DestDir: "{app}\mods\Sideloader Modpack - Studio\Misc";    Flags: ignoreversion recursesubdirs createallsubdirs;           
+Source: "{#GameDir}\mods\Sideloader Modpack - Studio\Misc\AIS_HS2_QuickAccessBox_Thumbs_Stock.zipmod";                 DestDir: "{app}\mods\Sideloader Modpack - Studio\Misc";    Flags: ignoreversion;
 Source: "Input\Server\*";                 DestDir: "{app}";                      Flags: ignoreversion recursesubdirs createallsubdirs;            Components: Server
 ; Make sure this is never missing in case the plugin archive doesn't have it included. Also solidbreak to split off the modpacks
 Source: "Input\_Plugins\HS2_UncensorSelector Base.zipmod"; DestDir: "{app}\mods"; Flags: ignoreversion; Components: UNC\Selector
@@ -123,6 +124,8 @@ Source: "Input\_Plugins\_out\IllusionFixes_HoneySelect2\BepInEx\patchers\*"; Des
 Source: "Input\US_config_noBP.cfg"; DestDir: "{app}\BepInEx\config"; DestName: "com.deathweasel.bepinex.uncensorselector.cfg"; Flags: solidbreak
 ; This config only allows BP uncensors to be chosen by random
 Source: "Input\US_config_BP.cfg";   DestDir: "{app}\BepInEx\config"; DestName: "com.deathweasel.bepinex.uncensorselector.cfg"; Flags: solidbreak; Components: UNC\Selector\BetterPenetration
+Source: "Input\marco.kkapi.cfg"; DestDir: "{app}\BepInEx\config"; DestName: "marco.kkapi.cfg"; Flags: onlyifdoesntexist solidbreak
+Source: "Input\System.Drawing.dll";   DestDir: "{app}\BepInEx\core"; DestName: "System.Drawing.dll"; Flags: solidbreak; Components: Feature\VideoExport
 #endif
 
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -257,7 +260,11 @@ Root: HKCU; Subkey: "Software\Illusion\HoneySelect2\HoneySelect2"; ValueType: st
 [Tasks]
 Name: desktopicon; Description: "{cm:TaskIcon}"; Flags: unchecked
 Name: delete; Description: "{cm:TaskDelete}";
+#ifndef LITE
 Name: delete\Sidemods; Description: "{cm:TaskDeleteSide}"
+#else
+Name: delete\Sidemods; Description: "{cm:TaskDeleteSide}"; Flags: unchecked
+#endif 
 Name: delete\Plugins; Description: "{cm:TaskDeletePlugins}";
 Name: delete\Config; Description: "{cm:TaskDeletePluginSettings}"; Flags: unchecked
 Name: delete\scripts; Description: "Delete old scripts"

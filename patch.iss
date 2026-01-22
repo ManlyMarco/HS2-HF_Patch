@@ -635,12 +635,22 @@ begin
       if(FileExists(ExpandConstant('{app}\scripts\AYAYA.cs'))) then
         RenameFile(ExpandConstant('{app}\scripts\AYAYA.cs'), ExpandConstant('{app}\AYAYA.cs'));
 
+      DeleteFile(ExpandConstant('{app}\AYAYA_v2.cs'));
+      if(FileExists(ExpandConstant('{app}\scripts\AYAYA_v2.cs'))) then
+        RenameFile(ExpandConstant('{app}\scripts\AYAYA_v2.cs'), ExpandConstant('{app}\AYAYA_v2.cs'));
+
       DelTree(ExpandConstant('{app}\scripts'), True, True, True);
 
       if(FileExists(ExpandConstant('{app}\AYAYA.cs'))) then
       begin
         CreateDir(ExpandConstant('{app}\scripts'));
         RenameFile(ExpandConstant('{app}\AYAYA.cs'), ExpandConstant('{app}\scripts\AYAYA.cs'));
+      end;
+
+      if(FileExists(ExpandConstant('{app}\AYAYA_v2.cs'))) then
+      begin
+        CreateDir(ExpandConstant('{app}\scripts'));
+        RenameFile(ExpandConstant('{app}\AYAYA_v2.cs'), ExpandConstant('{app}\scripts\AYAYA_v2.cs'));
       end;
     end;
 

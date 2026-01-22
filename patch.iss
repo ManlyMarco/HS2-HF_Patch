@@ -7,7 +7,7 @@
 ;-------------Full game name for naming patch itself and desktop icons
 #define NAME "HoneySelect2"
 ;---------------------------------------------Current HF Patch version
-#define VERSION "2.17"
+#define VERSION "2.18"
 ;-----------------------------------------Sideloader modpack directory
 #define GameDir "L:\HFpatchmaking\HS\MODSOURCE"
 ;#define ModsDir "F:\Games\KoikatsuP\mods"
@@ -16,7 +16,7 @@
 ;---Skip file verification for easier testing, COMMENT OUT FOR RELEASE
 ;#define NOVERIFY
 ;------------Don't include general, studio and map sideloader modpacks
-;#define LITE
+#define LITE
 ;---------------------------------------------------------------------
 
 #include "_Common\Header.iss"
@@ -76,7 +76,7 @@ Name: "Modpack\General"         ; Description: "General (Content for making char
 ;Name: "Modpack\Studio"          ; Description: "Studio (Additional content for making Studio scenes)"                           ; Types: full_en full extra_en extra
 ;Name: "Modpack\MapsStudio"      ; Description: "Maps for use in Studio (Add > Map)"
 Name: "Modpack\MapsGame"        ; Description: "Maps for use in main game (H scenes)"                                             ; Types: full_en full extra_en extra
-;Name: "Modpack\Animations"      ; Description: "Animations (Additional adnimations for use in Studio and H scenes)"               ; Types: full_en full extra_en extra                          ; Types: full_en full extra_en extra
+;Name: "Modpack\Animations"      ; Description: "Animations (Additional adnimations for use in Studio and H scenes)"               ; Types: full_en full extra_en extra                      
 #endif
 ;Name: "Modpack\Fixes"           ; Description: "Fixes (Fixes to some of the official content, always recommended)"              ; Types: full_en full extra_en extra
 Name: "Modpack\MaterialEditor"  ; Description: "MaterialEditor (Materials for use with MaterialEditor)"                      ; Types: full_en full extra_en extra
@@ -111,7 +111,7 @@ Source: "{#GameDir}\mods\Sideloader Modpack - Exclusive HS2\*"          ; DestDi
 Source: "{#GameDir}\mods\Sideloader Modpack - Maps (HS2 Game)\*"       ; DestDir: "{app}\mods\Sideloader Modpack - Maps (HS2 Game)"       ; Flags: ignoreversion recursesubdirs; Components: Modpack\MapsGame
 #endif
 Source: "{#GameDir}\mods\Sideloader Modpack - MaterialEditor Shaders\*"; DestDir: "{app}\mods\Sideloader Modpack - MaterialEditor Shaders"; Flags: ignoreversion recursesubdirs solidbreak; Components: Modpack\MaterialEditor
-Source: "{#GameDir}\mods\Sideloader Modpack - Uncensor Selector\*"     ; DestDir: "{app}\mods\Sideloader Modpack - Uncensor Selector"     ; Flags: ignoreversion recursesubdirs; Components: Modpack\UncensorSelector
+Source: "{#GameDir}\mods\SideloaderModpack-UncensorSelector\*"     ; DestDir: "{app}\mods\SideloaderModpack-UncensorSelector"     ; Flags: ignoreversion recursesubdirs; Components: Modpack\UncensorSelector
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "{#GameDir}\BepInEx\cache\sideloader_zipmod_cache.bin*";                 DestDir: "{app}\BepinEx\cache";                      Flags: ignoreversion recursesubdirs createallsubdirs;           
 Source: "{#GameDir}\mods\Sideloader Modpack - Studio\Misc\AIS_HS2_QuickAccessBox_Thumbs_Stock.zipmod";                 DestDir: "{app}\mods\Sideloader Modpack - Studio\Misc";    Flags: ignoreversion;
@@ -126,6 +126,8 @@ Source: "Input\US_config_noBP.cfg"; DestDir: "{app}\BepInEx\config"; DestName: "
 Source: "Input\US_config_BP.cfg";   DestDir: "{app}\BepInEx\config"; DestName: "com.deathweasel.bepinex.uncensorselector.cfg"; Flags: solidbreak; Components: UNC\Selector\BetterPenetration
 Source: "Input\marco.kkapi.cfg"; DestDir: "{app}\BepInEx\config"; DestName: "marco.kkapi.cfg"; Flags: onlyifdoesntexist solidbreak
 Source: "Input\System.Drawing.dll";   DestDir: "{app}\BepInEx\core"; DestName: "System.Drawing.dll"; Flags: solidbreak; Components: Feature\VideoExport
+Source: "Input\Animations\HS2AX\*";                      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\Animations
+Source: "Input\Animations\MrC_HS2_RGPosMod\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\Animations
 #endif
 
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -196,6 +198,9 @@ Type: files; Name: "{app}\HoneySelect2_Data\output_log.txt"
 Type: files; Name: "{app}\HoneySelect2VR_Data\output_log.txt"
 ; Yikes, someone extracted a sideloader mod...
 Type: files; Name: "{app}\manifest.xml"
+
+; Problematic config files
+Type: files; Name: "{app}\BepInEx\config\com.joan6694.illusionplugins.videoexport.cfg"
 
 ; Just in case. Also resets any hash caches
 Type: filesandordirs; Name: "{app}\[UTILITY] KKManager"; Components: KKManager

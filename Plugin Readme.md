@@ -23,7 +23,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# Autosave v2.0
+# Autosave v3.0
 - Short description: Autosave for maker and studio
 - Author(s):         DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -48,7 +48,7 @@
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.SplashScreen
 
-# BepisPlugins v21.1.2
+# BepisPlugins v21.1.2.1
 - Short description: Essential plugins required by many other plugins to function
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/BepisPlugins
@@ -58,7 +58,7 @@
 - Author(s):         A basement dweller
 - More information:  https://www.patreon.com/posts/29809884
 
-# BetterPenetration v5.0.1.4
+# BetterPenetration v5.0.1.5
 - Short description: Improves how penetration looks in H scenes
 - Author(s):         https://www.patreon.com/Animal42069
 - More information:  https://www.patreon.com/Animal42069/posts?filters%5Btag%5D=BetterPenetration
@@ -108,6 +108,11 @@
 - Author(s):         https://github.com/ManlyMarco/IllusionCheatTools
 - More information:  https://github.com/ManlyMarco/IllusionCheatTools
 
+# ChicksDigMapModders v1.0.1
+- Short description: Girls will now show up in custom mod maps when walking the halls
+- Author(s):         OrangeSpork
+- More information:  https://github.com/OrangeSpork/HS2_ChicksDigMapModdersPlugin
+
 # Colliders v1.3.1
 - Short description: Cloth physics support for mods
 - Author(s):         https://github.com/DeathWeasel1337
@@ -118,8 +123,8 @@
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.ConfigurationManager
 
-# Custom intro voices v33.0
-- Short description: Being a gooner is my job
+# Custom intro voices v34.0
+- Short description: Gitgoon
 - Author(s):         ManlyMarco
 - More information:  https://www.youtube.com/watch?v=SZBQ4lQFqvw
 
@@ -143,7 +148,7 @@
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/DragAndDrop
 
-# Dynamic Bone Editor v1.0.5
+# Dynamic Bone Editor v1.1
 - Short description: Edit properties of Dynamic Bones for accessories
 - Author(s):         DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -388,7 +393,7 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# IllusionFixes v22.0.4
+# IllusionFixes v22.1
 - Short description: A collection of essential fixes and improvements
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionFixes
@@ -433,12 +438,12 @@
 - Author(s):         thojmr
 - More information:  https://github.com/thojmr/KK_PregnancyPlus/releases
 
-# KKManager v1.6.1.0
+# KKManager v1.7.0.0
 - Short description: Manage and update mods, browse cards
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/KKManager
 
-# LoveMachine v4.1.0
+# LoveMachine v4.2.1
 - Short description: Support for some interactive sex toys
 - Author(s):         Sauceke
 - More information:  https://github.com/Sauceke/BepInEx.LoveMachine
@@ -453,7 +458,7 @@
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/MakerJumpToSelectionPlugin
 
-# Maker/Studio Browser Folders v3.3
+# Maker/Studio Browser Folders v4.0.1
 - Short description: Adds folder support to studio character and scene lists
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/Illusion_BrowserFolders
@@ -473,7 +478,7 @@
 - Author(s):         Mikke
 - More information:  https://mikkemods.blogspot.com/
 
-# Material Editor v3.13.5
+# Material Editor v4.0
 - Short description: Material editing in maker and studio
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -498,7 +503,7 @@
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/ModBoneImplantor
 
-# Modding API v1.44
+# Modding API v1.45.1
 - Short description: Modding API needed by many plugins
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/IllusionMods/IllusionModdingAPI
@@ -583,7 +588,7 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# Runtime Unity Editor v6.2
+# Runtime Unity Editor v6.3
 - Short description: Debugging and development tool
 - Author(s):         ManlyMarco
 - More information:  https://github.com/ManlyMarco/RuntimeUnityEditor
@@ -618,7 +623,7 @@
 - Author(s):         https://github.com/kkykkykky/
 - More information:  https://github.com/kkykkykky/StudioCharaSort
 
-# Studio Custom Masking v1.2
+# Studio Custom Masking v1.3.2
 - Short description: Can make studio items disappear when blocking the camera view
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -653,12 +658,12 @@
 - Author(s):         craft
 - More information:  ???
 
-# Studio_AnimationSearch v1.0.0
+# Studio_AnimationSearch v1.0.1
 - Short description: You can hide certains positions for specific characters
 - Author(s):         Hijack Hornet
 - More information:  https://github.com/ManlyMarco/HijackHornet_IllusionMods
 
-# StudioImageEmbed v1.0.3
+# StudioImageEmbed v4.0
 - Short description: Save custom images into scenes so other people can load them
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -678,7 +683,12 @@
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/TranslationTools
 
-# Timeline v1.5.4
+# The Bird of Hermes v1.0.0.0
+- Short description: Timeline addon, allows loading an audio file, and get a waveform of the audio
+- Author(s):         Rinu Nalo
+- More information:  KK Discord/
+
+# Timeline v1.5.5
 - Short description: Advanced animation editor for Studio (Ctrl+T, read the Help)
 - Author(s):         IllusionMods
 - More information:  https://github.com/IllusionMods/HSPlugins
@@ -703,7 +713,7 @@
 - Author(s):         Njaecha
 - More information:  ???
 
-# UIScalerAndWidescreenSupport v1.0.2
+# UIScalerAndWidescreenSupport v1.0.3
 - Short description: Allows widescreen and UI scaling
 - Author(s):         Hijack Hornet
 - More information:  https://github.com/ManlyMarco/HijackHornet_IllusionMods
@@ -713,7 +723,7 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
-# VideoExport v1.8
+# VideoExport v2.0.1
 - Short description: Video and image sequence recorder
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694

@@ -23,6 +23,11 @@
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
 
+# Auto Keyframe v1.3.0.0
+- Short description: Automatically updates any keyframes in Timeline that you change
+- Author(s):         Rinu Nalo
+- More information:  KK Discord/
+
 # Autosave v3.0
 - Short description: Autosave for maker and studio
 - Author(s):         DeathWeasel1337
@@ -48,7 +53,7 @@
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.SplashScreen
 
-# BepisPlugins v21.1.2.1
+# BepisPlugins v21.1.3
 - Short description: Essential plugins required by many other plugins to function
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/BepisPlugins
@@ -62,6 +67,11 @@
 - Short description: Improves how penetration looks in H scenes
 - Author(s):         https://www.patreon.com/Animal42069
 - More information:  https://www.patreon.com/Animal42069/posts?filters%5Btag%5D=BetterPenetration
+
+# BlendshapeCreator v1.1
+- Short description: Allows adding custom blendshapes to meshes inside studio or maker
+- Author(s):         ShalltyB
+- More information:  https://github.com/ShalltyB/BlendshapeCreator
 
 # BonesFramework v1.4.2
 - Short description: Lets mods add new bones
@@ -328,7 +338,7 @@
 - Author(s):         https://www.patreon.com/2155X
 - More information:  https://github.com/Mantas-2155X/MakerSearch
 
-# HS2_QuickAccessBox v3.4
+# HS2_QuickAccessBox v3.4.1
 - Short description: Quick search studio items
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/QuickAccessBox
@@ -378,7 +388,7 @@
 - Author(s):         hooh-hooah
 - More information:  https://github.com/hooh-hooah/IL_Heelz
 
-# HS2PE v2.21.4
+# HS2PE v2.21.5
 - Short description: Advanced studio controls
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
@@ -393,17 +403,17 @@
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# IllusionFixes v22.1
+# IllusionFixes v22.2
 - Short description: A collection of essential fixes and improvements
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionFixes
 
-# IllusionLaunchers v3.4.1.36419
+# IllusionLaunchers v3.5.1.0
 - Short description: Custom game launcher
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionLaunchers
 
-# IllusionLaunchers v3.4.1.36418
+# IllusionLaunchers v3.5.1.0
 - Short description: Custom game launcher
 - Author(s):         https://github.com/IllusionMods
 - More information:  https://github.com/IllusionMods/IllusionLaunchers
@@ -478,7 +488,7 @@
 - Author(s):         Mikke
 - More information:  https://mikkemods.blogspot.com/
 
-# Material Editor v4.0.2
+# Material Editor v4.0.3
 - Short description: Material editing in maker and studio
 - Author(s):         https://github.com/DeathWeasel1337
 - More information:  https://github.com/DeathWeasel1337/KK_Plugins
@@ -518,17 +528,22 @@
 - Author(s):         https://mikkemods.blogspot.com
 - More information:  https://mikkemods.blogspot.com/
 
+# MuneRestoration v1.4.0
+- Short description: Restores the Mune00 bones which are the root FK handles for breasts in studio
+- Author(s):         Freelancer604
+- More information:  https://www.patreon.com/posts/154779660
+
 # Mute In Background v1.1
 - Short description: Mute the game when it's not in focus, turn on in plugin settings
 - Author(s):         BepInEx
 - More information:  https://github.com/BepInEx/BepInEx.Utility
 
-# NodesConstraints v1.6.2.1
+# NodesConstraints v1.6.3
 - Short description: Connect studio items to create custom animations
 - Author(s):         https://www.patreon.com/joan6694
 - More information:  https://www.patreon.com/joan6694
 
-# ObjectMap v1.1.7
+# ObjectMap v1.2.2
 - Short description: Allows editing of studio maps as normal objects
 - Author(s):         krypto4863
 - More information:  https://github.com/krypto5863/Illusion.ObjectMap
@@ -548,7 +563,7 @@
 - Author(s):         OrangeSpork
 - More information:  https://github.com/OrangeSpork/OutfitPainter
 
-# Overlay Mods v7.1.1
+# Overlay Mods v7.1.2
 - Short description: Set custom body, clothes and eye textures
 - Author(s):         https://github.com/ManlyMarco
 - More information:  https://github.com/ManlyMarco/Illusion-Overlay-Mods
@@ -592,6 +607,11 @@
 - Short description: Debugging and development tool
 - Author(s):         ManlyMarco
 - More information:  https://github.com/ManlyMarco/RuntimeUnityEditor
+
+# Shader Swapper v1.8.1
+- Short description: Swap all shaders to the equivalent Hanmen shader in maker (ctrl + P)
+- Author(s):         IllusionMods
+- More information:  https://github.com/IllusionMods/KK_Plugins
 
 # Shallty Utils v1.3
 - Short description: A utility plugin focused on enhancing Timeline to improve animator's workflows (may cause issues)
@@ -733,7 +753,7 @@
 - Author(s):         GeBo
 - More information:  https://gebo1.github.io/GeBoPlugins/src/GameWh
 
-# XUnity Auto Translator v5.5.1
+# XUnity Auto Translator v5.6.1
 - Short description: Translation loader
 - Author(s):         bbepis and others
 - More information:  https://github.com/bbepis/XUnity.AutoTranslator

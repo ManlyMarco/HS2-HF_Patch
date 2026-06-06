@@ -27,8 +27,8 @@
 #include "HelperLib\Common.iss"
 ;---------------------------------------------------------------------
 ; Used for post install run links, comment out to hide
-#define WikiLink "https://wiki.anime-sharing.com/hgames/index.php?title=AI_Syoujyo"
-#define RepoLink "https://github.com/ManlyMarco/AI-HF_Patch"
+#define WikiLink "https://wiki.anime-sharing.com/hgames/index.php?title=Honey_Select_2"
+#define RepoLink "https://github.com/ManlyMarco/HS2-HF_Patch"
 ; Can be KoiDiscordLink, IsDiscordLink, or a normal link   
 #define DiscordLink IsDiscordLink
 ;---------------------------------------------------------------------
@@ -281,7 +281,7 @@ begin
   if (not FileExists(ExpandConstant('{app}\HoneySelect2_Data\resources.assets'))
    or not FileExists(ExpandConstant('{app}\abdata\adv\camera\action.unity3d')) 
    or not FileExists(ExpandConstant('{app}\abdata\sound\setting\sound3dsettingdata\00.unity3d')) 
-   or not FileExists(ExpandConstant('{app}\abdata\sound\setting\soundsettingdata\00.unity3d')) then
+   or not FileExists(ExpandConstant('{app}\abdata\sound\setting\soundsettingdata\00.unity3d'))) then
   begin
     // Cancel, there's file corruptions that we can't fix
     MsgBox(ExpandConstant('{cm:MsgMissingGameFiles}'), mbCriticalError, MB_OK);

@@ -7,7 +7,7 @@
 ;-------------Full game name for naming patch itself and desktop icons
 #define NAME "HoneySelect2"
 ;---------------------------------------------Current HF Patch version
-#define VERSION "3.0"
+#define VERSION "3.1"
 ;-----------------------------------------Sideloader modpack directory
 #define GameDir "L:\HFpatchmaking\HS2\MODSOURCE"
 ;--Don't include any files in the build to make it go fast for testing
@@ -15,7 +15,7 @@
 ;---Skip file verification for easier testing, COMMENT OUT FOR RELEASE
 ;#define NOVERIFY
 ;------------Don't include general, studio and map sideloader modpacks
-#define LITE
+;#define LITE
 ;--------------------------------------------------------Configuration
 ; The main executable name without the .exe
 #define GameName "HoneySelect2"
@@ -110,6 +110,7 @@ Source: "{#GameDir}\mods\Sideloader Modpack - Maps (HS2 Game)\*"       ; DestDir
 #endif
 Source: "{#GameDir}\mods\Sideloader Modpack - MaterialEditor Shaders\*"; DestDir: "{app}\mods\Sideloader Modpack - MaterialEditor Shaders"; Flags: ignoreversion recursesubdirs solidbreak; Components: Modpack\MaterialEditor
 Source: "{#GameDir}\mods\SideloaderModpack-UncensorSelector\*"     ; DestDir: "{app}\mods\SideloaderModpack-UncensorSelector"     ; Flags: ignoreversion recursesubdirs; Components: Modpack\UncensorSelector
+Source: "{#GameDir}\mods\MyMods\*"; DestDir: "{app}\mods\MyMods"; Flags: ignoreversion recursesubdirs; 
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Source: "{#GameDir}\BepInEx\cache\sideloader_zipmod_cache.bin*";                 DestDir: "{app}\BepinEx\cache";                      Flags: ignoreversion recursesubdirs createallsubdirs;           
 Source: "{#GameDir}\mods\Sideloader Modpack - Studio\Misc\AIS_HS2_QuickAccessBox_Thumbs_Stock.zipmod";                 DestDir: "{app}\mods\Sideloader Modpack - Studio\Misc";    Flags: ignoreversion;
@@ -123,6 +124,7 @@ Source: "Input\US_config_noBP.cfg"; DestDir: "{app}\BepInEx\config"; DestName: "
 ; This config only allows BP uncensors to be chosen by random
 Source: "Input\US_config_BP.cfg";   DestDir: "{app}\BepInEx\config"; DestName: "com.deathweasel.bepinex.uncensorselector.cfg"; Flags: solidbreak; Components: UNC\Selector\BetterPenetration
 Source: "Input\marco.kkapi.cfg"; DestDir: "{app}\BepInEx\config"; DestName: "marco.kkapi.cfg"; Flags: onlyifdoesntexist solidbreak
+Source: "Input\Mods_readme.txt"; DestDir: "{app}\mods"; DestName: "Mods_readme.txt"; Flags: onlyifdoesntexist solidbreak
 Source: "Input\System.Drawing.dll";   DestDir: "{app}\BepInEx\core"; DestName: "System.Drawing.dll"; Flags: solidbreak; Components: Feature\VideoExport
 Source: "Input\Animations\HS2AX\*";                      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\Animations
 Source: "Input\Animations\MrC_HS2_RGPosMod\*";           DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Content\Animations
